@@ -17,6 +17,16 @@
     margin-top: 5px;
 }
 
+#menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: none; 
+    font-size: 30px;
+  }
+
 .logo{
     height: 100%;
     width: auto;
@@ -81,5 +91,78 @@
     padding: 3px 5px;
     border-radius: 5px;
 }
+.btnMail:hover{
+    color:#006000;
+    border: 2px solid #006000
+}
 
+/* cambio de lenguaje */
+.en{
+    color: #333;
+}
+.es{
+    color: #00a1ff;
+}
+.check{
+    position: relative;
+    width:50px;
+}
+.check:before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color:#333 ;
+    border-radius: 30px;
+}
 
+.check:after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 2px solid #333;
+    box-sizing: border-box ;
+}
+
+.check:checked:after{
+    left:25px;
+    border: 2px solid #00a1ff;
+}
+.check:checked:before{
+    background-color: #00a1ff;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+.menu-icon {
+    display: block;
+    }
+#menu-toggle:checked ~ .navbar ul {
+    display: block;
+    }
+.navbar ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 15.5%;
+    background-color: rgb(15, 101, 159);
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+    }
+.btnMail{
+        background-color: #009900;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        padding: 3px 5px;
+        border-radius: 5px;
+    }
+.parrafoHome{
+    font-size: 20px;
+}
+
+}

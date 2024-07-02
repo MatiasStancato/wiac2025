@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,8 @@
 <body>
     <header class="header">
         <div class="logo"><a href="./index.html"><img class="logo " src="./public/img/LogoWIAC2025.png" alt="logo wiac 2025"></a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label> 
         <nav class="navbar">
                     <ul class="lista">
                         <li><a class="linkNav" href="./index.html">HOME</a></li>
@@ -20,7 +22,10 @@
                         <li><a class="linkNav" href="#">UBICACION</a></li>
                         <li><a class="linkNav" href="#">PARTICIPANTES</a></li>
                         <li><a class="linkNav" href="#">ITINERARIO</a></li>   
-                        <li><a class="linkNav" href="#">TERMINOS Y CONDICIONES</a></li>           
+                        <li><a class="linkNav" href="#">TERMINOS Y CONDICIONES</a></li>  
+                        <span class="en">Ingles</span>
+                            <input type="checkbox"  class="check" checked>
+                        <span class="es">Español</span>         
                     </ul>
         </nav>
     </header>
@@ -32,13 +37,14 @@
         <div class="subcontainerHome">
             <h2 class="subtitulo">La pagina esta en reparacion,<br> estara disponible a partir del <br> 1.10.2024</h2>
 
-            <p class="subparrafoHome">Para mas informacion comunicate a 
-                <br>
+            <p class="subparrafoHome">Para mas informacion, comunicate a 
+                <br class="brbtn">
                 <a class="btnMail" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">aata.argentina.presidente@gmail.com</a>
         </div>
     </main>
     <footer class="footer">
         <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
     </footer>
+    <script src="./public/Js/app.js"></script>
 </body>
 </html>
