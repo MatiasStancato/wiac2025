@@ -1,0 +1,18 @@
+npm init -y //para agregar el package.josn
+npm install express // para agregar el modulo express
+npm install  ejs mysql nodemon // instala vistas ejs bd mysql y nodemon
+crear archivo app.js o index.js
+cambiar en el pag.josn name: por app.js o index.js
+
+configurar la app.js con el servidor y el motor de busqueda
+
+uso node app para usar la app una vez
+uso nodemon app para que funcione continuamente
+
+creamos carpeta views
+
+creamos todos los archivos que seran paginas como index.ejs
+
+creamos una carpeta database con un archivo db.js
+creamos la carpeta controllers y un archivo crud.js
+creamos el archivo router.js

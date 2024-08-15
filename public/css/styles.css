@@ -5,6 +5,7 @@
     font-family: "Poppins", sans-serif;;
 }
 
+/* Header */
 .header{
 
     height: 15vh;
@@ -14,7 +15,9 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid gray;
-    margin-top: 5px;
+    position:sticky;
+    top: 0;
+    background-color: #FFFFFF;
 }
 
 #menu-toggle {
@@ -55,20 +58,115 @@
     text-decoration: underline;
     background-color: #e0e0e0;
 }
-.titulo{
+
+.title{
+    margin: 20px auto;
     text-align: center;
-    margin-top: 50px;
-    font-size: 54px;
+}
+.subtitulo{
+    text-align: center;
+    font-size: 40px;
+}
+.subtitle{
+    margin-bottom: 10px auto;
+    text-align: center;
+}
+.needHelp{
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+    background-color: yellow;
+    align-content: space-around;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-items:center ;
+    margin: auto;
+}
+.needHelpP{
+    display: block;
+    width:max-content;
+    font-size: 2rem;
+    font-weight: 800;
+    align-self: center;
+}
+.needHelpBtn{
+    display: flex;
+    background-color:#5ea4de ;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 0px 5px;
+    border-radius: 5px;
+    width: min-content;
+    height: 2.5rem;
+}
+.needHelpBtn:hover{
+    color:#1a2afe;
+    border: 1px solid #1a2afe;
+    offset: auto;
+    
+}
+
+/* Home */
+.bannerHome{
+    display: flex;
+    background-color: lightseagreen;
+    height: 50%;
 }
 .parrafoHome, .subparrafoHome{
     text-align: center;
     font-size: 40px;
     margin: 40px 0;
 }
-.subtitulo{
-    text-align: center;
-    font-size: 40px;
+.containerMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+.schedule{
+    width: 100%;
+    height: 32rem;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.scheduleDays{
+    width: 40%;
+    background-color: #57738d;
+    height: max-content;
+    
+}
+.day{
+    height: 3rem;
+    width: 100%;
+    background-color: #00a1ff;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.booking{
+    height: 32rem;
+    width: 100%;
+    background-color: #00a1ff;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:80%;
+    width: 30%;
+    border:1px solid black;
+}
+/* Footer */
 .footer{
     background-color: grey;
     width: 100%;
@@ -83,56 +181,88 @@
     font-size: 25px;
 }
 
-.btnMail{
-    background-color: #009900;
-    font-size: 40px;
-    text-decoration: none;
-    color: white;
-    padding: 3px 5px;
+
+
+
+/* admin-login */
+.formLog{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto
+}
+.formLog input{
+    margin-top: .5rem;
+}
+/* admin-index */
+.containerIndexAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* admin-form */
+
+.tablacontainer{
+    width: 100%;
+    margin: auto;   
+}
+.containerBotonesForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: 0.5rem auto;
+}
+/* admin-edit */
+.ContainerFormEdit{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: max-content;
+    border:  1px solid blue;
+    margin: 2rem auto;
     border-radius: 5px;
 }
-.btnMail:hover{
-    color:#006000;
-    border: 2px solid #006000
+.formEdit input{
+    margin:0 auto;
+    width: 90%;
+}
+.formEdit select, label{
+    margin:.5rem 2rem;
+    width: 90%
+}
+.containerEditBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
 }
 
-/* cambio de lenguaje */
-.en{
-    color: #333;
+/* pagina inscripcion */
+.containerForm{
+    width: 50%;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-bottom: 2rem;
 }
-.es{
-    color: #00a1ff;
+.containerForm input{
+    margin:0 auto;
+    width: 90%;
 }
-.check{
-    position: relative;
-    width:50px;
+.containerForm select, label{
+    margin:.5rem 2rem;
+    width: 90%
 }
-.check:before{
-    content:'';
-    position: absolute;
-    width: 50px;
-    height: 30px;
-    background-color:#333 ;
-    border-radius: 30px;
-}
-
-.check:after{
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 30px;
-    border: 2px solid #333;
-    box-sizing: border-box ;
-}
-
-.check:checked:after{
-    left:25px;
-    border: 2px solid #00a1ff;
-}
-.check:checked:before{
-    background-color: #00a1ff;
+.btnContainerInsc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 /* responsive */
