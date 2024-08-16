@@ -17,6 +17,7 @@ app.use('/resources',express.static('public'))
 app.use('/resources',express.static(__dirname + '/public'));
 
 //establecemos el motor de plantillas ejs
+app.set("views", __dirname + "/views");
 app.set('view engine','ejs');
 
 //bcryptjs
