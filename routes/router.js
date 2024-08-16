@@ -5,7 +5,7 @@ const crud = require("../controllers/crud");
 const bcryptjs = require('bcryptjs');
 
 router.get('/',(req,res)=>{
-    res.render("./home/home")
+    res.render("home/home")
 })
 
 router.get('/ubicacion',(req,res)=>{
