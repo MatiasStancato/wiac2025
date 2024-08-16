@@ -2,6 +2,7 @@
 //referenciamos a express
 const express = require ('express'); 
 const app = express(); //
+const port = process.env.PORT || 3000
 
 //para capturar los datos del formulario
 app.use(express.urlencoded({extended:false}));
@@ -33,8 +34,8 @@ const connection = require('./database/db');
 
 app.use('/', require('./routes/router'));
 
-app.listen(5000,()=>{
-    console.log("SERVER corriendo en http://localhost:5000")
+app.listen(port,()=>{
+    console.log(`SERVER corriendo en http://localhost:${port}`)
  });      //metodo de express
 
 
