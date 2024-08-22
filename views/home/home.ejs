@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/timer.css">
     <link rel="shortcut icon" href="/resources/img/LogoWIAC2025.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +52,29 @@
                 <strong>Gustavo Stancato</strong> <br>
                 Presidente del Comité Organizador del Campeonato Mundial de Tiro con Arco WIAC 2025</p></div>
         </div>
+            <div class="timer">
+                <div class="fecha"><span id="fecha"><p>WIAC 2025 starts in: </p></span></div>
+                <img src="resources/img/targetIFAA.webp" alt="timer">
+                
+            <div class="cuenta-atras" id="cuenta-atras">
+                <div class="grupo">
+                    <p class="grande" id="dias">00</p>
+                    <p class="chico">days</p>
+                </div>
+                <div class="grupo">
+                    <p class="grande" id="horas">00</p>
+                    <p class="chico">hours</p>
+                </div>
+                <div class="grupo">
+                    <p class="grande" id="minutos">00</p>
+                    <p class="chico">minutes</p>
+                </div>
+                <div class="grupo">
+                    <p class="grande" id="segundos">00</p>
+                    <p class="chico">seconds</p>
+                </div>  
+            </div>
+        </div>
         <div class="needHelp"><p class="needHelpP">Need help?</p> <a class="needHelpBtn" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">aata.argentina.presidente@gmail.com</a>
         </div>
         <div class="schedule">
@@ -63,7 +87,10 @@
                 <div class="day"><p>12.08.2025</p>Awards ceremony - Dinner </div>
         </div>
         </div>
+        <div class="bookingContainer">
+        <h2 class="subtitle">Book your space</h2>
         <div class="booking">
+            
             <div class="card secondGroup">
                 <h3>Early Bird</h3>
                 <p class="cardUp">Desde la (FECHA) hasta la (FECHA) 2024</p>
@@ -88,11 +115,16 @@
                 <a class="button type1" href="/inscription">
                     <span class="btn-txt">Register</span></a>
         </div>
-        <div class="readMore"></div>
+        </div>
 
     </main>
     <footer class="footer">
+        <div class="containerFooter">
+            <a href="/tyc" class="tycFooter">Terms of acceptances</a>
+            <a href="/tyc" class="privacyFotter">Privacy Policy</a>
         <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
+        </div>
     </footer>
+    <script src="resources/js/script.js"></script>
 </body>
 </html>

@@ -61,16 +61,13 @@
 }
 
 .title{
-    margin: 20px auto;
+    margin: 1rem auto;
     text-align: center;
-}
-.subtitulo{
-    text-align: center;
-    font-size: 40px;
 }
 .subtitle{
-    margin-bottom: 10px auto;
+    margin: 1rem auto;
     text-align: center;
+    font-size: 3rem;
 }
 .needHelp{
     display: flex;
@@ -174,6 +171,8 @@
 .containerMain p{
     padding: 0 4rem;
 }
+
+
 .schedule{
     width: 100%;
     height: 25rem;
@@ -207,11 +206,13 @@
     color:#fff;
     padding: 0 5rem;
 }
+.bookingContainer{
+    border: 1px solid black;
+}
 
 .booking{
-    height: 32rem;
+    height: 30rem;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center
@@ -235,12 +236,12 @@
     text-align: center;
 }
 .cardUp{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 2rem;
 }
 .precio{
     font-weight: 800;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .button {
@@ -271,7 +272,7 @@
     left: 0;
     top: 0;
     transition: all 0.5s ease-in-out;
-    background-color: #333;
+    background-color: #99bb00;
     border-radius: 30px;
     visibility: hidden;
     height: 10px;
@@ -280,7 +281,7 @@
 }
 
 .button:hover {
-    box-shadow: 1px 1px 200px #252525;
+    box-shadow: 1px 1px 200px #99aa99;
     color: #fff;
     outline: none;
     }
@@ -300,10 +301,29 @@
     flex-direction: column;
     justify-content: center;
 }
+.containerFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerFooter a{
+    align-self: end;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #c1c1c3;
+    font-size: 1.3rem;
+}
+.containerFooter a:hover{
+    text-decoration: underline;
+}
+
 
 .parrafoFooter{
     text-align: center;
     font-size: 25px;
+    align-self: center;
 }
 
 
@@ -397,7 +417,7 @@
 }
 .containerParticipants iframe{
     width: 100%;
-    height: 50vh;
+    height: 1000px;
 }
 
 /* responsive */
