@@ -61,6 +61,7 @@
 }
 
 .title{
+    font-size: 3rem;
     margin: 1rem auto;
     text-align: center;
 }
@@ -103,6 +104,8 @@
     offset: auto;
     background-color: #fff;
     text-decoration: underline;
+    border-top: 1px solid #57738d;
+    border-bottom: 1px solid #57738d;
 }
 
 /* Home */
@@ -110,6 +113,7 @@
     display: flex;
     width: 100%;
     height: auto;
+    
 }
 
 .bannerHome img{
@@ -138,7 +142,7 @@
     color: #FFFFFF;
     font-size: 2rem;
     top: 39rem;
-    left:35rem;
+    left:33rem;
     text-shadow: 1px 1px 3px black;
 }
 .locationpara{
@@ -152,60 +156,70 @@
 }
 
 .containerMain{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 50%;
+    align-items: center;
+    height: max-content;
 }
 .containerMain img{
-    width: 40%;
+    width: 50%;
     height: auto;
     padding: 5rem;
 }
 .containerMain h4{
-    font-size: 2rem;
-    text-decoration: underline;
-    margin-top: 1rem;
+    font-size: 2.5rem;
     margin-left: 4rem;
+    font-weight: 400;
+    
 }
 .containerMain p{
     padding: 0 4rem;
+    font-size: 1.2rem;
+}
+.pMsg{
+    margin-top:.5rem
 }
 
 
 .schedule{
     width: 100%;
-    height: 25rem;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    margin-bottom: 1rem;
 }
-.schedule h3{
-    font-size: 3rem;
+.schedule h4{
+    font-size: 2rem;
+    font-weight: 400;
 
 }
 .scheduleDays{
-    width: 50%;
-    height: max-content;
+    width: 80%;
     display: flex;
     flex-direction: column;
     
 }
 .day{
-    height: 3rem;
     width: 100%;
     background-color: #57738d;
     border-bottom: 2px solid #fff;
     text-align: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.5rem;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
     color:#fff;
-    padding: 0 5rem;
+    padding: 0 5rem; 
 }
+.day span{
+    width: 30rem;
+    padding: .2rem;
+}
+
 .bookingContainer{
     border: 1px solid black;
 }
@@ -215,13 +229,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-bottom: 1rem;
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:80%;
+    height:100%;
     width: 30%;
     border:1px solid #57738d;
     margin: 0px 1rem;
@@ -240,7 +255,7 @@
     margin-top: 2rem;
 }
 .precio{
-    font-weight: 800;
+    font-weight: 400;
     font-size: 5rem;
 }
 
@@ -272,7 +287,7 @@
     left: 0;
     top: 0;
     transition: all 0.5s ease-in-out;
-    background-color: #99bb00;
+    background-color: #57738d;
     border-radius: 30px;
     visibility: hidden;
     height: 10px;
@@ -366,7 +381,7 @@
     flex-direction: column;
     width: 50%;
     height: max-content;
-    border:  1px solid blue;
+    border:  1px solid black;
     margin: 2rem auto;
     border-radius: 5px;
 }
@@ -393,20 +408,39 @@
     border: 2px solid gray;
     border-radius: 5px;
     margin-bottom: 2rem;
+    background-color: #57738d;
+    color: #c1c1c3;
 }
 .containerForm input{
-    margin:0 auto;
+    margin: auto;
+    margin-top: .5rem;
     width: 90%;
 }
 .containerForm select, label{
-    margin:.5rem 2rem;
-    width: 90%
+    margin:0 2rem;
+    width: 90%;
+    font-size: 1.2rem;
 }
 .btnContainerInsc{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 1rem;
+}
+/* location */
+.ubicacionContainer{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    
+}
+.ubicacionIframe{
+    width: 80%;
+    height: 500px;
+    margin: auto;
     margin-bottom: 1rem;
 }
 

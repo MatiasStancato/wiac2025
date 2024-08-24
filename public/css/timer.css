@@ -5,23 +5,26 @@
 }
 
 .timer{
+    width: 100%;
     border-top: 1px solid black ;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    height: 100%
+    height: 100%;
+    padding: 1rem 0;
+    position: relative;
 }
 .cuenta-atras{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 2.5rem 1.5rem;
+    gap: 3rem 2rem;
     position: relative;
-    bottom: 370px;
-    left: .5rem;
+    right: 390px;
+    text-shadow: 2px 2px 5px #fff;
 
 }
 .timer img{
@@ -31,15 +34,15 @@
     position: relative;
 }   
 .fecha{
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 400;
 }
 
 .grupo{
     line-height: 1;
 }
 .grande{
-    font-size:4rem;
+    font-size:3.5rem;
     font-weight: 800;
 }
 .timerpar{

@@ -34,8 +34,62 @@
             <br>
             
             <label for="federation">Federation(*):</label>
-            <input class="form-control form-control-sm" type="text" id="federation" name="federation" placeholder="Federation" value="<%= user.federation%>" autofocus>
-            <span id="errorFederation" class="error-message"></span>
+            <select class="form-control form-control-sm" id="federation" name="federation" placeholder="Federation" required>
+            <option value="" disabled selected>Select an option</option>
+                <option <%= user.federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
+                <option <%= user.federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
+                <option <%= user.federation=='AATA' ? "selected" : "" %> value="AATA">AATA</option>
+                <option <%= user.federation=='ABA' ? "selected" : "" %> value="ABA">ABA</option>
+                <option <%= user.federation=='OBSV' ? "selected" : "" %> value="OBSV">OBSV</option>
+                <option <%= user.federation=='RBA' ? "selected" : "" %> value="RBA">RBA</option>
+                <option <%= user.federation=='GAA' ? "selected" : "" %> value="GAA">GAA</option>
+                <option <%= user.federation=='AFB' ? "selected" : "" %> value="AFB">AFB</option>
+                <option <%= user.federation=='BFAA' ? "selected" : "" %> value="BFAA">BFAA</option>
+                <option <%= user.federation=='AC' ? "selected" : "" %> value="AC">AC</option>
+                <option <%= user.federation=='ACH' ? "selected" : "" %> value="ACH">ACH</option>
+                <option <%= user.federation=='AICC' ? "selected" : "" %> value="AICC">AICC</option>
+                <option <%= user.federation=='CZ3D' ? "selected" : "" %> value="CZ3D">CZ3D</option>
+                <option <%= user.federation=='EFAA' ? "selected" : "" %> value="EFAA">EFAA</option>
+                <option <%= user.federation=='FAAE' ? "selected" : "" %> value="FAAE">FAAE</option>
+                <option <%= user.federation=='FFAA' ? "selected" : "" %> value="FFAA">FFAA</option>
+                <option <%= user.federation=='FFTL' ? "selected" : "" %> value="FFTL">FFTL</option>
+                <option <%= user.federation=='DFBV' ? "selected" : "" %> value="DFBV">DFBV</option>
+                <option <%= user.federation=='PAPG' ? "selected" : "" %> value="PAPG">PAPG</option>
+                <option <%= user.federation=='HKFAA' ? "selected" : "" %> value="HKFAA">HKFAA</option>
+                <option <%= user.federation=='HAA' ? "selected" : "" %> value="HAA">HAA</option>
+                <option <%= user.federation=='IBA' ? "selected" : "" %> value="IBA">IBA</option>
+                <option <%= user.federation=='FAAI' ? "selected" : "" %> value="FAAI">FAAI</option>
+                <option <%= user.federation=='IFAF' ? "selected" : "" %> value="IFAF">IFAF</option>
+                <option <%= user.federation=='FIARC' ? "selected" : "" %> value="FIARC">FIARC</option>
+                <option <%= user.federation=='LAF' ? "selected" : "" %> value="LAF">LAF</option>
+                <option <%= user.federation=='FAAFL' ? "selected" : "" %> value="FAAFL">FAAFL</option>
+                <option <%= user.federation=='LAA' ? "selected" : "" %> value="LAA">LAA</option>
+                <option <%= user.federation=='FLTA' ? "selected" : "" %> value="FLTA">FLTA</option>
+                <option <%= user.federation=='FAAM' ? "selected" : "" %> value="FAAM">FAAM</option>
+                <option <%= user.federation=='KHN' ? "selected" : "" %> value="KHN">KHN</option>
+                <option <%= user.federation=='NZFAA' ? "selected" : "" %> value="NZFAA">NZFAA</option>
+                <option <%= user.federation=='NIFAA' ? "selected" : "" %> value="NIFAA">NIFAA</option>
+                <option <%= user.federation=='PTAF' ? "selected" : "" %> value="PTFA">PTFA</option>
+                <option <%= user.federation=='PFAA' ? "selected" : "" %> value="PFAA">PFAA</option>
+                <option <%= user.federation=='FABP' ? "selected" : "" %> value="FABP">FABP</option>
+                <option <%= user.federation=='FRATF' ? "selected" : "" %> value="FRATF">FRATF</option>
+                <option <%= user.federation=='KFAA' ? "selected" : "" %> value="KFAA">KFAA</option>
+                <option <%= user.federation=='RAF' ? "selected" : "" %> value="RAF">RAF</option>
+                <option <%= user.federation=='FSTA' ? "selected" : "" %> value="FSTA">FSTA</option>
+                <option <%= user.federation=='SFAA' ? "selected" : "" %> value="SFAA">SFAA</option>
+                <option <%= user.federation=='SAA' ? "selected" : "" %> value="SAA">SAA</option>
+                <option <%= user.federation=='SANIFA' ? "selected" : "" %> value="SANIFA">SANIFA</option>
+                <option <%= user.federation=='AAL' ? "selected" : "" %> value="AAL">AAL</option>
+                <option <%= user.federation=='SFSF' ? "selected" : "" %> value="SFSF">SFSF</option>
+                <option <%= user.federation=='FAAS' ? "selected" : "" %> value="FAAS">FAAS</option>
+                <option <%= user.federation=='TTFAA' ? "selected" : "" %> value="TTFAA">TTFAA</option>
+                <option <%= user.federation=='FUTARCO' ? "selected" : "" %> value="FUTARCO">FUTARCO</option>
+                <option <%= user.federation=='NFAA' ? "selected" : "" %> value="NFAA">NFAA</option>
+                <option <%= user.federation=='VAF' ? "selected" : "" %> value="VAF">VAF</option>
+                <option <%= user.federation=='VIFAF' ? "selected" : "" %> value="VIFAF">VIFAF</option>
+                <option <%= user.federation=='WFAA' ? "selected" : "" %> value="WFAA">WFAA</option>
+                <option <%= user.federation=='AZA' ? "selected" : "" %> value="AZA">AZA</option>
+            </select>
             <br>
             <label for="country">Country(*):</label>
             <input class="form-control form-control-sm" type="text" id="country" name="country" placeholder="Country" value="<%= user.country%>" autofocus>

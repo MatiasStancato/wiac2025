@@ -35,7 +35,7 @@ exports.update = (req, res) => {
     const firstName = req.body.firstName.toLowerCase();
     const lastname = req.body.lastname.toLowerCase();
     const email = req.body.email.toLowerCase();
-    const federation = req.body.federation.toUpperCase();
+    const federation = req.body.federation;
     const country = req.body.country.toLowerCase();
     const ageclass = req.body.ageclass;
     const gender = req.body.gender;
