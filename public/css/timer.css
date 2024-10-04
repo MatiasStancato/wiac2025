@@ -6,45 +6,46 @@
 
 .timer{
     width: 100%;
-    border-top: 1px solid black ;
+    height: 30rem;
+    background-image: url("/resources/img/fondodemensaje.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-around;
     text-align: center;
-    height: 100%;
     padding: 1rem 0;
-    position: relative;
+}
+.fecha{
+    font-size: 6rem;
+    font-weight: 400;
+    color:  #008080;
+    text-shadow: 2px 2px 2px #fff;
 }
 .cuenta-atras{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 3rem 2rem;
-    position: relative;
-    right: 390px;
-    text-shadow: 2px 2px 5px #fff;
+    display: flex;
+    flex-direction: row;
+    color:  #008080;
+    text-shadow: 2px 2px 2px #fff;
 
 }
-.timer img{
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    position: relative;
-}   
-.fecha{
-    font-size: 4rem;
-    font-weight: 400;
-}
-
 .grupo{
     line-height: 1;
+    text-align: center;
 }
 .grande{
-    font-size:3.5rem;
-    font-weight: 800;
+    font-size:7rem;
+    font-weight: 400;
+    margin-left: 2rem;
 }
+.chico{
+    font-size: 2rem;
+    
+}
+
 .timerpar{
     font-size: 4rem;
     position: relative;

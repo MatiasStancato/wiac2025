@@ -19,120 +19,124 @@
             
             <input class="form-control form-control-sm" id="id" name="id" value="<%= user.id%>" hidden>
         <div>
-            <label for="firstName">First name(*):</label>
-            <input class="form-control form-control-sm" type="text" id="firstName" name="firstName" placeholder="First Name" value="<%= user.firstname%>" autofocus>
+            <label for="First name">First name(*):</label>
+            <input class="form-control form-control-sm" type="text" id="First name" name="Firstname" placeholder="Firstname" value="<%= user.Firstname%>" autofocus>
             <span id="errorName" class="error-message"></span>
             <br>
         </div>
-            <label for="lastname">Last name(*):</label>
-            <input class="form-control form-control-sm" type="text" id="lastname" name="lastname" placeholder="Last Name" value="<%= user.lastname%>" autofocus>
+            <label for="Last name">Last name(*):</label>
+            <input class="form-control form-control-sm" type="text" id="Last name" name="Lastname" placeholder="Last Name" value="<%= user.Lastname%>" autofocus>
             <span id="errorLastName" class="error-message"></span>
             <br>
-            <label for="email">Email(*):</label>
-            <input class="form-control form-control-sm" type="email" id="email" name="email" placeholder="Email" value="<%= user.email%>" autofocus>
+            <label for="Email">Email(*):</label>
+            <input class="form-control form-control-sm" type="email" id="Email" name="Email" placeholder="Email" value="<%= user.Email%>" autofocus>
             <span id="errorEmail" class="error-message"></span>
             <br>
             
-            <label for="federation">Federation(*):</label>
-            <select class="form-control form-control-sm" id="federation" name="federation" placeholder="Federation" required>
+            <label for="Federation">Federation(*):</label>
+            <select class="form-control form-control-sm" id="Federation" name="Federation" required>
             <option value="" disabled selected>Select an option</option>
-                <option <%= user.federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
-                <option <%= user.federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
-                <option <%= user.federation=='AATA' ? "selected" : "" %> value="AATA">AATA</option>
-                <option <%= user.federation=='ABA' ? "selected" : "" %> value="ABA">ABA</option>
-                <option <%= user.federation=='OBSV' ? "selected" : "" %> value="OBSV">OBSV</option>
-                <option <%= user.federation=='RBA' ? "selected" : "" %> value="RBA">RBA</option>
-                <option <%= user.federation=='GAA' ? "selected" : "" %> value="GAA">GAA</option>
-                <option <%= user.federation=='AFB' ? "selected" : "" %> value="AFB">AFB</option>
-                <option <%= user.federation=='BFAA' ? "selected" : "" %> value="BFAA">BFAA</option>
-                <option <%= user.federation=='AC' ? "selected" : "" %> value="AC">AC</option>
-                <option <%= user.federation=='ACH' ? "selected" : "" %> value="ACH">ACH</option>
-                <option <%= user.federation=='AICC' ? "selected" : "" %> value="AICC">AICC</option>
-                <option <%= user.federation=='CZ3D' ? "selected" : "" %> value="CZ3D">CZ3D</option>
-                <option <%= user.federation=='EFAA' ? "selected" : "" %> value="EFAA">EFAA</option>
-                <option <%= user.federation=='FAAE' ? "selected" : "" %> value="FAAE">FAAE</option>
-                <option <%= user.federation=='FFAA' ? "selected" : "" %> value="FFAA">FFAA</option>
-                <option <%= user.federation=='FFTL' ? "selected" : "" %> value="FFTL">FFTL</option>
-                <option <%= user.federation=='DFBV' ? "selected" : "" %> value="DFBV">DFBV</option>
-                <option <%= user.federation=='PAPG' ? "selected" : "" %> value="PAPG">PAPG</option>
-                <option <%= user.federation=='HKFAA' ? "selected" : "" %> value="HKFAA">HKFAA</option>
-                <option <%= user.federation=='HAA' ? "selected" : "" %> value="HAA">HAA</option>
-                <option <%= user.federation=='IBA' ? "selected" : "" %> value="IBA">IBA</option>
-                <option <%= user.federation=='FAAI' ? "selected" : "" %> value="FAAI">FAAI</option>
-                <option <%= user.federation=='IFAF' ? "selected" : "" %> value="IFAF">IFAF</option>
-                <option <%= user.federation=='FIARC' ? "selected" : "" %> value="FIARC">FIARC</option>
-                <option <%= user.federation=='LAF' ? "selected" : "" %> value="LAF">LAF</option>
-                <option <%= user.federation=='FAAFL' ? "selected" : "" %> value="FAAFL">FAAFL</option>
-                <option <%= user.federation=='LAA' ? "selected" : "" %> value="LAA">LAA</option>
-                <option <%= user.federation=='FLTA' ? "selected" : "" %> value="FLTA">FLTA</option>
-                <option <%= user.federation=='FAAM' ? "selected" : "" %> value="FAAM">FAAM</option>
-                <option <%= user.federation=='KHN' ? "selected" : "" %> value="KHN">KHN</option>
-                <option <%= user.federation=='NZFAA' ? "selected" : "" %> value="NZFAA">NZFAA</option>
-                <option <%= user.federation=='NIFAA' ? "selected" : "" %> value="NIFAA">NIFAA</option>
-                <option <%= user.federation=='PTAF' ? "selected" : "" %> value="PTFA">PTFA</option>
-                <option <%= user.federation=='PFAA' ? "selected" : "" %> value="PFAA">PFAA</option>
-                <option <%= user.federation=='FABP' ? "selected" : "" %> value="FABP">FABP</option>
-                <option <%= user.federation=='FRATF' ? "selected" : "" %> value="FRATF">FRATF</option>
-                <option <%= user.federation=='KFAA' ? "selected" : "" %> value="KFAA">KFAA</option>
-                <option <%= user.federation=='RAF' ? "selected" : "" %> value="RAF">RAF</option>
-                <option <%= user.federation=='FSTA' ? "selected" : "" %> value="FSTA">FSTA</option>
-                <option <%= user.federation=='SFAA' ? "selected" : "" %> value="SFAA">SFAA</option>
-                <option <%= user.federation=='SAA' ? "selected" : "" %> value="SAA">SAA</option>
-                <option <%= user.federation=='SANIFA' ? "selected" : "" %> value="SANIFA">SANIFA</option>
-                <option <%= user.federation=='AAL' ? "selected" : "" %> value="AAL">AAL</option>
-                <option <%= user.federation=='SFSF' ? "selected" : "" %> value="SFSF">SFSF</option>
-                <option <%= user.federation=='FAAS' ? "selected" : "" %> value="FAAS">FAAS</option>
-                <option <%= user.federation=='TTFAA' ? "selected" : "" %> value="TTFAA">TTFAA</option>
-                <option <%= user.federation=='FUTARCO' ? "selected" : "" %> value="FUTARCO">FUTARCO</option>
-                <option <%= user.federation=='NFAA' ? "selected" : "" %> value="NFAA">NFAA</option>
-                <option <%= user.federation=='VAF' ? "selected" : "" %> value="VAF">VAF</option>
-                <option <%= user.federation=='VIFAF' ? "selected" : "" %> value="VIFAF">VIFAF</option>
-                <option <%= user.federation=='WFAA' ? "selected" : "" %> value="WFAA">WFAA</option>
-                <option <%= user.federation=='AZA' ? "selected" : "" %> value="AZA">AZA</option>
+                <option <%= user.Federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
+                <option <%= user.Federation=='AATA' ? "selected" : "" %> value="AATA">AATA</option>
+                <option <%= user.Federation=='ABA' ? "selected" : "" %> value="ABA">ABA</option>
+                <option <%= user.Federation=='OBSV' ? "selected" : "" %> value="OBSV">OBSV</option>
+                <option <%= user.Federation=='RBA' ? "selected" : "" %> value="RBA">RBA</option>
+                <option <%= user.Federation=='GAA' ? "selected" : "" %> value="GAA">GAA</option>
+                <option <%= user.Federation=='AFB' ? "selected" : "" %> value="AFB">AFB</option>
+                <option <%= user.Federation=='BFAA' ? "selected" : "" %> value="BFAA">BFAA</option>
+                <option <%= user.Federation=='AC' ? "selected" : "" %> value="AC">AC</option>
+                <option <%= user.Federation=='ACH' ? "selected" : "" %> value="ACH">ACH</option>
+                <option <%= user.Federation=='AICC' ? "selected" : "" %> value="AICC">AICC</option>
+                <option <%= user.Federation=='CZ3D' ? "selected" : "" %> value="CZ3D">CZ3D</option>
+                <option <%= user.Federation=='EFAA' ? "selected" : "" %> value="EFAA">EFAA</option>
+                <option <%= user.Federation=='FAAE' ? "selected" : "" %> value="FAAE">FAAE</option>
+                <option <%= user.Federation=='FFAA' ? "selected" : "" %> value="FFAA">FFAA</option>
+                <option <%= user.Federation=='FFTL' ? "selected" : "" %> value="FFTL">FFTL</option>
+                <option <%= user.Federation=='DFBV' ? "selected" : "" %> value="DFBV">DFBV</option>
+                <option <%= user.Federation=='PAPG' ? "selected" : "" %> value="PAPG">PAPG</option>
+                <option <%= user.Federation=='HKFAA' ? "selected" : "" %> value="HKFAA">HKFAA</option>
+                <option <%= user.Federation=='HAA' ? "selected" : "" %> value="HAA">HAA</option>
+                <option <%= user.Federation=='IBA' ? "selected" : "" %> value="IBA">IBA</option>
+                <option <%= user.Federation=='FAAI' ? "selected" : "" %> value="FAAI">FAAI</option>
+                <option <%= user.Federation=='IFAF' ? "selected" : "" %> value="IFAF">IFAF</option>
+                <option <%= user.Federation=='FIARC' ? "selected" : "" %> value="FIARC">FIARC</option>
+                <option <%= user.Federation=='LAF' ? "selected" : "" %> value="LAF">LAF</option>
+                <option <%= user.Federation=='FAAFL' ? "selected" : "" %> value="FAAFL">FAAFL</option>
+                <option <%= user.Federation=='LAA' ? "selected" : "" %> value="LAA">LAA</option>
+                <option <%= user.Federation=='FLTA' ? "selected" : "" %> value="FLTA">FLTA</option>
+                <option <%= user.Federation=='FAAM' ? "selected" : "" %> value="FAAM">FAAM</option>
+                <option <%= user.Federation=='KHN' ? "selected" : "" %> value="KHN">KHN</option>
+                <option <%= user.Federation=='NZFAA' ? "selected" : "" %> value="NZFAA">NZFAA</option>
+                <option <%= user.Federation=='NIFAA' ? "selected" : "" %> value="NIFAA">NIFAA</option>
+                <option <%= user.Federation=='PTAF' ? "selected" : "" %> value="PTFA">PTFA</option>
+                <option <%= user.Federation=='PFAA' ? "selected" : "" %> value="PFAA">PFAA</option>
+                <option <%= user.Federation=='FABP' ? "selected" : "" %> value="FABP">FABP</option>
+                <option <%= user.Federation=='FRATF' ? "selected" : "" %> value="FRATF">FRATF</option>
+                <option <%= user.Federation=='KFAA' ? "selected" : "" %> value="KFAA">KFAA</option>
+                <option <%= user.Federation=='RAF' ? "selected" : "" %> value="RAF">RAF</option>
+                <option <%= user.Federation=='FSTA' ? "selected" : "" %> value="FSTA">FSTA</option>
+                <option <%= user.Federation=='SFAA' ? "selected" : "" %> value="SFAA">SFAA</option>
+                <option <%= user.Federation=='SAA' ? "selected" : "" %> value="SAA">SAA</option>
+                <option <%= user.Federation=='SANIFA' ? "selected" : "" %> value="SANIFA">SANIFA</option>
+                <option <%= user.Federation=='AAL' ? "selected" : "" %> value="AAL">AAL</option>
+                <option <%= user.Federation=='SFSF' ? "selected" : "" %> value="SFSF">SFSF</option>
+                <option <%= user.Federation=='FAAS' ? "selected" : "" %> value="FAAS">FAAS</option>
+                <option <%= user.Federation=='TTFAA' ? "selected" : "" %> value="TTFAA">TTFAA</option>
+                <option <%= user.Federation=='FUTARCO' ? "selected" : "" %> value="FUTARCO">FUTARCO</option>
+                <option <%= user.Federation=='NFAA' ? "selected" : "" %> value="NFAA">NFAA</option>
+                <option <%= user.Federation=='VAF' ? "selected" : "" %> value="VAF">VAF</option>
+                <option <%= user.Federation=='VIFAF' ? "selected" : "" %> value="VIFAF">VIFAF</option>
+                <option <%= user.Federation=='WFAA' ? "selected" : "" %> value="WFAA">WFAA</option>
+                <option <%= user.Federation=='AZA' ? "selected" : "" %> value="AZA">AZA</option>
             </select>
             <br>
-            <label for="country">Country(*):</label>
-            <input class="form-control form-control-sm" type="text" id="country" name="country" placeholder="Country" value="<%= user.country%>" autofocus>
-            <span id="errorCountry" class="error-message"></span>
+            <label for="Country">Country(*):</label>
+            <input class="form-control form-control-sm" type="text" id="Country" name="Country" placeholder="Country" value="<%= user.Country%>" autofocus>
             <br>
-            <label for="ageclass">Age Class(*)</label>
-            <select class="form-control form-control-sm" id="ageclass" name="ageclass">
-                <option <%= user.ageclass=='A' ? "selected" : "" %> value="A">Adult (A)</option>
-                <option <%= user.ageclass=='C' ? "selected" : "" %> value="C">Cub (C)</option>
-                <option <%= user.ageclass=='J' ? "selected" : "" %> value="J">Junior (J)</option>
-                <option <%= user.ageclass=='S' ? "selected" : "" %> value="S">Senior (S)</option>
-                <option <%= user.ageclass=='V' ? "selected" : "" %> value="V">Veteran (V)</option>
-                <option <%= user.ageclass=='YA' ? "selected" : "" %> value="YA">Young Adult (YA)</option>
+            <label for="Age class">Age Class(*)</label>
+            <select class="form-control form-control-sm" id="Age class" name="Ageclass">
+                <option value="" disabled selected>Select an option</option>
+                <option <%= user.Ageclass=='A' ? "selected" : "" %> value="A">Adult (A)</option>
+                <option <%= user.Ageclass=='C' ? "selected" : "" %> value="C">Cub (C)</option>
+                <option <%= user.Ageclass=='J' ? "selected" : "" %> value="J">Junior (J)</option>
+                <option <%= user.Ageclass=='S' ? "selected" : "" %> value="S">Senior (S)</option>
+                <option <%= user.Ageclass=='V' ? "selected" : "" %> value="V">Veteran (V)</option>
+                <option <%= user.Ageclass=='YA' ? "selected" : "" %> value="YA">Young Adult (YA)</option>
             </select>
             <br>
-            <label for="gender">Gender(*)</label>
-            <select class="form-control form-control-sm" id="gender" name="gender">
-                <option <%= user.gender=='F' ? "selected" : "" %> value="F">Female (F)</option>
-                <option <%= user.gender=='M' ? "selected" : "" %> value="M">Male (M)</option>
+            <label for="Gender">Gender(*)</label>
+            <select class="form-control form-control-sm" id="Gender" name="Gender">
+                <option <%= user.Gender=='F' ? "selected" : "" %> value="F">Female (F)</option>
+                <option <%= user.Gender=='M' ? "selected" : "" %> value="M">Male (M)</option>
             </select>
             <br>
-            <label for="bowtype">Bow Type(*)</label>
-            <select class="form-control form-control-sm" id="bowtype" name="bowtype">
-                <option <%= user.bowtype=='BB-C' ? "selected" : "" %> value="BB-C">Barebow Compound (BB-C)</option>
-                <option <%= user.bowtype=='BB-R' ? "selected" : "" %> value="BB-R">Barebow Recurve (BB-R)</option>
-                <option <%= user.bowtype=='BH-C' ? "selected" : "" %> value="BH-C">Bowhunter Compound (BH-C)</option>
-                <option <%= user.bowtype=='BB-R' ? "selected" : "" %> value="BH-R">Bowhunter Recurve (BH-R)</option>
-                <option <%= user.bowtype=='BL' ? "selected" : "" %> value="BL">Bowhunter Limited (BL)</option>
-                <option <%= user.bowtype=='BU' ? "selected" : "" %> value="BU">Bowhunter Unlimited (BU)</option>
-                <option <%= user.bowtype=='FS-C' ? "selected" : "" %> value="FS-C">Freestyle Limited Compound (FS-C)</option>
-                <option <%= user.bowtype=='FS-R' ? "selected" : "" %> value="FS-R">Freestyle Limited Recurve (FS-R)</option>
-                <option <%= user.bowtype=='FU' ? "selected" : "" %> value="FU">Freestyle Unlimited (FU)</option>
-                <option <%= user.bowtype=='HB' ? "selected" : "" %> value="HB">Historical Bow (HB)</option>
-                <option <%= user.bowtype=='LB' ? "selected" : "" %> value="LB">LongBow (LB)</option>
-                <option <%= user.bowtype=='TR' ? "selected" : "" %> value="TR">Traditional Recurve Bow (TR)</option>
+            <label for="Bow type">Bow Type(*)</label>
+            <select class="form-control form-control-sm" id="Bow type" name="Bowtype">
+                <option value="" disabled selected>Select an option</option>
+                <option <%= user.Bowtype=='BB-C' ? "selected" : "" %> value="BB-C">Barebow Compound (BB-C)</option>
+                <option <%= user.Bowtype=='BB-R' ? "selected" : "" %> value="BB-R">Barebow Recurve (BB-R)</option>
+                <option <%= user.Bowtype=='BH-C' ? "selected" : "" %> value="BH-C">Bowhunter Compound (BH-C)</option>
+                <option <%= user.Bowtype=='BB-R' ? "selected" : "" %> value="BH-R">Bowhunter Recurve (BH-R)</option>
+                <option <%= user.Bowtype=='BL' ? "selected" : "" %> value="BL">Bowhunter Limited (BL)</option>
+                <option <%= user.Bowtype=='BU' ? "selected" : "" %> value="BU">Bowhunter Unlimited (BU)</option>
+                <option <%= user.Bowtype=='FS-C' ? "selected" : "" %> value="FS-C">Freestyle Limited Compound (FS-C)</option>
+                <option <%= user.Bowtype=='FS-R' ? "selected" : "" %> value="FS-R">Freestyle Limited Recurve (FS-R)</option>
+                <option <%= user.Bowtype=='FU' ? "selected" : "" %> value="FU">Freestyle Unlimited (FU)</option>
+                <option <%= user.Bowtype=='HB' ? "selected" : "" %> value="HB">Historical Bow (HB)</option>
+                <option <%= user.Bowtype=='LB' ? "selected" : "" %> value="LB">LongBow (LB)</option>
+                <option <%= user.Bowtype=='TR' ? "selected" : "" %> value="TR">Traditional Recurve Bow (TR)</option>
             </select>
             <br>
-            <label for="target">Target type(*)</label>
-            <select class="form-control form-control-sm" id="target" name="target" required>
-                <option <%= user.target=='5' ? "selected" : "" %> value="5">5 spots</option>
-                <option <%= user.target=='1' ? "selected" : "" %> value="1">1 spot</option>
+            <label for="Target">Target type(*)</label>
+            <select class="form-control form-control-sm" id="Target" name="Target" required>
+                <option value="" disabled selected>Select an option</option>
+                <option <%= user.Target=='5' ? "selected" : "" %> value="5">5 spots</option>
+                <option <%= user.Target=='1' ? "selected" : "" %> value="1">1 spot</option>
             </select>
             <br>
+            <label for="text">Message</label>
+                    <textarea  type="text" name="Text" rows="5" cols="72" value="<%= user.Text%>""><%= user.Text %>
+                    </textarea>  
             <div class="containerEditBtn">
                 <button class="btn btn-primary btn-lg" type="submit">Editar</button>
                 <a class="btn btn-danger btn-lg" href="/admin/form">Cancelar</a>

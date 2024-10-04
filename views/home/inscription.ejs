@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <link rel="stylesheet" href="resources/css/styles.css">
     <title>Inscription | WIAC 2025</title>
     
@@ -21,169 +22,194 @@
     <nav class="navbar">
                 <ul class="lista">
                     <li><a class="linkNav" href="/">HOME</a></li>
-                    <li><a class="linkNav" href="/inscription">INSCRIPCION</a></li>
-                    <li><a class="linkNav" href="/ubicacion">UBICACION</a></li>
-                    <li><a class="linkNav" href="/participants">PARTICIPANTES</a></li>
-                    <li><a class="linkNav" href="/itinerario">ITINERARIO</a></li>   
-                    <li><a class="linkNav" href="/tyc">TERMINOS Y CONDICIONES</a></li>            
+                    <li><a class="linkNav" href="/inscription">REGISTRATION</a></li>
+                    <li><a class="linkNav" href="/ubicacion">LOCATION</a></li>
+                    <li><a class="linkNav" href="/participants">PARTICIPANTS</a></li>
+                    <li><a class="linkNav" href="/itinerario">SCHEDULE</a></li>   
+                    <li><a class="linkNav" href="/tyc">TERMS AND CONDITIONS</a></li>            
                 </ul>
     </nav>
 </header>
 <body>
-    <h1 class="title">Inscription</h1>
-    <div class="containerForm">
-        <form action="/save" method="POST">
-            <div class="mb-3">
-            <label for="firstName">First name(*):</label>
-            <input class="form-control form-control-sm" type="text" id="firstName" name="firstName" placeholder="First Name" autofocus required>
-            <span id="errorName" class="error-message"></span>
-            </div>  
-            <br>
-
-            <label for="lastname">Last name(*):</label>
-            <input class="form-control form-control-sm" type="text" id="lastname" name="lastname" placeholder="Last Name" required>
-            <span id="errorLastName" class="error-message"></span>
-            <br>
-            <label for="email">Email(*):</label>
-            <input class="form-control form-control-sm" type="email" id="email" name="email" placeholder="Email" required>
-            <span id="errorEmail" class="error-message"></span>
-            <br>
-            
-            <label for="federation">Federation(*):</label>
-            <select class="form-control form-control-sm" id="federation" name="federation" placeholder="Federation" required>
-            <option value="" disabled selected>Select an option</option>
-                <option value="AAE">AAE</option>
-                <option value="AFAA">AFAA</option>
-                <option value="AATA">AATA</option>
-                <option value="ABA">ABA</option>
-                <option value="OBSV">OBSV</option>
-                <option value="RBA">RBA</option>
-                <option value="GAA">GAA</option>
-                <option value="AFB">AFB</option>
-                <option value="BFAA">BFAA</option>
-                <option value="AC">AC</option>
-                <option value="ACH">ACH</option>
-                <option value="AICC">AICC</option>
-                <option value="CZ3D">CZ3D</option>
-                <option value="EFAA">EFAA</option>
-                <option value="FAAE">FAAE</option>
-                <option value="FFAA">FFAA</option>
-                <option value="FFTL">FFTL</option>
-                <option value="DFBV">DFBV</option>
-                <option value="PAPG">PAPG</option>
-                <option value="HKFAA">HKFAA</option>
-                <option value="HAA">HAA</option>
-                <option value="IBA">IBA</option>
-                <option value="FAAI">FAAI</option>
-                <option value="IFAF">IFAF</option>
-                <option value="FIARC">FIARC</option>
-                <option value="LAF">LAF</option>
-                <option value="FAAFL">FAAFL</option>
-                <option value="LAA">LAA</option>
-                <option value="FLTA">FLTA</option>
-                <option value="FAAM">FAAM</option>
-                <option value="KHN">KHN</option>
-                <option value="NZFAA">NZFAA</option>
-                <option value="NIFAA">NIFAA</option>
-                <option value="PTAF">PTAF</option>
-                <option value="PFAA">PFAA</option>
-                <option value="FABP">FABP</option>
-                <option value="FRATF">FRATF</option>
-                <option value="KFAA">KFAA</option>
-                <option value="RAF">RAF</option>
-                <option value="FSTA">FSTA</option>
-                <option value="SFAA">SFAA</option>
-                <option value="SAA">SAA</option>
-                <option value="SANIFAA">"SANIFAA</option>
-                <option value="AAL">AAL</option>
-                <option value="SFSF">SFSF</option>
-                <option value="FAAS">FAAS</option>
-                <option value="TTFAA">TTFAA</option>
-                <option value="FUTARCO">FUTARCO</option>
-                <option value="NFAA">NFAA</option>
-                <option value="VAF">VAF</option>
-                <option value="VIFAF">VIFAF</option>
-                <option value="WFAA">WFAA</option>
-                <option value="AZA">AZA</option>
-            </select>
-            <br>
-            <label for="country">Country(*):</label>
-            <input class="form-control form-control-sm" type="text" id="country" name="country" placeholder="Country" required>
-            <span id="errorCountry" class="error-message"></span>
-            <br>
-            <label for="ageclass">Age Class(*)</label>
-            <select class="form-control form-control-sm" id="ageclass" name="ageclass" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="A">Adult (A)</option>
-                <option value="C">Cub (C)</option>
-                <option value="J">Junior (J)</option>
-                <option value="S">Senior (S)</option>
-                <option value="V">Veteran (V)</option>
-                <option value="YA">Young Adult (YA)</option>
-            </select>
-            <br>
-            <label for="gender">Gender(*)</label>
-            <select class="form-control form-control-sm" id="gender" name="gender" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="F">Female (F)</option>
-                <option value="M">Male (M)</option>
-            </select>
-            <br>
-            <label for="bowtype">Bow Type(*)</label>
-            <select class="form-control form-control-sm" id="bowtype" name="bowtype" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="BB-C">Barebow Compound (BB-C)</option>
-                <option value="BB-R">Barebow Recurve (BB-R)</option>
-                <option value="BH-C">Bowhunter Compound (BH-C)</option>
-                <option value="BH-R">Bowhunter Recurve (BH-R)</option>
-                <option value="BL">Bowhunter Limited (BL)</option>
-                <option value="BU">Bowhunter Unlimited (BU)</option>
-                <option value="FS-C">Freestyle Limited Compound (FS-C)</option>
-                <option value="FS-R">Freestyle Limited Recurve (FS-R)</option>
-                <option value="FU">Freestyle Unlimited (FU)</option>
-                <option value="HB">Historical Bow (HB)</option>
-                <option value="LB">LongBow (LB)</option>
-                <option value="TR">Traditional Recurve Bow (TR)</option>
-            </select>
-            <br>
-            <label for="target">Target type(*)</label>
-            <select class="form-control form-control-sm" id="target" name="target" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="5">5 Spot</option>
-                <option value="1">1 Spot</option>
-            </select>
-            <br>
-            <div class="btnContainerInsc">
-                <button class="btn btn-primary btn-lg" type="submit">Registrate</button>
-            <a  class="btn btn-danger btn-lg" href="/">Cancel</a>
+<main>
+        <div class="containerForm">
+            <div class="inscriptionContainer">
+                <h1 class="title">Registration</h1>
+                <ul>
+                    <li>Each inscription is only for one participant.
+                    </li>
+                    <li>After filling the form, you will get a button to pay.
+                    </li>
+                    <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
+                    <li>Note: Amounts will be charged in local currency (ARS).</li>
+                    <li>(*) items in the form need to be complete.</li>
+                    <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
+                </ul>
             </div>
-        </form>
-    </div>
-    <div class="needHelp"><p class="needHelpP">Need help?</p> <a class="needHelpBtn" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">aata.argentina.presidente@gmail.com</a>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <% if(typeof alert != 'undefined') { %>
-        <script>
-            Swal.fire({
-                    title:'<%= alertTitle %>',
-                    text:'<%= alertMessage %>',
-                    icon:'<%= alertIcon %>',
-                    showConfirmaButton: '<%= showConfirmButton %>',
-                    timer: '<%= timer %>',
-                    }).then(()=>{
-                window.location='/<%= ruta %>'
-            })
-            
-        </script>
-        <%}%>
-        
-</body>
+            <form id="registration-form" novalidate>
+                <div class="rowForm">
+                    <div class="lineForm ">
+                        <label for="First name">First name(*):</label>
+                        <input  type="text" id="First name" name="Firstname" autofocus required>
+                    </div>
+                    <div class="lineForm">
+                        <label for="Last name">Last name(*):</label>
+                        <input  type="text" id="Last name" name="Lastname"
+                        required>
+                    </div>
+                </div>
+    
+                <div class="rowForm">
+                    <div class="lineForm"><label for="Email">Email(*):</label>
+                        <input  type="Email" id="Email" name="Email"
+                            required>
+                    </div>
+                    <div class="lineForm"><label for="Federation">Federation(*):</label>
+                        <select  id="Federation" name="Federation"required>
+                            <option value="" disabled selected hidden>Select an option</option>
+                            <option value="AAE">AAE</option>
+                            <option value="AFAA">AFAA</option>
+                            <option value="AATA">AATA</option>
+                            <option value="ABA">ABA</option>
+                            <option value="OBSV">OBSV</option>
+                            <option value="RBA">RBA</option>
+                            <option value="GAA">GAA</option>
+                            <option value="AFB">AFB</option>
+                            <option value="BFAA">BFAA</option>
+                            <option value="AC">AC</option>
+                            <option value="ACH">ACH</option>
+                            <option value="AICC">AICC</option>
+                            <option value="CZ3D">CZ3D</option>
+                            <option value="EFAA">EFAA</option>
+                            <option value="FAAE">FAAE</option>
+                            <option value="FFAA">FFAA</option>
+                            <option value="FFTL">FFTL</option>
+                            <option value="DFBV">DFBV</option>
+                            <option value="PAPG">PAPG</option>
+                            <option value="HKFAA">HKFAA</option>
+                            <option value="HAA">HAA</option>
+                            <option value="IBA">IBA</option>
+                            <option value="FAAI">FAAI</option>
+                            <option value="IFAF">IFAF</option>
+                            <option value="FIARC">FIARC</option>
+                            <option value="LAF">LAF</option>
+                            <option value="FAAFL">FAAFL</option>
+                            <option value="LAA">LAA</option>
+                            <option value="FLTA">FLTA</option>
+                            <option value="FAAM">FAAM</option>
+                            <option value="KHN">KHN</option>
+                            <option value="NZFAA">NZFAA</option>
+                            <option value="NIFAA">NIFAA</option>
+                            <option value="PTAF">PTAF</option>
+                            <option value="PFAA">PFAA</option>
+                            <option value="FABP">FABP</option>
+                            <option value="FRATF">FRATF</option>
+                            <option value="KFAA">KFAA</option>
+                            <option value="RAF">RAF</option>
+                            <option value="FSTA">FSTA</option>
+                            <option value="SFAA">SFAA</option>
+                            <option value="SAA">SAA</option>
+                            <option value="SANIFAA">"SANIFAA</option>
+                            <option value="AAL">AAL</option>
+                            <option value="SFSF">SFSF</option>
+                            <option value="FAAS">FAAS</option>
+                            <option value="TTFAA">TTFAA</option>
+                            <option value="FUTARCO">FUTARCO</option>
+                            <option value="NFAA">NFAA</option>
+                            <option value="VAF">VAF</option>
+                            <option value="VIFAF">VIFAF</option>
+                            <option value="WFAA">WFAA</option>
+                            <option value="AZA">AZA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowForm">
+                    <div class="lineForm"><label for="Country">Country(*):</label>
+                        <input  type="text" id="Country" name="Country"
+                             required>
+                    </div>
+                    <div class="lineForm">
+                        <label for="ageclass">Age Class(*)</label>
+                        <select  id="Age class" name="Ageclass" 
+                            required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="A">Adult (A)</option>
+                            <option value="C">Cub (C)</option>
+                            <option value="J">Junior (J)</option>
+                            <option value="S">Senior (S)</option>
+                            <option value="V">Veteran (V)</option>
+                            <option value="YA">Young Adult (YA)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowForm">
+                    <div class="lineForm">
+                        <label for="Gender">Gender(*)</label>
+                        <select  id="Gender" name="Gender" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="F">Female (F)</option>
+                            <option value="M">Male (M)</option>
+                        </select>
+                    </div>
+                    <div class="lineForm">
+                        <label for="Bow type">Bow Type(*)</label>
+                        <select  id="Bow type" name="Bowtype" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="BB-C">Barebow Compound (BB-C)</option>
+                            <option value="BB-R">Barebow Recurve (BB-R)</option>
+                            <option value="BH-C">Bowhunter Compound (BH-C)</option>
+                            <option value="BH-R">Bowhunter Recurve (BH-R)</option>
+                            <option value="BL">Bowhunter Limited (BL)</option>
+                            <option value="BU">Bowhunter Unlimited (BU)</option>
+                            <option value="FS-C">Freestyle Limited Compound (FS-C)</option>
+                            <option value="FS-R">Freestyle Limited Recurve (FS-R)</option>
+                            <option value="FU">Freestyle Unlimited (FU)</option>
+                            <option value="HB">Historical Bow (HB)</option>
+                            <option value="LB">LongBow (LB)</option>
+                            <option value="TR">Traditional Recurve Bow (TR)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowForm">
+                    <div class="lineForm">
+                        <label for="Target">Target type(*)</label>
+                        <select id="Target" name="Target" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="5">5 Spot</option>
+                            <option value="1">1 Spot</option>
+                        </select>
+                    </div>
+                    <div class="lineForm"><label for="text">Message</label>
+                        <textarea  type="text" id="mssg" name="mssg" rows="6" cols="60" maxlength="255" ></textarea>    
+                        </div>
+                </div>
+                <div class="btnContainerInsc">
+                    <button class="btnInsc btnReg " type="button" id="checkout-btn">Register</button>
+                    <a class="btnInsc btnCnl" href="/">Cancel</a>
+                </div>
+            </form>
+            <div id="wallet_container"></div>
+        </div>
+    
+        <div class="needHelpContainer">
+            <button class="needHelpBtn btnHelp"
+            onclick="window.location.href='mailto:aata.argentina.presidente@gmail.com?Subject=Inquiry%20about%20the%20WIAC%202025%20tournament'">
+            </button>
+        </div>
+        <script src="resources/js/mpCheckoutBtn.js"></script>
+</main>
 
 <footer class="footer">
     <div class="containerFooter">
-        <a href="/tyc" class="tycFooter">Terms of acceptances</a>
+        <img src="/resources/img/logoIFAA(@).png" alt="logoIFAA">
+        <img src="/resources/img/logoWIAC2025.png" alt="logoWIAC">
+        <img src="/resources/img/logoaata.png" alt="logoAATA">
+        <a href="/tyc" class="tycFooter">Terms & conditions</a>
         <a href="/tyc" class="privacyFotter">Privacy Policy</a>
-    <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
+        <a class="aFooter" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact us</a>
+        
     </div>
+    <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
 </footer>
+</body>
 </html>

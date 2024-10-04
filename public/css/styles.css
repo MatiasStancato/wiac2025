@@ -8,8 +8,8 @@
 /* Header */
 .header{
 
-    height: 15vh;
-    width: 100%;
+    height: 11vh;
+    max-width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -46,79 +46,157 @@
 .lista li{
     list-style: none;
 }
-.lista li:hover{
-    background-color: #e0e0e0;
-}
+
 .lista a{
     text-decoration: none;
     margin: 0 30px;
-    font-size: 20px;
-    color: black;
+    font-size: 1.3rem;
+    color: #008080;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+    display: inline-block; /* Necesario para que el transform funcione correctamente */
 }
 .lista a:hover{
     text-decoration: underline;
-    background-color: #e0e0e0;
+    transform: scale(1.2)
 }
 
 .title{
     font-size: 3rem;
     margin: 1rem auto;
+    margin-top: 0;
     text-align: center;
+    font-weight: 400;
 }
 .subtitle{
     margin: 1rem auto;
     text-align: center;
     font-size: 3rem;
 }
-.needHelp{
+/* Footer */
+.footer{
+    background: linear-gradient(180deg, rgba(63,66,66,1) 19%, rgba(32,30,30,1) 72%);
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top:1px solid black;
+    color: white;
+}
+.containerFooter{
     display: flex;
     flex-direction: row;
-    height: 3rem;
-    width: 100%;
-    background-color: #57738d;
-    align-content: space-around;
-    justify-content: space-evenly;
-    align-items:center ;
-    margin: auto;
+    justify-content: space-between;
+    align-items: center;
 }
-.needHelpP{
-    display: block;
-    width:max-content;
-    font-size: 2rem;
-    font-weight: 800;
-    align-self: center;
-    color: #fff;
-}
-.needHelpBtn{
-    display: flex;
-    font-size: 2rem;
+.containerFooter a{
+    margin-right: 2rem;
     text-decoration: none;
-    color: white;
-    padding: 0px 5px;
-    border-radius: 5px;
-    width: min-content;
-    height: 3rem;
+    color: #c1c1c3;
+    font-size: 1.3rem;
 }
-.needHelpBtn:hover{
-    color:#57738d;
-    offset: auto;
-    background-color: #fff;
+.containerFooter a:hover{
     text-decoration: underline;
-    border-top: 1px solid #57738d;
-    border-bottom: 1px solid #57738d;
+}
+.containerFooter img{
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+    margin: 0 1rem;
 }
 
-/* Home */
+.parrafoFooter{
+    text-align: center;
+    font-size: 25px;
+    align-self: center;
+}
+
+/* Help container */
+.needHelpContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.needHelpBtn {
+    height: 50px;
+    width: 15rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #008080;
+    
+    }
+
+.needHelpBtn:hover {
+    box-shadow: 1px 1px 200px #252525;
+    }
+
+.btnHelp::after {
+    content: "Email us";
+    height: 50px;
+    width: 15rem;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+.btnHelp::before {
+    content: "Need help?";
+    height: 50px;
+    width: 15rem;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.btnHelp:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.btnHelp:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/* Pagina Home */
+main{
+    background: rgb(220, 219, 209);
+}
+/* Home Banner */
 .bannerHome{
     display: flex;
     width: 100%;
     height: auto;
-    
 }
 
 .bannerHome img{
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 80vh;
     object-fit: cover;
     position: relative;
 }
@@ -155,6 +233,7 @@
     text-shadow: 1px 1px 3px black;
 }
 
+/* Home Message */
 .containerMain{
     width: 100%;
     display: flex;
@@ -163,187 +242,249 @@
     align-items: center;
     height: max-content;
 }
+.message{
+    width: 70%;
+}
 .containerMain img{
-    width: 50%;
+    width: 40%;
     height: auto;
-    padding: 5rem;
+    padding: 3rem;
 }
 .containerMain h4{
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-top: 1rem;
     margin-left: 4rem;
     font-weight: 400;
-    
 }
 .containerMain p{
     padding: 0 4rem;
     font-size: 1.2rem;
-}
-.pMsg{
-    margin-top:.5rem
-}
-
-
-.schedule{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
-.schedule h4{
-    font-size: 2rem;
-    font-weight: 400;
-
+.pMsg{
+    color: #008080;;
 }
-.scheduleDays{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    
-}
-.day{
+/* Home Schedule */
+.homeSchedule{
     width: 100%;
-    background-color: #57738d;
-    border-bottom: 2px solid #fff;
-    text-align: center;
+    height: 35rem;
     display: flex;
     flex-direction: row;
-    align-items: space-evenly;
-    justify-content: space-evenly;
-    font-size: 1.3rem;
-    color:#fff;
-    padding: 0 5rem; 
+    justify-content: space-between;
 }
-.day span{
-    width: 30rem;
-    padding: .2rem;
+.schlL{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.schlL h2{
+    font-weight: 400;
+}
+.schlR{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.daySchl {
+    background: rgb(104, 110, 110);
+    color: #c1c1c3;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid gray;
+    width: 43rem;
+    margin: auto;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content li {
+    padding: 12px 16px;
+    list-style: none;
 }
 
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+/* Home Booking */
 .bookingContainer{
-    border: 1px solid black;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.bookingText{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.bookingText h2{
+    align-self: start;
+    font-weight: 400;
+}
+.bookingText span{
+    width: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    bottom:6rem;
+    font-weight: 400;
+}
+.bookingText span p{
+    margin-bottom: 1rem;
 }
 
+.bookingText span a{
+    background-color: #008080;
+    color: #000;
+    padding: .3rem .5rem;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.bookingText span a:hover{
+    background-color: #c1c1c3;
+    color: #008080;
+    font-weight: 600;
+
+}
 .booking{
-    height: 30rem;
+    height: 40rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    
 }
 .card{
+    background: linear-gradient(180deg, rgba(63,66,66,1) 19%, rgba(32,30,30,1) 72%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:100%;
-    width: 30%;
-    border:1px solid #57738d;
+    height:80%;
+    width: 100%;
+    border:1px solid #c1c1c3;
     margin: 0px 1rem;
     border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.earlyBird:hover{
+    transform: scale(1.1);
+}
+.spanCard {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spanCard::before {
+    content: 'AVAILABLE NOW!';
+    position: absolute;
+    width: 150%;
+    height: 1.8rem;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  .spanCard::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+  .secondGroup, .lastCall{
+    transform: scale(.8);
 }
 .card h3{
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 1.8rem;
     font-size: 2.5rem;
-    background-color: #57738d;
+    background-color: #008080;
     text-shadow: 2px 2px 5px #fff;
-    text-align: center;
 }
 .cardUp{
     font-size: 1.2rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    color: #c1c1c3;
+}
+.cardDown{
+    font-size: 1.2rem;
+    color: #FFF;
+    text-align: center;
+    position: relative;
+    bottom: 2rem;
+}
+.cardD{
+    font-size: 1.2rem;
+    color: #ddd4a3;
+    text-align: center;
+    position: relative;
+    bottom: 4rem;
+    
 }
 .precio{
     font-weight: 400;
     font-size: 5rem;
-}
-
-.button {
-    height: 50px;
-    width: 200px;
-    position: relative;
-    text-align: center;
-    background-color: transparent;
-    cursor: pointer;
-    outline: 2px solid #252525;
-    overflow: hidden;
-    border-radius: 30px;
-    color: #333;
-    transition: all 0.5s ease-in-out;
-    text-decoration: none;
-    margin: auto;
-    line-height: 50px;
-}
-
-.btn-txt {
-    z-index: 1;
-    font-weight: 800;
-    letter-spacing: 4px;
-}
-.type1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-    background-color: #57738d;
-    border-radius: 30px;
-    visibility: hidden;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-}
-
-.button:hover {
-    box-shadow: 1px 1px 200px #99aa99;
+    -webkit-text-stroke: 3px black;
     color: #fff;
-    outline: none;
-    }
-
-.type1:hover::after {
-    visibility: visible;
-    transform: scale(100) ;
-    }
-
-
-/* Footer */
-.footer{
-    background-color: grey;
-    width: 100%;
-    height: 22vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
-.containerFooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Up{
+    position: relative;
+    bottom: .5rem;
 }
-.containerFooter a{
-    align-self: end;
-    margin-right: 2rem;
-    margin-top: 2rem;
+.Dw{
+    position: relative;
+    bottom: 2rem;
+    color: #ddd4a3;
+}
+.btnCard{
+    position: relative;
+    bottom: 3rem;
     text-decoration: none;
-    color: #c1c1c3;
-    font-size: 1.3rem;
+    color: #000;
 }
-.containerFooter a:hover{
-    text-decoration: underline;
+.btnNO{
+    display: none;
 }
-
-
-.parrafoFooter{
-    text-align: center;
-    font-size: 25px;
-    align-self: center;
-}
-
-
-
-
 /* admin-login */
 .formLog{
     width: 30%;
@@ -402,41 +543,132 @@
 }
 
 /* pagina inscripcion */
-.containerForm{
-    width: 50%;
+.inscriptionContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
     margin: auto;
-    border: 2px solid gray;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-    background-color: #57738d;
-    color: #c1c1c3;
 }
-.containerForm input{
-    margin: auto;
-    margin-top: .5rem;
-    width: 90%;
-}
-.containerForm select, label{
-    margin:0 2rem;
-    width: 90%;
+.inscriptionContainer ul{
+    list-style: none;
     font-size: 1.2rem;
 }
+.containerForm{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem auto;
+    margin-top: 0;
+    border: 2px solid gray;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
+    color: #414141;
+}
+.aForm{
+    color: blue
+}
+.rowForm{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.lineForm{
+    display: flex;
+    flex-direction: column;
+    min-height: 20%;
+    align-items: start;
+}
+.rowForm input{
+    width: 30rem;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem;
+}
+.rowForm select{
+    width: 30rem;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem;
+}
+
+.lineForm label{
+    width: 30rem;
+    font-size: 1rem;
+    color: #c1c1c3;
+    font-weight: 700;
+    position: relative;
+    top:.5rem;
+    right: 1rem;
+    width: fit-content;
+    
+}
+.rowForm textarea{
+    border: none;
+}
+
+
+.wallet_container{
+    width: 15rem;
+}
+
+.btnInsc{
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btnReg{
+    background-color: rgba(106, 238, 117, .7)
+}
+.btnReg:hover{
+    border: 1px solid #009900;
+    background-color: #000;
+    color: #009900;
+    box-shadow: .5rem .5rem 2rem #009900;
+}
+.btnCnl{
+    background-color: rgba(215, 32, 32, 0.824);
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+.btnCnl:hover{
+    border: 1px solid #cc3f47;
+    background-color: #000;
+    color: #cc3f47;
+    box-shadow: .5rem .5rem 2rem #cc3f47;
+}
+
+
 .btnContainerInsc{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin: 2rem 0;
+}
+/* pagina location */
+
+.ubicacionMain h2{
+    text-align: center;
     margin-bottom: 1rem;
 }
-/* location */
 .ubicacionContainer{
     display: flex;
     flex-direction: column;
-
     width: 100%;
     height: auto;
-    
+    text-align: center;
 }
+
 .ubicacionIframe{
     width: 80%;
     height: 500px;
@@ -444,15 +676,131 @@
     margin-bottom: 1rem;
 }
 
-/* participants */
+/* pagina  participants */
 .containerParticipants{
     width: 100%;
     height: 100%;
 }
 .containerParticipants iframe{
     width: 100%;
-    height: 1000px;
+    height: 1200px;
 }
+/* Pagina Schedule */
+
+.schedule{
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scheduleInfo{
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+
+.schedule h4{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #008080;
+    
+
+}
+.scheduleDays{
+    width:67%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    z-index: 1;
+    
+    
+}
+.scheduleDays img{
+    width: 67%;
+    position: absolute;
+    top: -100;
+    z-index: -10;
+    filter: blur(6px);
+    filter: opacity(0.5);
+    
+}
+.day{
+    width: 100%;
+    height: max-content;
+    border-bottom: 3px solid #008080c9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:#008080;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px #c1c1c1;
+    font-size: 1.2rem;
+    
+}
+.day span{
+    width: 50%;
+}
+.day span p{
+    height: .8rem;
+}
+
+/* pagina T&C */
+.tycContainer{
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+}
+.tycContainer li{
+    margin: .5rem;
+    border-bottom: 2px solid #c1c1c3;
+}
+.notesContainer{
+    width: 75%;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Pagina Success */
+.successContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.regSuccess{
+    padding: 2rem;
+    width: 40rem;
+
+    margin:  auto;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #ddd;
+}
+.regSuccess img{
+    width: 50%;
+    height: auto;
+}
+.regSuccess p{
+    margin-bottom: 1rem;
+}
+.regSuccess a{
+    background-color: #009900;
+    padding: .5rem;
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+.regSuccess a:hover{
+    background-color: #fff;
+    border: 1px solid #009900;
+    color: #009900;
+}
+
 
 /* responsive */
 @media screen and (max-width: 576px) {

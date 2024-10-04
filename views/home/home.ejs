@@ -19,41 +19,37 @@
         <nav class="navbar">
                     <ul class="lista">
                         <li><a class="linkNav" href="/">HOME</a></li>
-                        <li><a class="linkNav" href="/inscription">INSCRIPCION</a></li>
-                        <li><a class="linkNav" href="/ubicacion">UBICACION</a></li>
-                        <li><a class="linkNav" href="/participants">PARTICIPANTES</a></li>
-                        <li><a class="linkNav" href="/itinerario">ITINERARIO</a></li>   
-                        <li><a class="linkNav" href="/tyc">TERMINOS Y CONDICIONES</a></li>       
-                        <li><a class="linkNav" href="/admin/form">admin</a></li>    
+                        <li><a class="linkNav" href="/inscription">REGISTRATION</a></li>
+                        <li><a class="linkNav" href="/ubicacion">LOCATION</a></li>
+                        <li><a class="linkNav" href="/participants">PARTICIPANTS</a></li>
+                        <li><a class="linkNav" href="/itinerario">SCHEDULE</a></li>   
+                        <li><a class="linkNav" href="/tyc">TERMS AND CONDITIONS</a></li>        
                     </ul>
         </nav>
     </header>
-    <main>
+    <main class="homeMain">
         <div class="bannerHome">
             <img src="resources/img/banner.webp" alt="Torneo de arqueria">
             <p class="hometoptext">Welcome to the</p>
             <h1 class="title titleMain">WIAC Word Indoor Archery Championship 2025</h1>
-            <p class="datepara">06.08.2025 |</p>
+            <p class="datepara">October-06-2025 |</p>
             <p class="locationpara">Buenos Aires | Argentina</p>
         </div>
         <div class="containerMain">
             <img src="resources/img/LogoWIAC2025.png" alt="logoWIAC2025">
             <div class="message">
-                <h4>Mensaje de los organizadores</h4>
+                <h4>Message from the organisers</h4>
                 <br>
                 <p>
-                Estimados arqueros y aficionados al tiro con arco,<br>
-                Nos complace enormemente invitarles al Campeonato Mundial de Tiro con Arco WIAC 2025, organizado por la Asociación Argentina de Tiro con Arco.
-                El evento se llevará a cabo desde el 06.08.2025 hasta el 12.08.2025 y se desarrollará siguiendo las normas y reglamentos de la IFAA. La competencia está abierta a miembros de todo el mundo, limitado a 288 arqueros en buena posición de los países miembros.
-                El campeonato tendrá lugar en el majestuoso Polideportivo General Rodriguez. Este lugar, conocido por sus hermosos paisajes y su rica cultura, será el escenario perfecto para este evento de clase mundial.
-                Finalmente, en nombre de la Asociación Argentina de Tiro con Arco, del Comité Organizador del evento y de todos los arqueros argentinos, les damos una cálida bienvenida a Argentina para el Campeonato Mundial de Tiro con Arco WIAC 2025.
-                Atentamente,</p><br>
-                <strong><p class="pMsg">Gustavo Stancato</p></strong>
-                <p>Presidente del Comité Organizador del Campeonato Mundial de Tiro con Arco WIAC 2025</p></div>
+                    Dear archers and fans of archery,
+                    We are very pleased to invite you to the WIAC 2025 World Archery Championships, organized by the Argentine Archery Association. <br> The event will take place from October-06-2025 to October-12-2025 and will be held according to the rules and regulations of IFAA. The competition is open to members from all over the world, limited to 288 archers in good standing of member countries. The championship will take place at the majestic <strong>Polideportivo Municipal Colinas de Peralta Ramos</strong> . This place, known for its beautiful scenery and rich culture, will be the perfect setting for this world-class event. <br> Finally, on behalf of the Argentine Archery Association, the event’s Organizing Committee and all Argentine archers, we warmly welcome you to Argentina for the WIAC 2025 World Archery Championship. Sincerely,</p><br>
+                <p class="pMsg"><strong>Gustavo Stancato</strong></p>
+                <p>Chairman of the Organising Committee for the WIAC 2025 World Archery Championships</p></div>
         </div>
-            <div class="timer">
-                <div class="fecha"><span id="fecha"><p>WIAC 2025 starts in: </p></span></div>
-                <img src="resources/img/targetIFAA.webp" alt="timer">
+        <div class="timer">
+                <div class="fecha">
+                    <span id="fecha"><p>WIAC 2025 starts in: </p></span></div>
+
                 
             <div class="cuenta-atras" id="cuenta-atras">
                 <div class="grupo">
@@ -74,68 +70,150 @@
                 </div>  
             </div>
         </div>
-        <div class="needHelp"><p class="needHelpP">Need help?</p> <a class="needHelpBtn" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">aata.argentina.presidente@gmail.com</a>
+        <div class="needHelpContainer">
+            <button class="needHelpBtn btnHelp"
+            onclick="window.location.href='mailto:aata.argentina.presidente@gmail.com?Subject=Inquiry%20about%20the%20WIAC%202025%20tournament'">
+            </button>
         </div>
-        <h3 class="title">Schedule</h3>
-        <div class="schedule">
-            <div class="scheduleDays">
-                <div class="day"><span><h4>Monday</h4><p>12hs-18hs</p></span>
-                    <span><h4>06.08.2025</h4><p>Set up</p></span>
+        <div class="homeSchedule">
+            <div class="schlL">
+                <h2 class="subtitle">Activity schedule</h2>
+            </div>
+            <div class="schlR">
+                <div class="dropdown">
+                    <button class="daySchl">Monday 10-06-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>12hs - 18hs - Set up </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day"><span><h4>Tuesday</h4><p>8hs-13hs</p><p>8hs-13hs</p><p>13hs-14hs</p><p>15hs-17hs</p></span><span><h4>07.08.2025</h4><p>Registration and equipment Inspection</p><p>Practice range open</p><p>Captains Meeting</p><p>The March of Nations & Opening Ceremony</p>
+                <div class="dropdown">
+                    <button class="daySchl">Tuesday 10-07-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>8hs - 13hs - Registration and equipment inspection </li>
+                            <li>8hs - 13hs - Practice range open</li>
+                            <li>13hs - 14hs - Captains meeting </li>
+                            <li>15hs - 17hs - The March of Nations & Opening ceremony </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day"><span><h4>Wednesday</h4><p>8hs-16hs</p><p>8hs-17hs</p><p>9hs-12hs</p><p>13hs-16hs</p><p>17hs-20hs</p></span><span><h4>08.08.2025</h4><p>Registration and Equipment Inspection</p><p>Practice range open</p> <p>1st Round</p><p>2nd Round</p><p>3rd Round</p></span></div>
-                <div class="day"><span><h4>Thursday</h4><p>8hs-13hs</p><p>9hs-12hs</p><p>13hs-16hs</p></span><span><h4>09.08.2025</h4><p>Practice Range Open</p><p>1st Round</p><p>2nd Round</p></span></div>
-                <div class="day"><span><h4>Friday</h4><p>8hs-13hs</p><p>9hs-12hs</p><p>13hs-16hs</p></span><span><h4>10.08.2025</h4><p>Practice Range Open</p><p>1st Round</p><p>2nd Round</p></span></div>
-                <div class="day"><span><h4>Saturday</h4><p>8hs-17hs</p><p>9hs-12hs</p><p>13hs-16hs</p><p>17hs-20hs</p></span><span><h4>11.08.2025</h4><p>Practice Range Open</p><p>1st Round</p><p>2nd Round</p><p>3rd Round</p></span></div>
-                <div class="day"><span><h4>Sunday</h4><p>11hs-15hs</p></span><span><h4>12.08.2025</h4><p>Award Ceremony</p><p>Banquet</p><p>Closing Ceremony</p></span></div>
+                <div class="dropdown">
+                    <button class="daySchl">Wednesday 10-08-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>8hs - 16hs - Registration and equipment inspection</li>
+                            <li>8hs - 17hs - Practice range open </li>
+                            <li>9hs - 12hs - 1st Round </li>
+                            <li>13hs - 16hs - 2nd Round</li>
+                            <li>17hs - 20hs - 3rd Round</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="daySchl">Thursday 10-09-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>8hs - 13hs - Practice Range Open </li>
+                            <li>9hs - 12hs - 1st Round </li>
+                            <li>13hs - 16hs - 2nd Round</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="daySchl">Friday 10-10-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>8hs - 13hs - Practice Range Open </li>
+                            <li>9hs - 12hs - 1st Round </li>
+                            <li>13hs - 16hs - 2nd Round</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="daySchl">Saturday 10-11-2025</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>8hs - 17hs - Practice Range Open </li>
+                            <li>9hs - 12hs - 1st Round </li>
+                            <li>13hs - 16hs - 2nd Round</li>
+                            <li>17hs - 20hs - 3rd Round</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="daySchl">Sunday 10-12-2025</button>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>11hs - 15hs - Award Ceremony
+                                    Banquet
+                                    Closing Ceremony</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         </div>
         </div>
         <div class="bookingContainer">
-    <h2 class="subtitle">Book your space</h2>
-        <div class="booking">
-            
-            <div class="card secondGroup">
-                <h3>Early Bird</h3>
-                <p class="cardUp">From October 1st 2024 to October 31th 2024</p>
-                <p class="precio">€150</p>
-                <p class="cardDown">Adults - Juniors - Veterans - Seniors</p>
-                <p class="precio">€120</p>
-                <p class="cardDown">Cubs</p>
-                <a class="button type1" href="/inscription">
-                    <span class="btn-txt">Register</span></a>
+            <div class="bookingText">
+                <h2 class="subtitle">Book your space</h2>
+                <span><p>The torunament stars on Monday 6th of October 2025 until Saturday 12th of October 2025 <br></p><a href="/itinerario">SEE MORE</a> </span>
+                <span><p>The tournament takes place at Polideportivo Municipal Colinas de Peralta Ramos,Mar Del Plata, Buenos Aires, Argentina <br></p><a href="/ubicacion">SEE MORE</a></span>
             </div>
-            <div class="card earlyBird">
+            <div class="booking">
+                <div class="card secondGroup">
                 <h3>SecondCall</h3>
                 <p class="cardUp">From November 1st 2024 to January 31th 2025</p>
-                <p class="precio">€170</p>
+                <p class="precio Up">€170</p>
                 <p class="cardDown">Adults - Juniors - Veterans - Seniors</p>
-                <p class="precio">€130</p>
-                <p class="cardDown">Cubs</p>
-                <a class="button type1" href="/inscription">
-                    <span class="btn-txt">Register</span></a>
+                <p class="precio Dw">€130</p>
+                <p class="cardD">Cubs</p>
+                <a class="btnInsc btnReg btnCard btnNO " href="/inscription">Register</a>
             </div>
+            <div class="card earlyBird">
+                <span class="spanCard"></span>
+                <h3>Early Bird</h3>
+                <p class="cardUp">From October 7th 2024 to October 31th 2024</p>
+                <p class="precio Up">€150</p>
+                <p class="cardDown">Adults - Juniors - Veterans - Seniors</p>
+                <p class="precio Dw">€120</p>
+                <p class="cardD">Cubs</p>
+                <a class="btnInsc btnReg btnCard " href="/inscription">Register</a>
+            </div>
+            
             <div class="card lastCall">
                 <h3>Last call</h3>
                 <p class="cardUp">From February 1st 2025 to July 10th 2025</p>
-                <p class="precio">€190</p>
+                <p class="precio Up">€190</p>
                 <p class="cardDown">Adults - Juniors - Veterans - Seniors</p>
-                <p class="precio">€140</p>
-                <p class="cardDown">Cubs</p>
-                <a class="button type1" href="/inscription">
-                    <span class="btn-txt">Register</span></a>
-        </div>
-        </div>
-        <div class="needHelp"><p class="needHelpP">Need help?</p> <a class="needHelpBtn" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">aata.argentina.presidente@gmail.com</a>
+                <p class="precio Dw">€140</p>
+                <p class="cardD">Cubs</p>
+                <a class="btnInsc btnReg btnCard btnNO " href="/inscription">Register</a>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
         <div class="containerFooter">
-            <a href="/tyc" class="tycFooter">Terms of acceptances</a>
+            <img src="/resources/img/logoIFAA(@).png" alt="logoIFAA">
+            <img src="/resources/img/logoWIAC2025.png" alt="logoWIAC">
+            <img src="/resources/img/logoaata.png" alt="logoAATA">
+            <a href="/tyc" class="tycFooter">Terms & conditions</a>
             <a href="/tyc" class="privacyFotter">Privacy Policy</a>
-        <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
+            <a class="aFooter" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact us</a>
+            
         </div>
+        <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
     </footer>
-    <script src="resources/js/script.js"></script>
+    <script src="resources/js/timer.js"></script>
+    <script src="resources/js/schlMenu.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+

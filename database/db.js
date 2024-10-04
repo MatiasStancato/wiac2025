@@ -1,4 +1,9 @@
-const mysql = require("mysql");
+import mysql from  'mysql';
+
+import dotenv from 'dotenv';
+dotenv.config({ path: './env/.env' });
+
+
 const connection = mysql.createConnection({
     host:process.env.DB_HOST,
     user:process.env.DB_USER,
@@ -14,4 +19,5 @@ connection.connect((error)=>{
     console.log("Conectado a la BD mySQL");
 })
 
-module.exports = connection;
+
+export default connection;

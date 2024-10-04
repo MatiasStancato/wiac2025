@@ -1,8 +1,11 @@
-const express = require("express");
+import express from "express";
+import connection from "../database/db.js";
+import * as crud from '../controllers/crud.js';
+import bcryptjs from 'bcryptjs';
+import { createPreference, webhook } from "../controllers/mpController.js";
+
 const router = express.Router();
-const connection = require("../database/db");
-const crud = require("../controllers/crud");
-const bcryptjs = require('bcryptjs');
+
 
 router.get('/',(req,res)=>{
     res.render("home/home")
@@ -38,23 +41,13 @@ router.get('/register',(req,res)=>{
 })
 
 
-router.get('/admin/',(req,res)=>{
-    if(req.session.loggedin){
-        res.render('admin/index',{
-            login: true,
-            name: req.session.name
-        });
-    }else{
-        res.render('admin/index',{
-            login: false,
-            name:"Debe iniciar sesion"
-        })
-    }
-})
 
-
-
-
+router.get('/admin/', (req, res) => {
+    res.render('admin/index', {
+        login: req.session.loggedin || false,
+        name: req.session.loggedin ? req.session.name : "Debe iniciar sesion"
+    });
+});
 
 
 router.get("/admin/form", (req, res) => {
@@ -63,13 +56,14 @@ router.get("/admin/form", (req, res) => {
     if (error) {
         throw error;
     } 
-    else if (req.session.name==undefined){
+    else if (req.session.name === undefined){
         res.render("admin/login")
     }
     else {
         res.render("admin/form",{
             results:results,
-            name: req.session.name});
+            name: req.session.name,
+            login: req.session.loggedin || false});
     }
     });
 });
@@ -116,6 +110,7 @@ router.get("/delete/:id",(req,res)=>{
                     throw error;
                 } else {
                     res.render("admin/form",{
+                        login: req.session.loggedin || false,
                         results:results,
                         name: req.session.name,
                         alert:true,
@@ -124,7 +119,7 @@ router.get("/delete/:id",(req,res)=>{
                         alertIcon:"success",
                         showConfirmButton:false,
                         timer:4000,
-                        ruta:''}); 
+                        ruta:'admin/form'}); 
                 }
             });
         }
@@ -146,7 +141,7 @@ router.post('/register',async (req,res)=>{
                 alert:true,
                 alertTitle:"Registration",
                 alertMessage:"Succesful Registration!",
-                alertIcon:"sucess",
+                alertIcon:"success",
                 showConfirmButton:false,
                 timer:3000,
                 ruta:'login'
@@ -157,6 +152,7 @@ router.post('/register',async (req,res)=>{
 })
 
 //11-Autenticacion
+
 
 router.post('/auth',async (req,res)=>{
     const user =  req.body.user;
@@ -177,7 +173,6 @@ router.post('/auth',async (req,res)=>{
             }else{
                 req.session.loggedin = true;
                 req.session.name = results[0].name;
-                login = true
                 res.render('admin/login',{
                     alert:true,
                     alertTitle:"conexion exitosa",
@@ -194,9 +189,14 @@ router.post('/auth',async (req,res)=>{
     }
 })
 
+// mp controller
+router.post("/create_preference", createPreference);
+router.post("/webhook", webhook);
+
 
 
 
 router.post ('/save',crud.save)
 router.post('/update',crud.update)
-module.exports = router;
+
+export default router;

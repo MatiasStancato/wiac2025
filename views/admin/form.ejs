@@ -36,22 +36,24 @@
             <th scope="col">Gender</th>
             <th scope="col">Bow type</th>
             <th scope="col">Target type</th>
+            <th scope="col">Message</th>
             <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody >
                 <% results.forEach((user)=> {%>
                 <tr scope="row" class="table-primary ">
-                    <td><%= user.id%></td>
-                    <td><%= user.firstname%></td>
-                    <td><%= user.lastname%></td>
-                    <td><%= user.email%></td>
-                    <td><%= user.federation%></td>
-                    <td><%=user.country%></td>
-                    <td><%=user.ageclass%></td>
-                    <td><%=user.gender%></td>
-                    <td><%=user.bowtype%></td>
-                    <td><%=user.target%></td>
+                    <td><%= user.id %></td>
+                    <td><%= user.Firstname %></td>
+                    <td><%= user.Lastname %></td>
+                    <td><%= user.Email %></td>
+                    <td><%= user.Federation %></td>
+                    <td><%= user.Country %></td>
+                    <td><%= user.Ageclass%></td>
+                    <td><%= user.Gender %></td>
+                    <td><%= user.Bowtype %></td>
+                    <td><%= user.Target %></td>
+                    <td class="TdText"><%= user.Text %></td>
                     <td>
                         <a class="btn btn-primary" href="/edit/<%= user.id%>">Editar</a>
                         <a class="btn btn-danger" href="/delete/<%= user.id%>">Borrar</a>
