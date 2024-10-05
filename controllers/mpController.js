@@ -79,7 +79,7 @@ console.log('preferenceStoredelwebhook',preferencesStore);
         console.log("data", data);
 
         try {
-            const response2 = await fetch("http://fed0-37-159-64-217.ngrok-free.app/save", {
+            const response2 = await fetch("https://wiac2025.vercel.app/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
