@@ -79,7 +79,7 @@ console.log('preferenceStoredelwebhook',preferencesStore);
         console.log("data", data);
 
         try {
-            const response2 = await fetch("/save", {
+            const response2 = await fetch("https://wiac2025.vercel.app/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
