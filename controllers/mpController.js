@@ -79,13 +79,14 @@ console.log('preferenceStoredelwebhook',preferencesStore);
         console.log("data", data);
 
         try {
-            const response2 = await fetch("https://wiac2025.vercel.app/save", {
+            const response2 = await fetch("/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(preferencesStore), // Enviando preferencesStore al backend
             });
+            res.status(200).send("Datos guardados correctamente")
         } catch (error) {
             console.error("Error en el fetch:", error);
         }
