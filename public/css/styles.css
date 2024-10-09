@@ -196,8 +196,8 @@ main{
 
 .bannerHome img{
     width: 100vw;
-    height: 80vh;
-    object-fit: cover;
+    height: 100vh;
+    object-fit: fill;
     position: relative;
 }
 .bannerHome h1{
