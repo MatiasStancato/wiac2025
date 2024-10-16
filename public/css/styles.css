@@ -220,7 +220,7 @@ main{
     color: #FFFFFF;
     font-size: 2rem;
     top: 23rem;
-    left:26rem;
+    left:30rem;
     text-shadow: 1px 1px 3px black;
 }
 .locationpara{
@@ -228,8 +228,8 @@ main{
     position: absolute;
     color: #FFFFFF;
     font-size: 2rem;
-    top: 23rem;
-    left:45rem;
+    top: 25rem;
+    left:38rem;
     text-shadow: 1px 1px 3px black;
 }
 

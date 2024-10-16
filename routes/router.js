@@ -29,6 +29,9 @@ router.get('/tyc',(req,res)=>{
 router.get('/sucess',(req,res)=>{
     res.render("./home/registersucess")
 })
+router.get('/turism',(req,res)=>{
+    res.render("./home/turism")
+})
 
 
 // 12-auth
