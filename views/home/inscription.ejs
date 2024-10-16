@@ -185,8 +185,14 @@
                         <textarea  type="text" id="mssg" name="mssg" rows="6" cols="60" maxlength="255" ></textarea>    
                         </div>
                 </div>
+                    <div class="lineForm aceptTYC">
+                        <label>
+                            Acepto los <a href="/tyc">términos y condiciones</a> (*)
+                            <input type="checkbox" id="termsCheckbox" onclick="toggleRegisterButton()"> 
+                        </label>
+                    </div>
                 <div class="btnContainerInsc">
-                    <button class="btnInsc btnReg " type="button" id="checkout-btn">Register</button>
+                    <button class="btnInsc btnReg " type="button" id="checkout-btn" disabled>Register</button>
                     <a class="btnInsc btnCnl" href="/">Cancel</a>
                 </div>
             </form>
