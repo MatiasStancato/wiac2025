@@ -14,10 +14,10 @@ export const createOrder = async () => {
             data: {
                 attributes: {
                     redirect_urls: {
-                        success: "https://a870-91-80-9-110.ngrok-free.app/sucess",
-                        failed: "https://a870-91-80-9-110.ngrok-free.app/inscription",
+                        success: "https://b591-5-91-169-57.ngrok-free.app/sucess",
+                        failed: "https://b591-5-91-169-57.ngrok-free.appapp/inscription",
                     },
-                    webhookUrl: "https://a870-91-80-9-110.ngrok-free.app/webhook",
+                    webhookUrl: "https://b591-5-91-169-57.ngrok-free.app/webhook",
                     currency: "032",
                     items: [
                         {
