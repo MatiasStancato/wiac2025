@@ -196,22 +196,22 @@ main{
 
 .bannerHome img{
     width: 100vw;
-    height: 100vh;
-    object-fit: fill;
+    height: auto;
     position: relative;
+    object-fit: cover;
 }
 .bannerHome h1{
     position: absolute;
     color: #FFFFFF;
     font-size: 5rem;
-    top:16rem;
+    top:9rem;
     text-shadow: 1px 1px 3px black;
 }
 .hometoptext{
     position: absolute;
     color: #FFFFFF;
     font-size: 4rem;
-    top:13rem;
+    top:4rem;
     left: 29rem;
     text-shadow: 1px 1px 3px black;
 }
@@ -219,8 +219,8 @@ main{
     position: absolute;
     color: #FFFFFF;
     font-size: 2rem;
-    top: 39rem;
-    left:33rem;
+    top: 23rem;
+    left:26rem;
     text-shadow: 1px 1px 3px black;
 }
 .locationpara{
@@ -228,7 +228,7 @@ main{
     position: absolute;
     color: #FFFFFF;
     font-size: 2rem;
-    top: 39rem;
+    top: 23rem;
     left:45rem;
     text-shadow: 1px 1px 3px black;
 }
@@ -656,6 +656,14 @@ main{
     align-items: center;
     margin: 2rem 0;
 }
+#payment-container{
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
 /* pagina location */
 
 .ubicacionMain h2{
@@ -691,7 +699,7 @@ main{
 .schedule{
     background-size: cover;
     width: 100%;
-    height: max-content;
+    height: 100rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -715,8 +723,7 @@ main{
     flex-direction: column;
     margin-bottom: 1rem;
     z-index: 1;
-    
-    
+    height: 100%;
 }
 .scheduleDays img{
     width: 67%;
@@ -745,7 +752,7 @@ main{
     width: 50%;
 }
 .day span p{
-    height: .8rem;
+    height: 1.8rem;
 }
 
 /* pagina T&C */

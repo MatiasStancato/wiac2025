@@ -2,7 +2,7 @@ import express from "express";
 import connection from "../database/db.js";
 import * as crud from '../controllers/crud.js';
 import bcryptjs from 'bcryptjs';
-import { createPreference, webhook } from "../controllers/mpController.js";
+import { createOrder,webhook } from "../controllers/SPController.js";
 
 const router = express.Router();
 
@@ -189,12 +189,26 @@ router.post('/auth',async (req,res)=>{
     }
 })
 
-// mp controller
-router.post("/create_preference", createPreference);
+// SP controller
+
+router.post('/api/create-order', async (req, res) => {
+    try {
+      const order = await createOrder();
+  
+      // Imprimimos toda la respuesta para ver cómo es la estructura
+      console.log('Respuesta completa de la orden:', JSON.stringify(order, null, 2));
+      
+      if (order.data && order.data.attributes && order.data.attributes.links && order.data.attributes.links.checkout) {
+        res.json({ checkout: order.data.attributes.links.checkout });  // Devolvemos la URL del checkout
+      } else {
+        throw new Error('No se encontró el enlace de checkout en la respuesta de la orden');
+      }}catch (error) {
+      console.error('Error al crear la orden:', error);
+      res.status(500).json({ message: 'Error al crear la orden' });
+    }
+  });
+
 router.post("/webhook", webhook);
-
-
-
 
 router.post ('/save',crud.save)
 router.post('/update',crud.update)
