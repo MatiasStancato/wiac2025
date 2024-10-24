@@ -37,6 +37,9 @@
             <th scope="col">Bow type</th>
             <th scope="col">Target type</th>
             <th scope="col">Message</th>
+            <th scope="col" hidden>Date</th>
+            <th scope="col">Pay</th>
+            <th scope="col">Expired</th>
             <th scope="col">Action</th>
             </tr>
             </thead>
@@ -54,6 +57,23 @@
                     <td><%= user.Bowtype %></td>
                     <td><%= user.Target %></td>
                     <td class="TdText"><%= user.Text %></td>
+                    <td hidden><%= user.dateReg %></td>
+                    <td><%= user.Pay %></td>
+                    <td class="expired">
+                        <% 
+                        const dateReg = new Date(user.dateReg);
+                        const payReg = (user.Pay)
+                        const now = new Date();
+                        const diffTime = Math.abs(now - dateReg);
+                        const diffHours = Math.ceil(diffTime / (1000 * 60 * 60));
+                        
+                        if (diffHours > 336 && payReg ==="NO") { 
+                            %>EXPIRED<% 
+                        } else { 
+                            %><% 
+                        } 
+                        %>
+                    </td>
                     <td>
                         <a class="btn btn-primary" href="/edit/<%= user.id%>">Editar</a>
                         <a class="btn btn-danger" href="/delete/<%= user.id%>">Borrar</a>

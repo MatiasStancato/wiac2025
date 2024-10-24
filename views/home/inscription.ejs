@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,66 +10,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <link rel="stylesheet" href="resources/css/styles.css">
     <script src="resources/js/loader.js"></script>
     <title>Inscription | WIAC 2025</title>
-    
+
 
 </head>
 <header class="header">
-    <div class="logo"><a href="/"><img class="logo " src="resources/img/LogoWIAC2025.png" alt="logo wiac 2025"></a></div>
+    <div class="logo"><a href="/"><img class="logo " src="resources/img/LogoWIAC2025.png" alt="logo wiac 2025"></a>
+    </div>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <nav class="navbar">
-                <ul class="lista">
-                    <li><a class="linkNav" href="/">HOME</a></li>
-                    <li><a class="linkNav" href="/inscription">REGISTRATION</a></li>
-                    <li><a class="linkNav" href="/ubicacion">LOCATION</a></li>
-                    <li><a class="linkNav" href="/participants">PARTICIPANTS</a></li>
-                    <li><a class="linkNav" href="/itinerario">SCHEDULE</a></li>
-                    <li><a class="linkNav" href="/turism">TURISM</a></li>    
-                    <li><a class="linkNav" href="/tyc">TERMS AND CONDITIONS</a></li>            
-                </ul>
+        <ul class="lista">
+            <li><a class="linkNav" href="/">HOME</a></li>
+            <li><a class="linkNav" href="/inscription">REGISTRATION</a></li>
+            <li><a class="linkNav" href="/ubicacion">LOCATION</a></li>
+            <li><a class="linkNav" href="/participants">PARTICIPANTS</a></li>
+            <li><a class="linkNav" href="/itinerario">SCHEDULE</a></li>
+            <li><a class="linkNav" href="/turism">TURISM</a></li>
+            <li><a class="linkNav" href="/tyc">TERMS AND CONDITIONS</a></li>
+        </ul>
     </nav>
 </header>
+
 <body>
-<main>
+    <main>
         <div class="containerForm">
             <div class="inscriptionContainer">
                 <h1 class="title">Registration</h1>
                 <ul>
                     <li>Each inscription is only for one participant.
                     </li>
-                    <li>After filling the form, you will get a button to pay.
+                    <li>After filling the form, you will get 14 days from the reservation to pay the inscription.
                     </li>
+                    <li>After 14 days of the reservation, if you have not made the payment, your reservation will be CANCELED </li>
                     <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
                     <li>Note: Amounts will be charged in local currency (ARS).</li>
                     <li>(*) items in the form need to be complete.</li>
                     <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
                 </ul>
             </div>
-            <form id="registration-form" novalidate>
+            <form id="registration-form" action="/save" method="POST" novalidate>
                 <div class="rowForm">
                     <div class="lineForm ">
-                        <label for="First name">First name(*):</label>
-                        <input  type="text" id="First name" name="Firstname" autofocus required>
+                        <label for="Firstname">First name(*):</label>
+                        <input type="text" id="Firstname" name="Firstname" autofocus required>
+                        <span class="error-message" id="Firstname-error"></span>
                     </div>
                     <div class="lineForm">
-                        <label for="Last name">Last name(*):</label>
-                        <input  type="text" id="Last name" name="Lastname"
-                        required>
+                        <label for="Lastname">Last name(*):</label>
+                        <input type="text" id="Lastname" name="Lastname" required>
+                        <span class="error-message" id="Lastname-error"></span>
                     </div>
                 </div>
-    
+
                 <div class="rowForm">
                     <div class="lineForm"><label for="Email">Email(*):</label>
-                        <input  type="Email" id="Email" name="Email"
-                            required>
+                        <input type="Email" id="Email" name="Email" required>
+                        <span class="error-message" id="Email-error"></span>
                     </div>
-                    <div class="lineForm"><label for="Federation">Federation(*):</label>
-                        <select  id="Federation" name="Federation"required>
+                    <div class="lineForm">
+                        <label for="Federation">Federation(*):</label>
+                        <select id="Federation" name="Federation" required>
                             <option value="" disabled selected hidden>Select an option</option>
                             <option value="AAE">AAE</option>
                             <option value="AFAA">AFAA</option>
@@ -124,18 +127,18 @@
                             <option value="WFAA">WFAA</option>
                             <option value="AZA">AZA</option>
                         </select>
+                        <span class="error-message" id="Federation-error"></span>
                     </div>
                 </div>
                 <div class="rowForm">
                     <div class="lineForm"><label for="Country">Country(*):</label>
-                        <input  type="text" id="Country" name="Country"
-                             required>
+                        <input type="text" id="Country" name="Country" required>
+                        <span class="error-message" id="Country-error"></span>
                     </div>
                     <div class="lineForm">
-                        <label for="ageclass">Age Class(*)</label>
-                        <select  id="Age class" name="Ageclass" 
-                            required>
-                            <option value="" disabled selected>Select an option</option>
+                        <label for="Ageclass">Age Class(*):</label>
+                        <select id="Ageclass" name="Ageclass" required>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="A">Adult (A)</option>
                             <option value="C">Cub (C)</option>
                             <option value="J">Junior (J)</option>
@@ -143,21 +146,24 @@
                             <option value="V">Veteran (V)</option>
                             <option value="YA">Young Adult (YA)</option>
                         </select>
+                        <span class="error-message" id="Ageclass-error"></span>
                     </div>
                 </div>
                 <div class="rowForm">
                     <div class="lineForm">
-                        <label for="Gender">Gender(*)</label>
-                        <select  id="Gender" name="Gender" required>
-                            <option value="" disabled selected>Select an option</option>
+                        <label for="Gender">Gender(*):</label>
+                        <select id="Gender" name="Gender" required>
+                            <span class="error-message" id="Gender-error"></span>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="F">Female (F)</option>
                             <option value="M">Male (M)</option>
                         </select>
+                        <span class="error-message" id="Gender-error"></span>
                     </div>
                     <div class="lineForm">
-                        <label for="Bow type">Bow Type(*)</label>
-                        <select  id="Bow type" name="Bowtype" required>
-                            <option value="" disabled selected>Select an option</option>
+                        <label for="Bowtype">Bow Type(*):</label>
+                        <select id="Bowtype" name="Bowtype" required>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="BB-C">Barebow Compound (BB-C)</option>
                             <option value="BB-R">Barebow Recurve (BB-R)</option>
                             <option value="BH-C">Bowhunter Compound (BH-C)</option>
@@ -171,59 +177,62 @@
                             <option value="LB">LongBow (LB)</option>
                             <option value="TR">Traditional Recurve Bow (TR)</option>
                         </select>
+                        <span class="error-message" id="Bowtype-error"></span>
                     </div>
                 </div>
                 <div class="rowForm">
                     <div class="lineForm">
-                        <label for="Target">Target type(*)</label>
+                        <label for="Target">Target type(*):</label>
                         <select id="Target" name="Target" required>
-                            <option value="" disabled selected>Select an option</option>
+                            <option value="" disabled selected hidden>Select an option</option>
                             <option value="5">5 Spot</option>
                             <option value="1">1 Spot</option>
                         </select>
+                        <span class="error-message" id="Target-error"></span>
                     </div>
-                    <div class="lineForm"><label for="text">Message</label>
-                        <textarea  type="text" id="mssg" name="mssg" rows="6" cols="60" maxlength="255" ></textarea>    
-                        </div>
+                    <div class="lineForm"><label for="Mssg">Message</label>
+                        <textarea type="text" id="mssg" name="Mssg" rows="6" cols="72" maxlength="255"></textarea>
+                    </div>
                 </div>
-                    <div class="lineForm aceptTYC">
-                        <label>
-                            Acepto los <a href="/tyc">términos y condiciones</a> (*)
-                            <input type="checkbox" id="termsCheckbox" onclick="toggleRegisterButton()"> 
-                        </label>
-                    </div>
+                <div class="lineForm aceptTYC">
+                    <label>
+                        I accept the <a href="/tyc">terms & conditions</a> (*)
+                        <input type="checkbox" id="termsCheckbox">
+                        <span class="error-message" id="terms-error"></span>
+                    </label>
+                </div>
                 <div class="btnContainerInsc">
-                    <button class="btnInsc btnReg " type="button" id="checkout-btn" disabled>Register</button>
+                    <button class="btnInsc btnReg " type="button" id="checkout-btn" >Register</button>
                     <a class="btnInsc btnCnl" href="/">Cancel</a>
                 </div>
             </form>
-            <!-- <div id="wallet_container"></div> -->
-            <div id="payment-container" style="display: none;">
-                <a id="checkout-link" href="#" class="btn btn-primary btn-sipago">Loading pay button..</a>
-            </div>
         </div>
-    
+
         <div class="needHelpContainer">
             <button class="needHelpBtn btnHelp"
-            onclick="window.location.href='mailto:aata.argentina.presidente@gmail.com?Subject=Inquiry%20about%20the%20WIAC%202025%20tournament'">
+                onclick="window.location.href='mailto:aata.argentina.presidente@gmail.com?Subject=Inquiry%20about%20the%20WIAC%202025%20tournament'">
             </button>
         </div>
-        <script src="resources/js/tycValidate.js"></script>
-        <script src="resources/js/SPButton.js"></script>
-</main>
+        <script src="/resources/js/InscValidator.js">
+            
+        </script>
+    </main>
 
-<footer class="footer">
-    <div class="containerFooter">
-        <img src="/resources/img/logoIFAA(@).png" alt="logoIFAA">
-        <img src="/resources/img/logoWIAC2025.png" alt="logoWIAC">
-        <img src="/resources/img/logoaata.png" alt="logoAATA">
-        <a href="/tyc" class="tycFooter">Terms & conditions</a>
-        <a href="/tyc" class="privacyFotter">Privacy Policy</a>
-        <a class="aFooter" href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact us</a>
-        
-    </div>
-    <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
-</footer>
-<div class="loader"></div>
+    <footer class="footer">
+        <div class="containerFooter">
+            <img src="/resources/img/logoIFAA(@).png" alt="logoIFAA">
+            <img src="/resources/img/logoWIAC2025.png" alt="logoWIAC">
+            <img src="/resources/img/logoaata.png" alt="logoAATA">
+            <a href="/tyc" class="tycFooter">Terms & conditions</a>
+            <a href="/tyc" class="privacyFotter">Privacy Policy</a>
+            <a class="aFooter"
+                href="mailto:aata.argentina.presidente@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact
+                us</a>
+
+        </div>
+        <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
+    </footer>
+    <div class="loader"></div>
 </body>
+
 </html>

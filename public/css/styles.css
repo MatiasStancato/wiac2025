@@ -549,12 +549,16 @@ main{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 60%;
+    width: 80%;
     margin: auto;
 }
 .inscriptionContainer ul{
     list-style: none;
     font-size: 1.2rem;
+    
+}
+.inscriptionContainer ul li{
+    margin: .3rem;
 }
 .containerForm{
     width: 90%;
@@ -566,7 +570,7 @@ main{
     border: 2px solid gray;
     margin-bottom: 2rem;
     background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
-    color: #414141;
+    color: #c1c1c3;
 }
 .aForm{
     color: blue
@@ -626,9 +630,6 @@ main{
 }
 
 
-.wallet_container{
-    width: 15rem;
-}
 
 .btnInsc{
     border: none;
@@ -677,6 +678,14 @@ main{
     justify-content: center;
     margin: auto;
     margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}
+.invalid {
+    border-color: red;
 }
 /* pagina location */
 
