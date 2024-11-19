@@ -26,7 +26,14 @@ document.getElementById('checkout-btn').addEventListener('click', function () {
         return;
     }
 
-    form.submit();
+    const formData = new FormData(form);
+    const queryParams = new URLSearchParams();
+
+    formData.forEach((value, key) => {
+        queryParams.append(key, value);
+    });
+
+    window.location.href = `/regSumary?${queryParams.toString()}`;
 });
 
 function clearErrorMessages() {

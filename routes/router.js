@@ -31,6 +31,9 @@ router.get('/sucess',(req,res)=>{
 router.get('/turism',(req,res)=>{
     res.render("./home/turism")
 })
+router.get('/regSumary',(req,res)=>{
+    res.render("./home/regSumary",{ query: req.query })
+})
 
 
 // 12-auth

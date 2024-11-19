@@ -561,16 +561,18 @@ main{
     margin: .3rem;
 }
 .containerForm{
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 2rem auto;
     margin-top: 0;
-    border: 2px solid gray;
     margin-bottom: 2rem;
     background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
     color: #c1c1c3;
+}
+.containerForm h2{
+    text-align: center;
 }
 .aForm{
     color: blue

@@ -45,7 +45,21 @@ export const sendConfirmationEmail = ({
                         <p style="font-size: 20px; color: #dc3545;">NOTE: You have 14 days from this moment to make the transfer.</p>
                         <p style="font-size: 20px; color: #dc3545;">YOUR RESERVATION EXPIRES ON: <strong>${expDate}</strong></p>
                     </div>
-                    <p style="font-size: 16px; margin-top: 20px;">For more information contact us: <a href="mailto:contacto@wiac2025.com.ar" style="color: #007BFF; text-decoration: none;">contacto@wiac2025.com.ar</a></p>
+                    <div style="width:80%; margin:auto;">
+                    <h2 style="color: #007BFF; font-size:30px;">Payment Instruction</h2>
+                    <p style="font-size:20px;"><strong>PAY TO/PAGAR A:</strong> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</p>
+                    <p style="font-size:20px;"><strong>ACCOUNT NUMBER / NUMERO DE CUENTA:</strong> 027-014475/4</p>
+                    <p style="font-size:20px;"><strong>WITH / CON:</strong> BANCO CREDICOOP C.L. - BUENOS AIRES</p>
+                    <p style="font-size:20px;"><strong>SWIFT ADDRESS / DIRECCION SWIFT:</strong> BCOOARBA</p>
+                    <p style="font-size:20px;"><strong>THROUGH / A TRAVÉS DE:</strong> COMMERZBANK AG - FRANKFURT</p>
+                    <p style="font-size:20px;"><strong>SWIFT ADDRESS / DIRECCION SWIFT:</strong> COBADEFF</p> 
+                    <p style="font-size:20px;">PLEASE NOTE The transfer commission fees are as follows:<br></p>
+                    <p style="font-size:20px;">$15 USD for transfers up to $500 USD.<br></p>
+                    <p style="font-size:20px;">$25 USD for transfers from $501 USD to $1,000 USD.<br></p>
+                    <p style="font-size:20px;">You can include two or more registrations in a single transfer.</p>
+                    
+                    </div>
+                    <p style="font-size: 16px; margin-top: 20px;">For more information contact us: <a href="mailto:wiac2025@gmail.com" style="color: #007BFF; text-decoration: none;">wiac2025@gmail.com</a></p>
                 <footer style="text-align: center; margin-top: 30px;">
                     <p style="font-size: 12px; color: #888;">WIAC 2025 | World Indoor Archery Championship</p>
                 </footer>
