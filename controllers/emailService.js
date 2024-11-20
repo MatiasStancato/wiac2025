@@ -1,6 +1,6 @@
 import nodeMailer from "nodemailer";
 
-export const sendConfirmationEmail = ({
+export const sendConfirmationEmail = async ({
     firstName,
     lastname,
     email,
@@ -23,7 +23,7 @@ export const sendConfirmationEmail = ({
         },
     });
 
-    let mail = {
+    const  mailOptions = {
         from: "contacto@wiac2025.com.ar",
         to: email,
         subject: "Confirmed reservation WIAC 2025",
@@ -67,11 +67,13 @@ export const sendConfirmationEmail = ({
         `,
     };
 
-    transporter.sendMail(mail, (error, info) => {
-        if (error) {
-            console.log("Error al enviar el correo: ", error);
-        } else {
-            console.log("Correo enviado: ", info.response);
-        }
-    });
-};
+    try{
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Correo enviado",info.response);
+    return info;
+    }
+    catch (error){
+        console.error("Error al enviar el correo:", error);
+        throw error;
+    }
+    };
