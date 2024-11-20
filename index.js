@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import connection from "./database/db.js";
 dotenv.config({ path: "./env/.env" });
 import cors from "cors";
+import cookieSession from "cookie-session";
 
 const app = express(); //
 //para capturar los datos del formulario
@@ -30,13 +31,15 @@ app.set("view engine", "ejs");
 //bcryptjs
 import bcryptjs from "bcryptjs";
 
-//express-session
-import session from "express-session";
+// cookie-session
 app.use(
-    session({
-    secret: "secret",
-    resave: true,
-    saveUninitialized: true,    
+    cookieSession({
+        name: "session",
+        secret: process.env.SESSION_SECRET || "secret",
+        maxAge: 24 * 60 * 60 * 1000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
     })
 );
 
