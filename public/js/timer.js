@@ -1,4 +1,4 @@
-let fecha = new Date(2025, 9, 8 , 8 , );
+let fecha = new Date(2025, 10, 3 , 8 , );
 
 let msFecha = fecha.getTime();
 

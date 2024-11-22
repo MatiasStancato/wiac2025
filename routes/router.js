@@ -56,6 +56,7 @@ router.get('/admin/', (req, res) => {
 
 
 router.get("/admin/form", (req, res) => {
+    console.log("Sesión actual:", req.session);
   connection.query("SELECT * FROM participants", (error, results) => {
     
     if (error) {
@@ -75,9 +76,9 @@ router.get("/admin/form", (req, res) => {
 
 
 router.get('/logout',(req,res)=>{
-    req.session.destroy(()=>{
+    
+    req.session= null;
         res.redirect('/login');
-})
 })
 
 
@@ -157,42 +158,41 @@ router.post('/register',async (req,res)=>{
 })
 
 //11-Autenticacion
-
-
-router.post('/auth',async (req,res)=>{
-    const user =  req.body.user;
+router.post('/auth', async (req, res) => {
+    const user = req.body.user;
     const pass = req.body.pass;
-    let passwordHaash = await bcryptjs.hash(pass,8);
-    if (user && pass){
-        connection.query('SELECT * FROM users WHERE user = ?', [user], async (error,results)=>{
-            if(results.length == 0 || !(await bcryptjs.compare(pass,results[0].pass))){
-                res.render('admin/login',{
-                    alert:true,
-                    alertTitle:"Error",
-                    alertMessage:"Usuario y/o password incorrectas!",
-                    alertIcon:"error",
-                    showConfirmButton:true,
-                    timer:1500,
-                    ruta:'login'
-                })
-            }else{
+
+    if (user && pass) {
+        connection.query('SELECT * FROM users WHERE user = ?', [user], async (error, results) => {
+            if (results.length == 0 || !(await bcryptjs.compare(pass, results[0].pass))) {
+                res.render('admin/login', {
+                    alert: true,
+                    alertTitle: "Error",
+                    alertMessage: "Usuario y/o password incorrectas!",
+                    alertIcon: "error",
+                    showConfirmButton: true,
+                    timer: 1500,
+                    ruta: 'login'
+                });
+            } else {
                 req.session.loggedin = true;
                 req.session.name = results[0].name;
-                res.render('admin/login',{
-                    alert:true,
-                    alertTitle:"conexion exitosa",
-                    alertMessage:"Login correcto",
-                    alertIcon:"success",
-                    showConfirmButton:false,
-                    timer:3000,
-                    ruta:'admin/form'
+                // Respuesta de éxito con redirección a la página de administración
+                res.render('admin/login', {
+                    alert: true,
+                    alertTitle: "Conexión exitosa",
+                    alertMessage: "Login correcto",
+                    alertIcon: "success",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    ruta: 'admin/form'
                 });
             }
-        })
-    }else{
-        res.send('Por favor ingrese un usuario y contrasena')
+        });
+    } else {
+        res.send('Por favor ingrese un usuario y contraseña');
     }
-})
+});
 
 
 router.post ('/save',crud.save)
