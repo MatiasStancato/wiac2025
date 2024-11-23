@@ -28,7 +28,7 @@
             <li><a class="linkNav" href="/participants">PARTICIPANTS</a></li>
             <li><a class="linkNav" href="/itinerario">SCHEDULE</a></li>
             <li><a class="linkNav" href="/turism">TURISM</a></li>
-            <li><a class="linkNav" href="/tyc">TERMS AND CONDITIONS</a></li>
+            <li><a class="linkNav" href="/tyc">T&C</a></li>
         </ul>
     </nav>
 </header>
@@ -145,12 +145,12 @@
                         <label for="Ageclass">Age Class(*):</label>
                         <select id="Ageclass" name="Ageclass" required>
                             <option value="" disabled selected hidden>Select an option</option>
-                            <option value="A">Adult (A)</option>
-                            <option value="C">Cub (C)</option>
-                            <option value="J">Junior (J)</option>
-                            <option value="S">Senior (S)</option>
-                            <option value="V">Veteran (V)</option>
-                            <option value="YA">Young Adult (YA)</option>
+                            <option value="Adult">Adult (A)</option>
+                            <option value="Cub">Cub (C)</option>
+                            <option value="Junior">Junior (J)</option>
+                            <option value="Senior">Senior (S)</option>
+                            <option value="Veteran">Veteran (V)</option>
+                            <option value="Young Adult">Young Adult (YA)</option>
                         </select>
                         <span class="error-message" id="Ageclass-error"></span>
                     </div>
@@ -170,18 +170,18 @@
                         <label for="Bowtype">Bow Type(*):</label>
                         <select id="Bowtype" name="Bowtype" required>
                             <option value="" disabled selected hidden>Select an option</option>
-                            <option value="BB-C">Barebow Compound (BB-C)</option>
-                            <option value="BB-R">Barebow Recurve (BB-R)</option>
-                            <option value="BH-C">Bowhunter Compound (BH-C)</option>
-                            <option value="BH-R">Bowhunter Recurve (BH-R)</option>
-                            <option value="BL">Bowhunter Limited (BL)</option>
-                            <option value="BU">Bowhunter Unlimited (BU)</option>
-                            <option value="FS-C">Freestyle Limited Compound (FS-C)</option>
-                            <option value="FS-R">Freestyle Limited Recurve (FS-R)</option>
-                            <option value="FU">Freestyle Unlimited (FU)</option>
-                            <option value="HB">Historical Bow (HB)</option>
-                            <option value="LB">LongBow (LB)</option>
-                            <option value="TR">Traditional Recurve Bow (TR)</option>
+                            <option value="Barebow Compound">Barebow Compound (BB-C)</option>
+                            <option value="Barebow Recurve">Barebow Recurve (BB-R)</option>
+                            <option value="Bowhunter Compound">Bowhunter Compound (BH-C)</option>
+                            <option value="Bowhunter Recurve">Bowhunter Recurve (BH-R)</option>
+                            <option value="Bowhunter Limited">Bowhunter Limited (BL)</option>
+                            <option value="Bowhunter Unlimited">Bowhunter Unlimited (BU)</option>
+                            <option value="Freestyle Limited Compound">Freestyle Limited Compound (FS-C)</option>
+                            <option value="Freestyle Limited Recurve">Freestyle Limited Recurve (FS-R)</option>
+                            <option value="Freestyle Unlimited">Freestyle Unlimited (FU)</option>
+                            <option value="Historical Bow">Historical Bow (HB)</option>
+                            <option value="LongBow">LongBow (LB)</option>
+                            <option value="Traditional Recurve Bow">Traditional Recurve Bow (TR)</option>
                         </select>
                         <span class="error-message" id="Bowtype-error"></span>
                     </div>
@@ -191,10 +191,17 @@
                         <label for="Target">Target type(*):</label>
                         <select id="Target" name="Target" required>
                             <option value="" disabled selected hidden>Select an option</option>
-                            <option value="5">5 Spot</option>
-                            <option value="1">1 Spot</option>
+                            <option value="5 spots">5 Spots</option>
+                            <option value="1 spot">1 Spot</option>
                         </select>
                         <span class="error-message" id="Target-error"></span>
+                            <label for="Flint"> Flint Target type(*):</label>
+                            <select id="Flint" name="Flint" required>
+                                <option value="" disabled selected hidden>Select an option</option>
+                                <option value="standard">Stardard</option>
+                                <option value="4 spots">4 Spots</option>
+                            </select>
+                            <span class="error-message" id="Flint-error"></span>
                     </div>
                     <div class="lineForm"><label for="Mssg">Message</label>
                         <textarea type="text" id="mssg" name="Mssg" rows="6" cols="72" maxlength="255"></textarea>

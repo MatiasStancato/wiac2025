@@ -56,7 +56,6 @@ router.get('/admin/', (req, res) => {
 
 
 router.get("/admin/form", (req, res) => {
-    console.log("Sesión actual:", req.session);
   connection.query("SELECT * FROM participants", (error, results) => {
     
     if (error) {

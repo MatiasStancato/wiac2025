@@ -21,6 +21,7 @@ export const save = (req, res) => {
     const gender = req.body.Gender;
     const bowtype = req.body.Bowtype;
     const target = req.body.Target;
+    const flint = req.body.Flint;
     const mssg = req.body.Mssg;
 
     let price = ageclass === "C" ? "EUR 120.00" : "EUR 150.00";
@@ -38,7 +39,9 @@ export const save = (req, res) => {
             Gender: gender,
             Bowtype: bowtype,
             Target: target,
+            Flint:flint,
             Text: mssg,
+            
         },
         (error, results) => {
             if (error) {
@@ -54,6 +57,7 @@ export const save = (req, res) => {
                     gender,
                     bowtype,
                     target,
+                    flint,
                     price,
                     expDate,
                 });
@@ -84,11 +88,12 @@ export const update = (req, res) => {
     const gender = req.body.Gender;
     const bowtype = req.body.Bowtype;
     const target = req.body.Target;
+    const flint = req.body.Flint;
     const mssg = req.body.Text;
     const Pay = req.body.Pay;
 
     const query =
-        "UPDATE participants SET Firstname = ?, Lastname = ?, Email = ?, Federation = ?, Country = ?, Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Text =?, Pay=? WHERE id = ?";
+        "UPDATE participants SET Firstname = ?, Lastname = ?, Email = ?, Federation = ?, Country = ?, Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Flint = ?, Text =?, Pay=? WHERE id = ?";
     const values = [
         firstName,
         lastname,
@@ -99,6 +104,7 @@ export const update = (req, res) => {
         gender,
         bowtype,
         target,
+        flint,
         mssg,
         Pay,
         id,

@@ -10,6 +10,7 @@ export const sendConfirmationEmail = async ({
     gender,
     bowtype,
     target,
+    flint,
     price,
     expDate,
 }) => {
@@ -39,7 +40,8 @@ export const sendConfirmationEmail = async ({
                     <p style="font-size:20px;"><strong>Age Class:</strong> ${ageclass}.</p>
                     <p style="font-size:20px;"><strong>Gender:</strong> ${gender}.</p>
                     <p style="font-size:20px;"><strong>Bowtype:</strong> ${bowtype}.</p>
-                    <p style="font-size:20px;"><strong>Target:</strong> ${target} spot.</p>
+                    <p style="font-size:20px;"><strong>Target:</strong> ${target}.</p>
+                    <p style="font-size:20px;"><strong>Flint Target:</strong> ${flint}.</p>
                     <p style="font-size:20px;"><strong>Price:</strong> ${price}</p>
                     <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 20px;">
                         <p style="font-size: 20px; color: #dc3545;">NOTE: You have 14 days from this moment to make the transfer.</p>

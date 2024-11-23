@@ -113,25 +113,32 @@
             <label for="Bow type">Bow Type:</label>
             <select class="form-control form-control-sm" id="Bow type" name="Bowtype">
                 <option value="" disabled selected>Select an option</option>
-                <option <%= user.Bowtype=='BB-C' ? "selected" : "" %> value="BB-C">Barebow Compound (BB-C)</option>
-                <option <%= user.Bowtype=='BB-R' ? "selected" : "" %> value="BB-R">Barebow Recurve (BB-R)</option>
-                <option <%= user.Bowtype=='BH-C' ? "selected" : "" %> value="BH-C">Bowhunter Compound (BH-C)</option>
-                <option <%= user.Bowtype=='BB-R' ? "selected" : "" %> value="BH-R">Bowhunter Recurve (BH-R)</option>
-                <option <%= user.Bowtype=='BL' ? "selected" : "" %> value="BL">Bowhunter Limited (BL)</option>
-                <option <%= user.Bowtype=='BU' ? "selected" : "" %> value="BU">Bowhunter Unlimited (BU)</option>
-                <option <%= user.Bowtype=='FS-C' ? "selected" : "" %> value="FS-C">Freestyle Limited Compound (FS-C)</option>
-                <option <%= user.Bowtype=='FS-R' ? "selected" : "" %> value="FS-R">Freestyle Limited Recurve (FS-R)</option>
-                <option <%= user.Bowtype=='FU' ? "selected" : "" %> value="FU">Freestyle Unlimited (FU)</option>
-                <option <%= user.Bowtype=='HB' ? "selected" : "" %> value="HB">Historical Bow (HB)</option>
-                <option <%= user.Bowtype=='LB' ? "selected" : "" %> value="LB">LongBow (LB)</option>
-                <option <%= user.Bowtype=='TR' ? "selected" : "" %> value="TR">Traditional Recurve Bow (TR)</option>
+                <option <%= user.Bowtype=='Barebow Compound' ? "selected" : "" %> value=Barebow Compound">Barebow Compound (BB-C)</option>
+                <option <%= user.Bowtype=='Barebow Recurve' ? "selected" : "" %> value="Barebow Recurve">Barebow Recurve (BB-R)</option>
+                <option <%= user.Bowtype=='Bowhunter Compound' ? "selected" : "" %> value="Bowhunter Compound">Bowhunter Compound (BH-C)</option>
+                <option <%= user.Bowtype=='Bowhunter Recurve' ? "selected" : "" %> value="Bowhunter Recurve">Bowhunter Recurve (BH-R)</option>
+                <option <%= user.Bowtype=='Bowhunter Limited' ? "selected" : "" %> value="Bowhunter Limited">Bowhunter Limited (BL)</option>
+                <option <%= user.Bowtype=='Bowhunter Unlimited' ? "selected" : "" %> value="Bowhunter Unlimited">Bowhunter Unlimited (BU)</option>
+                <option <%= user.Bowtype=='Freestyle Limited Compound' ? "selected" : "" %> value="FS-C">Freestyle Limited Compound (FS-C)</option>
+                <option <%= user.Bowtype=='FS-R' ? "selected" : "" %> value="Freestyle Limited Recurve">Freestyle Limited Recurve (FS-R)</option>
+                <option <%= user.Bowtype=='Freestyle Unlimited' ? "selected" : "" %> value="Freestyle Unlimited">Freestyle Unlimited (FU)</option>
+                <option <%= user.Bowtype=='Historical Bow' ? "selected" : "" %> value="Historical Bow">Historical Bow (HB)</option>
+                <option <%= user.Bowtype=='LongBow' ? "selected" : "" %> value="LongBow">LongBow (LB)</option>
+                <option <%= user.Bowtype=='Traditional Recurve Bow' ? "selected" : "" %> value="Traditional Recurve Bow">Traditional Recurve Bow (TR)</option>
             </select>
             <br>
             <label for="Target">Target type:</label>
             <select class="form-control form-control-sm" id="Target" name="Target" required>
                 <option value="" disabled selected>Select an option</option>
-                <option <%= user.Target=='5' ? "selected" : "" %> value="5">5 spots</option>
-                <option <%= user.Target=='1' ? "selected" : "" %> value="1">1 spot</option>
+                <option <%= user.Target=='5 spots' ? "selected" : "" %> value="5 spots">5 Spots</option>
+                <option <%= user.Target=='1 spot' ? "selected" : "" %> value="1 spot">1 Spot</option>
+            </select>
+            <br>
+            <label for="Flint">Flint type:</label>
+            <select class="form-control form-control-sm" id="Flint" name="Flint" required>
+                <option value="" disabled selected>Select an option</option>
+                <option <%= user.Flint=='standard' ? "selected" : "" %> value="standard">Standard</option>
+                <option <%= user.Flint=='4 spots' ? "selected" : "" %> value="4 spots">4 Spots</option>
             </select>
             <br>
             <label for="text">Message</label>
