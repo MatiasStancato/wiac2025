@@ -52,3 +52,13 @@ app.use("/", router);
 app.listen(port, () => {
     console.log(`SERVER corriendo en http://localhost:${port}`);
 }); //metodo de express
+
+process.on('uncaughtException', (err) => {
+    console.error('Excepción no capturada:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Promesa rechazada sin manejar:', promise, 'Razón:', reason);
+});
+
+
