@@ -22,6 +22,9 @@ export const sendConfirmationEmail = async ({
             user: process.env.MAILER_USER,
             pass: process.env.MAILER_PASS,
         },
+        tls: {
+            rejectUnauthorized: false, // Úsalo solo para pruebas.
+        },
     });
 
     const  mailOptions = {
