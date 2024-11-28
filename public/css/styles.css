@@ -346,7 +346,7 @@ main{
     font-weight: 400;
 }
 .bookingText span{
-    width: 90%;
+    width: 80%;
     text-align: center;
     font-size: 1.5rem;
     position: relative;
@@ -358,11 +358,12 @@ main{
 }
 
 .bookingText span a{
+    display: block;
     background-color: #008080;
-    color: #000;
+    color: #fff;
     padding: .3rem .5rem;
     text-decoration: none;
-    border-radius: 10px;
+    width: 100%;
 }
 .bookingText span a:hover{
     background-color: #c1c1c3;
@@ -374,7 +375,6 @@ main{
     height: 40rem;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
     
@@ -388,7 +388,7 @@ main{
     width: 100%;
     border:1px solid #c1c1c3;
     /* margin: 0px .5rem; */
-    border-radius: 1rem;
+    border-radius: .4rem;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -719,13 +719,13 @@ main{
 .ubicacionParraf a{
     display: block; 
     background-color: #008080;
-    color: #000;
+    color: #fff;
     padding: .5rem .5rem;
     text-decoration: none;
-    border-radius: 10px;;
     margin: auto ;
-    width: max-content;
+    width: 35%;
     font-weight: 600;
+    margin-top: 1rem;
 }
 
 .ubicacionParraf a:hover{
@@ -737,7 +737,7 @@ main{
 /* pagina  participants */
 .containerParticipants{
     width: 100%;
-    height: 100%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -751,11 +751,16 @@ main{
 .listadoPart{
     text-decoration: none;
     padding: .5rem 1rem;
-    background-color: #009900;
+    background-color: #008080;
     color: white;
     margin: auto;
-    width: max-content;
+    width: 10rem;
     align-self:center;
+    text-align: center;
+}
+.listadoPart:hover{
+    background-color: white;
+    color:#008080;
 }
 
 /* Pagina Schedule */
