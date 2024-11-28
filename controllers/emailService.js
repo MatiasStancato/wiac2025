@@ -15,7 +15,7 @@ export const sendConfirmationEmail = async ({
     expDate,
 }) => {
     const transporter = nodeMailer.createTransport({
-        service: "gmail",
+        service: "smtp.gmail.com",
         port: 465,
         secure: true,
         auth: {
