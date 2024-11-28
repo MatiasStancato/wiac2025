@@ -35,50 +35,40 @@
 
 <body>
     <main>
-        <div class="containerForm">
-            <h1 class="title">Inscription details</h1>
-            <div class="inscriptionContainer">
-                <ul>
-                    <li><h3>First name: <%= query.Firstname %></h3></li>
-                    <li><h3>Last name: <%= query.Lastname %></h3></li>
-                    <li><h3>Email: <%= query.Email %></h3></li>
-                    <li><h3>Federation: <%= query.Federation %></h3></li>
-                    <li><h3>Country: <%= query.Country %></h3></li>
-                    <li><h3>Age Class: <%= query.Ageclass %></h3></li>
-                    <li><h3>Gender: <%= query.Gender %></h3></li>
-                    <li><h3>Bow Type: <%= query.Bowtype %></h3></li>
-                    <li><h3>Target type: <%= query.Target %></h3></li>
-                    <li><h3>Flint Target type: <%= query.Flint %></h3></li>
-                    <li><h3>Message: <%= query.Mssg %></h3></li>
-                    <hr>
-                    <div>
-                        <h2>Payment Instruction</h2>
-                        <p><strong>PAY TO/PAGAR A:</strong> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</p>
-                        <p><strong>ACCOUNT NUMBER / NUMERO DE CUENTA:</strong> 027-014475/4</p>
-                        <p><strong>WITH / CON:</strong> BANCO CREDICOOP C.L. - BUENOS AIRES</p>
-                        <p><strong>SWIFT ADDRESS / DIRECCION SWIFT:</strong> BCOOARBA</p>
-                        <p><strong>THROUGH / A TRAVÉS DE:</strong> COMMERZBANK AG - FRANKFURT</p>
-                        <p><strong>SWIFT ADDRESS / DIRECCION SWIFT:</strong> COBADEFF</p>
-                        <li>PLEASE NOTE The transfer commission fees are as follows:<br>
-                            $15 USD for transfers up to $500 USD.<br>
-                            $25 USD for transfers from $501 USD to $1,000 USD.<br>
-                            You can include two or more registrations in a single transfer.</li> 
+        <div class="sumaryContainer">
+                <div class="subSumaryContainer">
+                    <div class="inscDetails">
+                        <h2>Inscription details</h2>
+                        <ul>
+                            <li><h3><span>First name:</span> <%= query.Firstname %></h3></li>
+                            <li><h3><span>Last name:</span> <%= query.Lastname %></h3></li>
+                            <li><h3><span>Email:</span> <%= query.Email %></h3></li>
+                            <li><h3><span>Federation:</span> <%= query.Federation %></h3></li>
+                            <li><h3><span>Country:</span> <%= query.Country %></h3></li>
+                            <li><h3><span>Age Class:</span> <%= query.Ageclass %></h3></li>
+                            <li><h3><span>Gender:</span> <%= query.Gender %></h3></li>
+                            <li><h3><span>Bow Type:</span> <%= query.Bowtype %></h3></li>
+                            <li><h3><span>Target type:</span> <%= query.Target %></h3></li>
+                            <li><h3><span>Flint Target type:</span> <%= query.Flint %></h3></li>
+                        </ul>
+                        </div>
                         <hr>
-                    </div>
-                    <div>
-                        <h2>NOTE:</h2>
-                        <li>Each inscription is only for one participant.
-                        </li>
-                        <li>After filling the form, you will get 14 days from the reservation to pay the registration fee and send the receipt to wiac2025@gmail.com
-                        </li>
-                        <li>After 14 days of the inscription, if you have not made the payment, your reservation will be <strong>CANCELED</strong> </li>
-                        <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
-                        <li>Note: Amounts will be charged in local currency (ARS).</li>
-                        <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
-                    </div>
-                    
-                </ul>
-                
+                    <div class="paymentInstruction">
+                                <h2>Payment Instruction</h2>
+                        <ul>        
+                                <li><h3><span>PAY TO/PAGAR A:</span> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</h3></li>
+                                <li><h3><span>ACCOUNT NUMBER / NUMERO DE CUENTA:</span> 027-014475/4</h3></li>
+                                <li><h3><span>WITH / CON:</span> BANCO CREDICOOP C.L. - BUENOS AIRES</h3></li>
+                                <li><h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> BCOOARBA</h3></li>
+                                <li><h3><span>THROUGH / A TRAVÉS DE:</span> COMMERZBANK AG - FRANKFURT</h3></li>
+                                <li><h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> COBADEFF</h3></li>
+                                <li><h3><span>PLEASE NOTE</span> The transfer commission fees are as follows:</h3>
+                                    $15 USD for transfers up to $500 USD.<br>
+                                    $25 USD for transfers from $501 USD to $1,000 USD.<br>
+                                    You can include two or more registrations in a single transfer.</li> 
+                        </ul>            
+                        </div>
+                </div>
                 <form class="btnContainerInsc" action="/save" method="POST">
                     <input type="hidden" name="Firstname" value="<%= query.Firstname %>">
                     <input type="hidden" name="Lastname" value="<%= query.Lastname %>">
@@ -94,16 +84,25 @@
                     <button type="submit" class="btnInsc btnReg">Confirm</button>
                     <a class="btnInsc btnCnl" href="/">Cancel</a> 
                 </form>
-            </div>
-        </div>
+                <div class="insNotes">
+                        <h2>NOTE</h2>
+                        <li>Each inscription is only for one participant.
+                        </li>
+                        <li>After filling the form, you will get 14 days from the reservation to pay the registration fee and send the receipt to wiac2025@gmail.com
+                        </li>
+                        <li>After 14 days of the inscription, if you have not made the payment, your reservation will be <strong>CANCELED</strong> </li>
+                        <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
+                        <li>Note: Amounts will be charged in local currency (ARS).</li>
+                        <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
+                </div>
 
+        </div>
         <div class="needHelpContainer">
             <button class="needHelpBtn btnHelp"
                 onclick="window.location.href='mailto:wiac2025@gmail.com?Subject=Inquiry%20about%20the%20WIAC%202025%20tournament'">
             </button>
         </div>
         <script src="/resources/js/InscValidator.js">
-            
         </script>
     </main>
 
