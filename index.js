@@ -53,17 +53,17 @@ app.listen(port, () => {
     console.log(`SERVER corriendo en http://localhost:${port}`);
 }); //metodo de express
 
-process.on('uncaughtException', (err) => {
-    console.error('Excepción no capturada:', err);
-});
+// process.on('uncaughtException', (err) => {
+//     console.error('Excepción no capturada:', err);
+// });
 
-process.on('unhandledRejection', (reason, promise) => {
-    console.error('Promesa rechazada sin manejar:', promise, 'Razón:', reason);
-});
+// process.on('unhandledRejection', (reason, promise) => {
+//     console.error('Promesa rechazada sin manejar:', promise, 'Razón:', reason);
+// });
 
-app.use((req, res, next) => {
-    console.log(`Solicitud recibida: ${req.method} ${req.url}`);
-    next();
-});
+// app.use((req, res, next) => {
+//     console.log(`Solicitud recibida: ${req.method} ${req.url}`);
+//     next();
+// });
 
 

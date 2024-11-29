@@ -24,7 +24,7 @@ export const save = (req, res) => {
     const flint = req.body.Flint;
     const mssg = req.body.Mssg;
 
-    let price = ageclass === "C" ? "EUR 120.00" : "EUR 150.00";
+    let price = ageclass === "Cub" ? "EUR 120.00" : "EUR 150.00";
 
 
     connection.query(

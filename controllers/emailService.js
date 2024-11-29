@@ -15,20 +15,18 @@ export const sendConfirmationEmail = async ({
     expDate,
 }) => {
     const transporter = nodeMailer.createTransport({
-        service: "smtp.gmail.com",
+        service:"gmail",
+        host: "smtp.gmail.com", 
         port: 465,
         secure: true,
         auth: {
             user: process.env.MAILER_USER,
             pass: process.env.MAILER_PASS,
         },
-        tls: {
-            rejectUnauthorized: false, // Úsalo solo para pruebas.
-        },
     });
 
     const  mailOptions = {
-        from: "contacto@wiac2025.com.ar",
+        from: "wiac2025@gmail.com",
         to: email,
         subject: "Confirmed reservation WIAC 2025",
         html: `
@@ -74,11 +72,11 @@ export const sendConfirmationEmail = async ({
 
     try{
     const info = await transporter.sendMail(mailOptions);
-    console.log("Correo enviado",info.response);
+    console.log("Email sentt",info.response);
     return info;
     }
     catch (error){
-        console.error("Error al enviar el correo:", error);
+        console.error("Error sending email:", error);
         throw error;
     }
     };
