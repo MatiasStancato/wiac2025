@@ -41,9 +41,7 @@ router.get('/regSumary',(req,res)=>{
 router.get('/login',(req,res)=>{
     res.render('admin/login')
 })
-router.get('/register',(req,res)=>{
-    res.render('admin/register')
-})
+
 
 
 
@@ -131,30 +129,6 @@ router.get("/delete/:id",(req,res)=>{
     });
 });
 
-//10- registracion 
-router.post('/register',async (req,res)=>{
-    const user = req.body.user;
-    const name = req.body.name;
-    const rol = req.body.rol;
-    const pass = req.body.pass;
-    let passwordHaash = await bcryptjs.hash(pass,8);
-    connection.query('INSERT INTO users SET ?',{user:user, name:name,rol:rol,pass:passwordHaash},async(error,results)=>{
-        if(error){
-            console.log(error);
-        }else{
-            res.render('admin/login',{
-                alert:true,
-                alertTitle:"Registration",
-                alertMessage:"Succesful Registration!",
-                alertIcon:"success",
-                showConfirmButton:false,
-                timer:3000,
-                ruta:'login'
-            })
-            
-        }
-    })
-})
 
 //11-Autenticacion
 router.post('/auth', async (req, res) => {
