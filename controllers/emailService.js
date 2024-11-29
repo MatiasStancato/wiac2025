@@ -72,7 +72,7 @@ export const sendConfirmationEmail = async ({
 
     try{
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sentt",info.response);
+    console.log("Email sent",info.response);
     return info;
     }
     catch (error){

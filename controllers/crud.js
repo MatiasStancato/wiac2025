@@ -1,6 +1,6 @@
 import connection from "../database/db.js";
 import { sendConfirmationEmail } from "./emailService.js";
-
+import { sendConfirmationEmail2 } from "./emailer.js";
 
 const now = new Date();
 const expDate = new Date(now);
@@ -47,7 +47,7 @@ export const save = (req, res) => {
             if (error) {
                 console.log(error);
             } else {
-                sendConfirmationEmail({
+                const emailData = ({
                     firstName,
                     lastname,
                     email,
@@ -60,7 +60,10 @@ export const save = (req, res) => {
                     flint,
                     price,
                     expDate,
+                    mssg,
                 });
+                sendConfirmationEmail(emailData);
+                sendConfirmationEmail2(emailData);
 
 
                 res.render("home/registersucess", {
