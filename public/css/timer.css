@@ -54,15 +54,22 @@
     height: 1rem;
 }
 
-/* @media (width <550px ){
-    .cuenta-atras{
-        display: grid;
-        columns: 1fr 1fr;
+@media screen and (max-width: 576px) {
+    .fecha{
+        font-size: 3.2rem;
+        width: 20rem;
+    }
+    .grupo{
+        text-align: center;
+    }
+    .grande{
+        font-size: 3rem;
+        text-align: center;
+        margin: 0.5rem;
+    }
+    .chico{
+        font-size: 1rem;
+        text-align: center;
+        gap: 0;
     }
 }
-@media (width <350px ){
-    .cuenta-atras{
-        display: flex;
-        flex-direction:column;  
-    }
-} */

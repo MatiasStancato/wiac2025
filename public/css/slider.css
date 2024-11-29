@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     height: 30rem;
-    background-color: #f4f4f4;
 }
 
 .slider {
@@ -39,7 +38,7 @@ button {
     padding: 20px;
     cursor: pointer;
     border-radius: .5rem;
-    z-index: 1000;
+    z-index: 100;
     font-size: 1rem;
 }
 
@@ -54,3 +53,27 @@ button:hover {
 .next {
     right: 10px;
 }
+/* responsive */
+@media screen and (max-width: 576px) {
+
+.hotelLeft{
+    width: 100%;
+}
+
+.hotelRight{
+    width: 100%;
+    height: max-content;
+}    
+.slider{
+    margin-top: 1rem;
+    width: 100%;
+    flex-direction: column;
+    height: max-content;
+}
+.slide{
+    display: block;
+    height: max-content;
+    width: 100%;
+}
+}
+
