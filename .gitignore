@@ -4,4 +4,4 @@
 /node_modules/
 .vercel
 
-views/admin/register.ejs
+wiac2025/views/admin/register.ejs
