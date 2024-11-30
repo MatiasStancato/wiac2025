@@ -25,6 +25,7 @@
     display: none;
 }
 
+
 .menu-icon {
     cursor: pointer;
     display: none; 
@@ -1017,7 +1018,7 @@ main{
     display: none;
     position: absolute;
     left: 0;
-    top: .5rem;
+    top:0;
     background-color: #008080;
     width: 100vw;
     height: max-content;
@@ -1041,8 +1042,8 @@ main{
     height: max-content;
     width: 100vw;
 }
-.header lable{
-    width: 1rem;
+.header label{
+    margin-bottom: 0;
 }
 .logo{
     width: 6rem;
@@ -1250,5 +1251,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-
+.hidden{
+    display: none;
+}
 }
