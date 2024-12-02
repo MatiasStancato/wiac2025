@@ -1,16 +1,15 @@
-import connection from "../database/db.js";
+import pool from "../database/db.js"; // Asegúrate de que este archivo usa mysql2 con pool y promesas.
 import { sendConfirmationEmail } from "./emailService.js";
 import { sendConfirmationEmail2 } from "./emailer.js";
 
 const now = new Date();
 const expDate = new Date(now);
-expDate.setDate(expDate.getDate() + 14); 
+expDate.setDate(expDate.getDate() + 14);
 
-export const save = (req, res) => {
+export const save = async (req, res) => {
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
     };
-
 
     const firstName = capitalizeFirstLetter(req.body.Firstname);
     const lastname = capitalizeFirstLetter(req.body.Lastname);
@@ -26,61 +25,63 @@ export const save = (req, res) => {
 
     let price = ageclass === "Cub" ? "EUR 120.00" : "EUR 150.00";
 
+    try {
+        const query = `
+            INSERT INTO participants 
+            (firstname, lastname, Email, Federation, Country, Ageclass, Gender, Bowtype, Target, Flint, Text)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
-    connection.query(
-        "INSERT INTO participants SET ?",
-        {
-            firstname: firstName,
-            lastname: lastname,
-            Email: email,
-            Federation: federation,
-            Country: country,
-            Ageclass: ageclass,
-            Gender: gender,
-            Bowtype: bowtype,
-            Target: target,
-            Flint:flint,
-            Text: mssg,
-            
-        },
-        (error, results) => {
-            if (error) {
-                console.log(error);
-            } else {
-                const emailData = ({
-                    firstName,
-                    lastname,
-                    email,
-                    federation,
-                    country,
-                    ageclass,
-                    gender,
-                    bowtype,
-                    target,
-                    flint,
-                    price,
-                    expDate,
-                    mssg,
-                });
-                sendConfirmationEmail(emailData);
-                sendConfirmationEmail2(emailData);
+        const values = [
+            firstName,
+            lastname,
+            email,
+            federation,
+            country,
+            ageclass,
+            gender,
+            bowtype,
+            target,
+            flint,
+            mssg,
+        ];
 
+        await pool.query(query, values);
 
-                res.render("home/registersucess", {
-                    alert: true,
-                    alertTitle: "Registration",
-                    alertMessage: "Succesfull Registration.",
-                    alertIcon: "sucess",
-                    showConfirmButton: false,
-                    timer: 3000,
-                    ruta: "sucess",
-                });
-            }
-        }
-    );
+        const emailData = {
+            firstName,
+            lastname,
+            email,
+            federation,
+            country,
+            ageclass,
+            gender,
+            bowtype,
+            target,
+            flint,
+            price,
+            expDate,
+            mssg,
+        };
+
+        sendConfirmationEmail(emailData);
+        sendConfirmationEmail2(emailData);
+
+        res.render("home/registersucess", {
+            alert: true,
+            alertTitle: "Registration",
+            alertMessage: "Successful Registration.",
+            alertIcon: "success",
+            showConfirmButton: false,
+            timer: 3000,
+            ruta: "sucess",
+        });
+    } catch (error) {
+        console.error("Error saving participant:", error);
+        res.status(500).send("Error al guardar el participante.");
+    }
 };
 
-export const update = (req, res) => {
+export const update = async (req, res) => {
     const id = req.body.id;
     const firstName = req.body.Firstname.toLowerCase();
     const lastname = req.body.Lastname.toLowerCase();
@@ -95,8 +96,12 @@ export const update = (req, res) => {
     const mssg = req.body.Text;
     const Pay = req.body.Pay;
 
-    const query =
-        "UPDATE participants SET Firstname = ?, Lastname = ?, Email = ?, Federation = ?, Country = ?, Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Flint = ?, Text =?, Pay=? WHERE id = ?";
+    const query = `
+        UPDATE participants 
+        SET Firstname = ?, Lastname = ?, Email = ?, Federation = ?, Country = ?, 
+            Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Flint = ?, Text = ?, Pay = ? 
+        WHERE id = ?`;
+
     const values = [
         firstName,
         lastname,
@@ -113,31 +118,25 @@ export const update = (req, res) => {
         id,
     ];
 
-    connection.query(query, values, (error, results) => {
-        if (error) {
-            console.log(error);
-            res.send("Error al actualizar el participante.");
-        } else {
-            // Hacer otra consulta para obtener los registros actualizados
-            connection.query("SELECT * FROM participants", (error, results) => {
-                if (error) {
-                    console.log(error);
-                    res.send("Error al obtener los participantes.");
-                } else {
-                    res.render("admin/form", {
-                        login: req.session.loggedin || false,
-                        results: results, // Esto es ahora un array de participantes
-                        name: req.session.name,
-                        alert: true,
-                        alertTitle: "Update",
-                        alertMessage: "Participant updated successfully!",
-                        alertIcon: "success",
-                        showConfirmButton: false,
-                        timer: 3000,
-                        ruta: "admin/form",
-                    });
-                }
-            });
-        }
-    });
+    try {
+        await pool.query(query, values);
+
+        const [results] = await pool.query("SELECT * FROM participants");
+
+        res.render("admin/form", {
+            login: req.session.loggedin || false,
+            results, // Array de participantes
+            name: req.session.name,
+            alert: true,
+            alertTitle: "Update",
+            alertMessage: "Participant updated successfully!",
+            alertIcon: "success",
+            showConfirmButton: false,
+            timer: 3000,
+            ruta: "admin/form",
+        });
+    } catch (error) {
+        console.error("Error updating participant:", error);
+        res.status(500).send("Error al actualizar el participante.");
+    }
 };

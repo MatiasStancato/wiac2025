@@ -3,7 +3,6 @@ import express from "express";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import dotenv from "dotenv";
-import connection from "./database/db.js";
 dotenv.config({ path: "./env/.env" });
 import cors from "cors";
 import cookieSession from "cookie-session";
