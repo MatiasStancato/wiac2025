@@ -37,6 +37,7 @@ export const sendConfirmationEmail2 = async ({
                     <h1 style="color: #007BFF; font-size:30px;">Nuevo registro de ${firstName} ${lastname},</h1>
                     <h2 style="color: #414141; font-size:24px;">Detalles:</h2>
                     <p style="font-size:20px;"><strong>Full Name:</strong> ${lastname} ${firstName}.</p>
+                    <p style="font-size:20px;"><strong>Email:</strong> ${email}.</p>
                     <p style="font-size:20px;"><strong>Federation:</strong> ${federation}.</p>
                     <p style="font-size:20px;"><strong>Country:</strong> ${country}.</p>
                     <p style="font-size:20px;"><strong>Age Class:</strong> ${ageclass}.</p>
