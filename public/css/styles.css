@@ -323,6 +323,10 @@ main{
 .dropdown-content li:hover {
     background-color: #ddd;
 }
+.roundDay{
+    color: #000;
+    border-bottom: 1px solid black;
+}
 .show {
     display: block;
 }
@@ -1090,6 +1094,7 @@ main{
     font-size: 1.1rem;
     position: absolute;
     top:20rem;
+    text-align: center;
 }
 .hometoptext{
     position: absolute;
@@ -1134,6 +1139,9 @@ main{
 
 .dropdown{
     width: 100%;
+}
+.roundTipe{
+    background-color: #c1c1c3;
 }
 .bookingContainer{
     flex-direction: column;
@@ -1240,6 +1248,7 @@ main{
     height: 4rem;
     margin-bottom: 1rem;
 }
+
 /* turism */
 
 .turismHotel{
