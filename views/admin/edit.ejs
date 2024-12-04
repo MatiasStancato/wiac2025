@@ -96,12 +96,12 @@
             <label for="Age class">Age Class:</label>
             <select class="form-control form-control-sm" id="Age class" name="Ageclass">
                 <option value="" disabled selected>Select an option</option>
-                <option <%= user.Ageclass=='A' ? "selected" : "" %> value="A">Adult (A)</option>
-                <option <%= user.Ageclass=='C' ? "selected" : "" %> value="C">Cub (C)</option>
-                <option <%= user.Ageclass=='J' ? "selected" : "" %> value="J">Junior (J)</option>
-                <option <%= user.Ageclass=='S' ? "selected" : "" %> value="S">Senior (S)</option>
-                <option <%= user.Ageclass=='V' ? "selected" : "" %> value="V">Veteran (V)</option>
-                <option <%= user.Ageclass=='YA' ? "selected" : "" %> value="YA">Young Adult (YA)</option>
+                <option <%= user.Ageclass=='Adult' ? "selected" : "" %> value="Adult">Adult (A)</option>
+                <option <%= user.Ageclass=='Cub' ? "selected" : "" %> value="Cub">Cub (C)</option>
+                <option <%= user.Ageclass=='Junior' ? "selected" : "" %> value="Junio">Junior (J)</option>
+                <option <%= user.Ageclass=='Senior' ? "selected" : "" %> value="Senior">Senior (S)</option>
+                <option <%= user.Ageclass=='Veteran' ? "selected" : "" %> value="Veteran">Veteran (V)</option>
+                <option <%= user.Ageclass=='Young Adult' ? "selected" : "" %> value="Young Adult">Young Adult (YA)</option>
             </select>
             <br>
             <label for="Gender">Gender:</label>
