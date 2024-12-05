@@ -185,6 +185,24 @@
 .btnHelp:hover::before {
     transform: translateY(-50px) scale(0) rotate(120deg);
 }
+/* logo Whatsapp */
+.IcoWhatsDesk{
+    width: 10rem;
+    height: auto;
+    position: fixed;
+    bottom: .5rem;
+    right: 4rem
+}
+.logoWhatsDesk{
+    width: 12rem;
+}
+.logoWhatsDesk:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+.IcoWhats{
+    display: none;
+}
 /* Pagina Home */
 main{
     background: rgb(220, 219, 209);
@@ -1038,6 +1056,21 @@ main{
     .navbar ul a{
         color: #fff;
         width: max-content;
+    }
+
+    .IcoWhatsDesk{
+        display: none;
+    }
+    .logoWhats{
+        width: 4rem;
+    }
+    .IcoWhats{
+        display: block;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: .5rem;
+        right: 0rem;
     }
 
 .header{
