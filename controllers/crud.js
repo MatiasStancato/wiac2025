@@ -23,13 +23,15 @@ export const save = async (req, res) => {
     const flint = req.body.Flint;
     const mssg = req.body.Mssg;
 
+    const Pay = "NO";
+
     let price = ageclass === "Cub" ? "EUR 120.00" : "EUR 150.00";
 
     try {
         const query = `
             INSERT INTO participants 
-            (firstname, lastname, Email, Federation, Country, Ageclass, Gender, Bowtype, Target, Flint, Text)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+            (firstname, lastname, Email, Federation, Country, Ageclass, Gender, Bowtype, Target, Flint, Text,Pay)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)`;
 
         const values = [
             firstName,
@@ -43,6 +45,7 @@ export const save = async (req, res) => {
             target,
             flint,
             mssg,
+            Pay,
         ];
 
         await pool.query(query, values);
@@ -82,12 +85,15 @@ export const save = async (req, res) => {
 };
 
 export const update = async (req, res) => {
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+    };
     const id = req.body.id;
-    const firstName = req.body.Firstname.toLowerCase();
-    const lastname = req.body.Lastname.toLowerCase();
+    const firstName = capitalizeFirstLetter(req.body.Firstname);
+    const lastname = capitalizeFirstLetter(req.body.Lastname);
     const email = req.body.Email;
     const federation = req.body.Federation;
-    const country = req.body.Country.toLowerCase();
+    const country = capitalizeFirstLetter(req.body.Country);
     const ageclass = req.body.Ageclass;
     const gender = req.body.Gender;
     const bowtype = req.body.Bowtype;
@@ -99,7 +105,7 @@ export const update = async (req, res) => {
     const query = `
         UPDATE participants 
         SET Firstname = ?, Lastname = ?, Email = ?, Federation = ?, Country = ?, 
-            Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Flint = ?, Text = ?, Pay = ? 
+            Ageclass = ?, Gender = ?, Bowtype = ?, Target = ?, Flint = ?, Text = ?, Pay = ?
         WHERE id = ?`;
 
     const values = [
