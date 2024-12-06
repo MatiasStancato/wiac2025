@@ -66,8 +66,8 @@ export const save = async (req, res) => {
             mssg,
         };
 
-        // sendConfirmationEmail(emailData);
-        // sendConfirmationEmail2(emailData);
+        sendConfirmationEmail(emailData);
+        sendConfirmationEmail2(emailData);
 
         res.render("home/registersucess", {
             alert: true,
