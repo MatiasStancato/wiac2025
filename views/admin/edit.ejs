@@ -180,7 +180,20 @@
 
         </script>
         <%}%>
-    
+        <script>
+            // Al guardar la posición
+            window.addEventListener("beforeunload", () => {
+              sessionStorage.setItem("scrollPosition", window.scrollY);
+            });
+          
+            // Al cargar la página
+            window.addEventListener("load", () => {
+              const scrollPosition = sessionStorage.getItem("scrollPosition");
+              if (scrollPosition !== null) {
+                window.scrollTo(0, parseInt(scrollPosition));
+              }
+            });
+          </script>
     
 </body>
 </html>
