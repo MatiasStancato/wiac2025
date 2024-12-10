@@ -8,7 +8,10 @@ expDate.setDate(expDate.getDate() + 14);
 
 export const save = async (req, res) => {
     const capitalizeFirstLetter = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        return string
+            .split(" ") // Divide el string en un array por espacios
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitaliza cada palabra
+            .join(" "); // Une las palabras en un string
     };
 
     const firstName = capitalizeFirstLetter(req.body.Firstname);
@@ -86,7 +89,10 @@ export const save = async (req, res) => {
 
 export const update = async (req, res) => {
     const capitalizeFirstLetter = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        return string
+            .split(" ") // Divide el string en un array por espacios
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitaliza cada palabra
+            .join(" "); // Une las palabras en un string
     };
     const id = req.body.id;
     const firstName = capitalizeFirstLetter(req.body.Firstname);
