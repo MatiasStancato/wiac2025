@@ -60,9 +60,11 @@ export const sendConfirmationEmail = async ({
                     <p style="font-size:20px;">$15 USD for transfers up to $500 USD.<br></p>
                     <p style="font-size:20px;">$25 USD for transfers from $501 USD to $1,000 USD.<br></p>
                     <p style="font-size:20px;">You can include two or more registrations in a single transfer.</p>
-                    
+                    <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 20px;">
+                        <p style="font-size: 20px; color: #dc3545;">NOTE: The transfer fee must be paid at the time of making the registration payment. Otherwise, it will be charged when the participant shows up at the tournament registration.</p>
                     </div>
-                    <p style="font-size: 16px; margin-top: 20px;">For more information contact us: <a href="mailto:wiac2025@gmail.com" style="color: #007BFF; text-decoration: none;">wiac2025@gmail.com</a></p>
+                    </div>
+                    <p style="font-size: 16px; margin-top: 20px;">For more information contact us: <a href="mailto:wiac2025@gmail.com" style="color: #007BFF; text-decoration: none;">wiac2025@gmail.com</a></p>I
                 <footer style="text-align: center; margin-top: 30px;">
                     <p style="font-size: 12px; color: #888;">WIAC 2025 | World Indoor Archery Championship</p>
                 </footer>
