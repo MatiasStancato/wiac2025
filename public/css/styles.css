@@ -866,7 +866,7 @@ main{
     text-align: center;
 }
 .hotelLeft{
-    width: 20rem;
+    width: 25rem;
     height: max-content;
     margin: auto;
     text-align: center;
@@ -874,6 +874,11 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
+.hotelLeft p{
+    background-color: white;
+    color:#008080;
+}
+
 .hotelLeft span{
     background-color: #008080;
     color: white;
@@ -889,6 +894,7 @@ main{
     background-color: white;
     color:#008080;
 }
+ 
 
 .turismHotel h3{
     font-size: 2rem;
@@ -923,6 +929,35 @@ main{
     object-fit: cover;
     margin: auto;
 }
+
+.club360{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.club360 img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.club360 h3{
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.club360 ul{
+    background-color: white;
+}
+.club360 li{
+    list-style: none;
+}
+.club360 div{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
 .turismNeed{
     position: relative;
     top:2rem
