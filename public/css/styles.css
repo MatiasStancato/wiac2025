@@ -856,6 +856,44 @@ main{
     height: 100%;
     margin: auto;
 }
+.mdqMoreInfo, .santaClaraMoreInfo{
+    width: 100%;
+    height: max-content;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.mdqMoreInfo img, .santaClaraMoreInfo img{
+    width: 80%;
+    margin-bottom: 1rem;
+}
+.mdqMoreInfo p, .santaClaraMoreInfo p{
+    width: 90%;
+    line-height: 2rem;
+}
+
+.mdqMoreInfo a, .santaClaraMoreInfo a{
+    display: block;
+    background-color: #008080;
+    color: #fff;
+    padding: .3rem .5rem;
+    text-decoration: none;
+    width: max-content;
+    margin-bottom: .5rem;
+}
+.mdqMoreInfoPbottom{
+    text-align: center;
+}
+
+.mdqMoreInfo a:hover, .santaClaraMoreInfo a:hover{
+    background-color: #fff;
+    color: #008080;
+    font-weight: 600;
+}
+
 .turismHotel{
     width: 100%;
     height: max-content;
@@ -864,6 +902,7 @@ main{
     justify-content: center;
     margin-bottom: 1rem;
     text-align: center;
+    background-color: #eeeeee;
 }
 .hotelLeft{
     width: 25rem;
@@ -894,13 +933,17 @@ main{
     background-color: white;
     color:#008080;
 }
- 
 
-.turismHotel h3{
+.turisContainer h3{
     font-size: 2rem;
     background-color: #008080;
     color: white;
-    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.topP{
+    color: #008080;
+    font-size: 1.5rem;
 }
 .hotelLeft h4{
     font-size: 1rem;
@@ -930,32 +973,43 @@ main{
     margin: auto;
 }
 
-.club360{
+.club360, .tiendaLeonMoreinfo{
     width: 90%;
     height: auto;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.club360 img{
-    width: 100%;
+.club360 img, .tiendaLeonMoreinfo img{
+    width: 60vw;
     height: auto;
     margin: auto;
 }
-.club360 h3{
+.club360 h3, .tiendaLeonMoreinfo h3{
     background-color: #008080;
     color: white;
-    text-align: center;
+    margin: auto;
     margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 60vw;
 }
-.club360 ul{
+.club360 ul, .tiendaLeonMoreinfo ul{
     background-color: white;
+    width: 60vw;
+    margin: auto;
 }
-.club360 li{
+.club360 li, .tiendaLeonMoreinfo li{
     list-style: none;
 }
-.club360 div{
-    width: 100%;
+.club360 div, .tiendaLeonMoreinfo div{
+    width: 60vw;
     height: auto;
     background-color: #fff;
+    margin: auto;
+    margin-bottom: 1rem;
+
 }
 
 .turismNeed{
@@ -1031,6 +1085,7 @@ main{
     margin-bottom: 2rem;
     background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
     color: #c1c1c3;
+    padding: 1rem;
 }
 .sumaryContainer li{
     list-style: none;
@@ -1038,7 +1093,7 @@ main{
 .subSumaryContainer{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: .5rem;
     margin-bottom: 0;
 }
@@ -1050,13 +1105,6 @@ main{
     text-decoration: underline;
 }
 
-.inscDetails, .paymentInstruction{
-    width: 50%;
-    padding: 0 .5rem;
-}
-.insNotes{
-    padding: 0 2rem;
-}
 
 
 

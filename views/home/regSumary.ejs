@@ -36,66 +36,167 @@
 <body>
     <main>
         <div class="sumaryContainer">
-                <div class="subSumaryContainer">
-                    <div class="inscDetails">
-                        <h2>Inscription details</h2>
-                        <ul>
-                            <li><h3><span>First name:</span> <%= query.Firstname %></h3></li>
-                            <li><h3><span>Last name:</span> <%= query.Lastname %></h3></li>
-                            <li><h3><span>Email:</span> <%= query.Email %></h3></li>
-                            <li><h3><span>Federation:</span> <%= query.Federation %></h3></li>
-                            <li><h3><span>Country:</span> <%= query.Country %></h3></li>
-                            <li><h3><span>Age Class:</span> <%= query.Ageclass %></h3></li>
-                            <li><h3><span>Gender:</span> <%= query.Gender %></h3></li>
-                            <li><h3><span>Bow Type:</span> <%= query.Bowtype %></h3></li>
-                            <li><h3><span>Target type:</span> <%= query.Target %></h3></li>
-                            <li><h3><span>Flint Target type:</span> <%= query.Flint %></h3></li>
-                        </ul>
-                        </div>
-                        <hr>
-                    <div class="paymentInstruction">
-                                <h2>Payment Instruction</h2>
-                        <ul>        
-                                <li><h3><span>PAY TO/PAGAR A:</span> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</h3></li>
-                                <li><h3><span>ACCOUNT NUMBER / NUMERO DE CUENTA:</span> 027-014475/4</h3></li>
-                                <li><h3><span>WITH / CON:</span> BANCO CREDICOOP C.L. - BUENOS AIRES</h3></li>
-                                <li><h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> BCOOARBA</h3></li>
-                                <li><h3><span>THROUGH / A TRAVÉS DE:</span> COMMERZBANK AG - FRANKFURT</h3></li>
-                                <li><h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> COBADEFF</h3></li>
-                                <li><h3><span>PLEASE NOTE</span> The transfer commission fees are as follows:</h3>
-                                    $15 USD for transfers up to $500 USD.<br>
-                                    $25 USD for transfers from $501 USD to $1,000 USD.<br>
-                                    You can include two or more registrations in a single transfer.</li> 
-                        </ul>            
-                        </div>
-                </div>
-                <form class="btnContainerInsc" action="/save" method="POST">
-                    <input type="hidden" name="Firstname" value="<%= query.Firstname %>">
-                    <input type="hidden" name="Lastname" value="<%= query.Lastname %>">
-                    <input type="hidden" name="Email" value="<%= query.Email %>">
-                    <input type="hidden" name="Federation" value="<%= query.Federation %>">
-                    <input type="hidden" name="Country" value="<%= query.Country %>">
-                    <input type="hidden" name="Ageclass" value="<%= query.Ageclass %>">
-                    <input type="hidden" name="Gender" value="<%= query.Gender %>">
-                    <input type="hidden" name="Bowtype" value="<%= query.Bowtype %>">
-                    <input type="hidden" name="Target" value="<%= query.Target %>">
-                    <input type="hidden" name="Flint" value="<%= query.Flint %>">
-                    <input type="hidden" name="Mssg" value="<%= query.Mssg %>">
-                    <button type="submit" class="btnInsc btnReg">Confirm</button>
-                    <a class="btnInsc btnCnl" href="/">Cancel</a> 
-                </form>
-                <div class="insNotes">
-                        <h2>NOTE</h2>
-                        <li>Each inscription is only for one participant.
+            <div class="subSumaryContainer">
+                <div class="inscDetails">
+                    <h2>Inscription details</h2>
+                    <ul>
+                        <li>
+                            <h3><span>First name:</span>
+                                <%= query.Firstname %>
+                            </h3>
                         </li>
-                        <li>After filling the form, you will get 14 days from the reservation to pay the registration fee and send the receipt to wiac2025@gmail.com
+                        <li>
+                            <h3><span>Last name:</span>
+                                <%= query.Lastname %>
+                            </h3>
                         </li>
-                        <li>After 14 days of the inscription, if you have not made the payment, your reservation will be <strong>CANCELED</strong> </li>
-                        <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
-                        <li>Note: Amounts will be charged in local currency (ARS).</li>
-                        <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
+                        <li>
+                            <h3><span>Email:</span>
+                                <%= query.Email %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Federation:</span>
+                                <%= query.Federation %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Country:</span>
+                                <%= query.Country %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Age Class:</span>
+                                <%= query.Ageclass %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Gender:</span>
+                                <%= query.Gender %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Bow Type:</span>
+                                <%= query.Bowtype %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Target type:</span>
+                                <%= query.Target %>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3><span>Flint Target type:</span>
+                                <%= query.Flint %>
+                            </h3>
+                        </li>
+                    </ul>
                 </div>
-
+                <hr>
+                <div class="paymentInstruction">
+                    <h2>IMPORTANT: IF YOU ARE TRANSFERING EURO YOU MUST FOLLOW THIS INSTRUCTIONS</h2>
+                    <h3>PAYMENT INSTRUCTIONS / INSTRUCCIONES DE PAGO:</h3>
+                    <ul>
+                        <li>
+                            <h3><span>PAY TO/PAGAR A:</span> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</h3>
+                        </li>
+                        <li>
+                            <h3><span>ACCOUNT NUMBER / NUMERO DE CUENTA:</span> 027-014475/4</h3>
+                        </li>
+                        <li>
+                            <h3><span>WITH / CON:</span> BANCO CREDICOOP C.L. - BUENOS AIRES</h3>
+                        </li>
+                        <li>
+                            <h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> BCOOARBA</h3>
+                        </li>
+                        <li>
+                            <h3><span>THROUGH / A TRAVÉS DE:</span> COMMERZBANK AG - FRANKFURT</h3>
+                        </li>
+                        <li>
+                            <h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> COBADEFF</h3>
+                        </li>
+                        <li>
+                            <h3><span>PLEASE NOTE</span> The transfer commission fees are as follows:</h3>
+                            $15 USD for transfers up to $500 USD.<br>
+                            $25 USD for transfers from $501 USD to $1,000 USD.<br>
+                            You can include two or more registrations in a single transfer.
+                        </li>
+                    </ul>
+                </div>
+                <div class="paymentInDollarInstruction">
+                    <h2>IMPORTANT: IF YOU ARE TRANSFERING US DOLLARS YOU MUST FOLLOW THIS INSTRUCTIONS</h2>
+                    <h3>PAYMENT INSTRUCTIONS / INSTRUCCIONES DE PAGO:</h3>
+                    <ul>
+                        <li>
+                            <h3><span>PAY TO/PAGAR A:</span> ASOCIACION ARGENTINA DE TIRADORES CON ARCO</h3>
+                        </li>
+                        <li>
+                            <h3><span>ACCOUNT NUMBER / NUMERO DE CUENTA:</span> 027-014475/4</h3>
+                        </li>
+                        <li>
+                            <h3><span>WITH / CON:</span> BANCO CREDICOOP C.L. - BUENOS AIRES</h3>
+                        </li>
+                        </li>
+                        <li>
+                            <h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> BCOOARBA</h3>
+                        </li>
+                        <li>
+                            <h3><span>THROUGH / A TRAVÉS DE:</span> STANDARD CHARTERED BANK - NEW YORK</h3>
+                        </li>
+                        <li>
+                            <h3><span>SWIFT ADDRESS / DIRECCION SWIFT:</span> SCBLUS33</h3>
+                        </li>
+                        <li>
+                            <h3><span>ABA ROUTING NUMBER:</span> 026002561</h3>
+                        </li>
+                        <li>
+                            <h3><span>CHIPS:</span> 0256</h3>
+                        </li>
+                        <li>
+                            <h3><span>PLEASE NOTE</span> The transfer commission fees are as follows:</h3>
+                            $15 USD for transfers up to $500 USD.<br>
+                            $25 USD for transfers from $501 USD to $1,000 USD.<br>
+                            You can include two or more registrations in a single transfer.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="insNotes">
+                <h2>NOTE</h2>
+                <li>Each inscription is only for one participant.
+                </li>
+                <li>After filling the form, you will get 14 days from the reservation to pay the registration fee and
+                    send the receipt to wiac2025@gmail.com
+                </li>
+                <li>After 14 days of the inscription, if you have not made the payment, your reservation will be
+                    <strong>CANCELED</strong>
+                </li>
+                <li>After paying, you will get registered and you will get a spot in the WIAC 2025.</li>
+                <li>Note: Amounts will be charged in local currency (ARS).</li>
+                <li>Please read the <a class="aForm" href="/tyc">Terms of acceptance </a>before registration.</li>
+                <h2>IMPORTANT</h2>
+                <p>According to the provisions of the Consolidated Text of the regulations on "Foreign Affairs and Foreign
+                    Exchange" of the BCRA, all messages received from abroad (Payment Orders) must include the following
+                    information:</p>
+                <li>Full name or denomination of the Payer.</li>
+                <li>Customer identification number in the payer entity (Account number) or IBAN.</li>
+                <li>Payer's country</li>
+            </div>
+            <form class="btnContainerInsc" action="/save" method="POST">
+                <input type="hidden" name="Firstname" value="<%= query.Firstname %>">
+                <input type="hidden" name="Lastname" value="<%= query.Lastname %>">
+                <input type="hidden" name="Email" value="<%= query.Email %>">
+                <input type="hidden" name="Federation" value="<%= query.Federation %>">
+                <input type="hidden" name="Country" value="<%= query.Country %>">
+                <input type="hidden" name="Ageclass" value="<%= query.Ageclass %>">
+                <input type="hidden" name="Gender" value="<%= query.Gender %>">
+                <input type="hidden" name="Bowtype" value="<%= query.Bowtype %>">
+                <input type="hidden" name="Target" value="<%= query.Target %>">
+                <input type="hidden" name="Flint" value="<%= query.Flint %>">
+                <input type="hidden" name="Mssg" value="<%= query.Mssg %>">
+                <button type="submit" class="btnInsc btnReg">Confirm</button>
+                <a class="btnInsc btnCnl" href="/">Cancel</a>
+            </form>
         </div>
         <div class="needHelpContainer">
             <button class="needHelpBtn btnHelp"
@@ -104,8 +205,10 @@
         </div>
         <script src="/resources/js/InscValidator.js">
         </script>
-                <div class="IcoWhatsDesk"><a href="https://chat.whatsapp.com/G2PhbfqHOpsL6pJDUHDc3t" target="_blank"><img class="logoWhatsDesk" src="/resources/img/logoWhatsDesk.png" alt="IconoWhats"></a></div>
-                <div class="IcoWhats"><a href="https://chat.whatsapp.com/G2PhbfqHOpsL6pJDUHDc3t" target="_blank"><img class="logoWhats" src="/resources/img/logoWhats.png" alt="IconoWhats"></a></div>
+        <div class="IcoWhatsDesk"><a href="https://chat.whatsapp.com/G2PhbfqHOpsL6pJDUHDc3t" target="_blank"><img
+                    class="logoWhatsDesk" src="/resources/img/logoWhatsDesk.png" alt="IconoWhats"></a></div>
+        <div class="IcoWhats"><a href="https://chat.whatsapp.com/G2PhbfqHOpsL6pJDUHDc3t" target="_blank"><img
+                    class="logoWhats" src="/resources/img/logoWhats.png" alt="IconoWhats"></a></div>
     </main>
     <footer class="footer">
         <div class="containerFooter">
@@ -114,10 +217,11 @@
             <img src="/resources/img/logoaata.png" alt="logoAATA">
             <div class="footerAconteiner">
                 <a href="/tyc" class="tycFooter">T&C</a>
-            <a href="/tyc" class="privacyFotter">Privacy Policy</a>
-            <a class="aFooter" href="mailto:wiac2025@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact us</a>
+                <a href="/tyc" class="privacyFotter">Privacy Policy</a>
+                <a class="aFooter"
+                    href="mailto:wiac2025@gmail.com?Subject=Consulta%20sobre%20el%20torneo%20WIAC%202024">Contact us</a>
             </div>
-            
+
         </div>
         <p class="parrafoFooter">WIAC 2025. Derechos reservados</p>
     </footer>
