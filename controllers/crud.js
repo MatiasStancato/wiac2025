@@ -28,7 +28,7 @@ export const save = async (req, res) => {
 
     const Pay = "NO";
 
-    let price = ageclass === "Cub" ? "EUR 120.00" : "EUR 150.00";
+    let price = ageclass === "Cub" ? "EUR 130.00" : "EUR 170.00";
 
     try {
         const query = `
@@ -69,8 +69,8 @@ export const save = async (req, res) => {
             mssg,
         };
 
-        sendConfirmationEmail(emailData);
-        sendConfirmationEmail2(emailData);
+         sendConfirmationEmail(emailData);
+         sendConfirmationEmail2(emailData);
 
         res.render("home/registersucess", {
             alert: true,

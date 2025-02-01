@@ -433,11 +433,11 @@ main{
     justify-content: center;
 }
 .spanCard::before {
-    content: 'AVAILABLE NOW!';
+    content: 'FINISHED!';
     position: absolute;
     width: 150%;
     height: 1.8rem;
-    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    background-image: linear-gradient(45deg, #930b0b 0%, #ff0000  51%, #882525  100%);
     transform: rotate(-45deg) translateY(-20px);
     display: flex;
     align-items: center;
@@ -459,8 +459,51 @@ main{
     box-shadow: 140px -140px #cc3f47;
     background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
   }
+  .spanCard1 {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spanCard1::before {
+    content: 'AVAILABLE NOW!';
+    position: absolute;
+    width: 150%;
+    height: 1.8rem;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  .spanCard1::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+
+
   .secondGroup, .lastCall{
     transform: scale(.8);
+}
+.secondGroup{
+    opacity: .5;
 }
 .card h3{
     width: 100%;
