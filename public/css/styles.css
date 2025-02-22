@@ -1,0 +1,1439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;;
+}
+
+/* Header */
+.header{
+
+    height: 11vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    position:sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 1000;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+.menu-icon {
+    cursor: pointer;
+    display: none; 
+    font-size: 30px;
+}
+
+.logo{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    align-content:  space-around;
+}
+
+.lista li{
+    list-style: none;
+}
+
+.lista a{
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 1.3rem;
+    color: #008080;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+    display: inline-block; /* Necesario para que el transform funcione correctamente */
+}
+.lista a:hover{
+    text-decoration: underline;
+    transform: scale(1.2)
+}
+
+.title{
+    font-size: 3rem;
+    margin: 1rem auto;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 400;
+}
+.subtitle{
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
+/* Footer */
+.footer{
+    background: linear-gradient(180deg, rgba(63,66,66,1) 19%, rgba(32,30,30,1) 72%);
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top:1px solid black;
+    color: white;
+}
+.containerFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.containerFooter a{
+    margin-right: 2rem;
+    text-decoration: none;
+    color: #c1c1c3;
+    font-size: 1.3rem;
+}
+.containerFooter a:hover{
+    text-decoration: underline;
+}
+.containerFooter img{
+    width: 6rem;
+    height: auto;
+    object-fit: cover;
+    margin: 0 1rem;
+}
+
+.parrafoFooter{
+    text-align: center;
+    font-size: 25px;
+    align-self: center;
+}
+
+/* Help container */
+.needHelpContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.needHelpBtn {
+    height: 50px;
+    width: 15rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #008080;
+    
+    }
+
+.needHelpBtn:hover {
+    box-shadow: 1px 1px 200px #252525;
+    }
+
+.btnHelp::after {
+    content: "Email us";
+    height: 50px;
+    width: 15rem;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+
+.btnHelp::before {
+    content: "Need help?";
+    height: 50px;
+    width: 15rem;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.btnHelp:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.btnHelp:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/* logo Whatsapp */
+.IcoWhatsDesk{
+    width: 10rem;
+    height: auto;
+    position: fixed;
+    bottom: .5rem;
+    right: 4rem
+}
+.logoWhatsDesk{
+    width: 12rem;
+}
+.logoWhatsDesk:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+.IcoWhats{
+    display: none;
+}
+/* Pagina Home */
+main{
+    background: rgb(220, 219, 209);
+}
+/* Home Banner */
+.bannerHome{
+    display: flex;
+    width: 90vw;
+    height: max-content;
+    margin: auto;
+    height: 100%;
+    justify-content: center;
+}
+
+.bannerHome img{
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    margin: auto;
+    
+}
+.homeH2{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 5rem;
+    top:6rem;
+    text-shadow: 1px 1px 3px black;
+}
+.bannerHome h3{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 5rem;
+    top:11rem;
+    text-shadow: 1px 1px 3px black;
+}
+.hometoptext{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    top:4.5rem;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+}
+.datepara{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    top: 17.5rem;
+    text-shadow: 1px 1px 3px black;
+}
+
+
+/* Home Message */
+.containerMain{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.message{
+    width: 70%;
+}
+.containerMain img{
+    width: 50%;
+    height: auto;
+    padding: 3rem;
+    overflow: hidden;
+}
+.containerMain h4{
+    font-size: 2.1rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+.containerMain p{
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.pMsg{
+    color: #008080;;
+}
+/* Home Schedule */
+.homeSchedule{
+    width: 90%;
+    height: 35rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.schlL{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.schlL h2{
+    font-weight: 400;
+}
+.schlR{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.daySchl {
+    background: rgb(104, 110, 110);
+    color: #c1c1c3;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid gray;
+    width: 43rem;
+    margin: auto;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content li {
+    padding: 12px 16px;
+    list-style: none;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+.roundDay{
+    color: #000;
+    border-bottom: 1px solid black;
+}
+.show {
+    display: block;
+}
+/* Home Booking */
+.bookingContainer{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.bookingText{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.bookingText h2{
+    align-self: start;
+    font-weight: 400;
+}
+.bookingText span{
+    width: 80%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    bottom:6rem;
+    font-weight: 400;
+}
+.bookingText span p{
+    margin-bottom: 1rem;
+}
+
+.bookingText span a{
+    display: block;
+    background-color: #008080;
+    color: #fff;
+    padding: .3rem .5rem;
+    text-decoration: none;
+    width: 100%;
+}
+.bookingText span a:hover{
+    background-color: #c1c1c3;
+    color: #008080;
+    font-weight: 600;
+
+}
+.booking{
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+.card{
+    background: linear-gradient(180deg, rgba(63,66,66,1) 19%, rgba(32,30,30,1) 72%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:max-content;
+    width: 100%;
+    border:1px solid #c1c1c3;
+    /* margin: 0px .5rem; */
+    border-radius: .4rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.earlyBird:hover{
+    transform: scale(1.1);
+}
+.spanCard {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spanCard::before {
+    content: 'FINISHED!';
+    position: absolute;
+    width: 150%;
+    height: 1.8rem;
+    background-image: linear-gradient(45deg, #930b0b 0%, #ff0000  51%, #882525  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  .spanCard::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+  .spanCard1 {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spanCard1::before {
+    content: 'AVAILABLE NOW!';
+    position: absolute;
+    width: 150%;
+    height: 1.8rem;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  }
+  .spanCard1::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  }
+
+
+  .secondGroup, .lastCall{
+    transform: scale(.8);
+}
+.secondGroup{
+    opacity: .5;
+}
+.card h3{
+    width: 100%;
+    margin-top: 1.8rem;
+    font-size: 2.5rem;
+    background-color: #008080;
+    text-shadow: 2px 2px 5px #fff;
+}
+.cardUp{
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: #c1c1c3;
+}
+.cardDown{
+    font-size: 1.2rem;
+    color: #FFF;
+    text-align: center;
+    position: relative;
+    bottom: 2rem;
+}
+.cardD{
+    font-size: 1.2rem;
+    color: #ddd4a3;
+    text-align: center;
+    position: relative;
+    bottom: 4rem;
+    
+}
+.precio{
+    font-weight: 400;
+    font-size: 5rem;
+    -webkit-text-stroke: 3px black;
+    color: #fff;
+}
+.Up{
+    position: relative;
+    bottom: .5rem;
+}
+.Dw{
+    position: relative;
+    bottom: 2rem;
+    color: #ddd4a3;
+}
+.btnCard{
+    position: relative;
+    bottom: 3rem;
+    text-decoration: none;
+    color: #000;
+}
+.btnNO{
+    display: none;
+}
+/* admin-login */
+.formLog{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto
+}
+.formLog input{
+    margin-top: .5rem;
+}
+/* admin-index */
+.containerIndexAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* admin-form */
+
+.tablacontainer{
+    width: 100%;
+    margin: auto;   
+}
+.containerBotonesForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: 0.5rem auto;
+}
+/* admin-edit */
+.ContainerFormEdit{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: max-content;
+    border:  1px solid black;
+    margin: 2rem auto;
+    border-radius: 5px;
+}
+.formEdit input{
+    margin:0 auto;
+    width: 90%;
+}
+.formEdit select, label{
+    margin:.5rem 2rem;
+    width: 90%
+}
+
+.containerEditBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+}
+
+/* pagina inscripcion */
+.inscriptionContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    margin: auto;
+}
+.inscriptionContainer ul{
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+.inscriptionContainer ul li{
+    margin: .3rem;
+}
+.containerForm{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
+    color: #c1c1c3;
+}
+.containerForm h2{
+    text-align: center;
+}
+.aForm{
+    color: #FFF;
+    font-weight: 800;
+}
+.rowForm{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.lineForm{
+    display: flex;
+    flex-direction: column;
+    min-height: 20%;
+    align-items: start;
+}
+.rowForm input{
+    width: 30rem;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem;
+}
+.rowForm select{
+    width: 30rem;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem;
+}
+
+.lineForm label{
+    width: 30rem;
+    font-size: 1rem;
+    color: #c1c1c3;
+    font-weight: 700;
+    position: relative;
+    top:.5rem;
+    right: 1rem;
+    width: fit-content;
+    
+}
+.rowForm textarea{
+    border: none;
+}
+
+.aceptTYC{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    margin: .5rem auto;
+    background-color: white;
+    color: #000;
+}
+.aceptTYC a{
+    color: #000;
+}
+
+
+
+.btnInsc{
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btnReg{
+    background-color: rgba(106, 238, 117, .7)
+}
+.btnReg:hover{
+    border: 1px solid #009900;
+    background-color: #000;
+    color: #009900;
+    box-shadow: .5rem .5rem 2rem #009900;
+}
+.btnCnl{
+    background-color: rgba(215, 32, 32, 0.824);
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+.btnCnl:hover{
+    border: 1px solid #cc3f47;
+    background-color: #000;
+    color: #cc3f47;
+    box-shadow: .5rem .5rem 2rem #cc3f47;
+}
+
+
+.btnContainerInsc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+}
+#payment-container{
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}
+.invalid {
+    border-color: red;
+}
+/* pagina location */
+
+.ubicacionMain h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.ubicacionContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.ubicacionIframe{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.ubicacionParraf{
+    text-align: center;
+}
+.ubicacionParraf a{
+    display: block; 
+    background-color: #008080;
+    color: #fff;
+    padding: .5rem .5rem;
+    text-decoration: none;
+    margin: auto ;
+    width: 35%;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.ubicacionParraf a:hover{
+    background-color: #c1c1c3;
+    color: #008080;
+    font-weight: 600;
+}
+
+/* pagina  participants */
+.containerParticipants{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.containerParticipants iframe{
+    width: 100%;
+    height: 1200px;
+
+}
+.listadoPart{
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background-color: #008080;
+    color: white;
+    margin: auto;
+    width: 10rem;
+    align-self:center;
+    text-align: center;
+}
+.listadoPart:hover{
+    background-color: white;
+    color:#008080;
+}
+
+/* Pagina Schedule */
+
+.schedule{
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scheduleInfo{
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.schedule h4{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #008080;
+    
+}
+.scheduleDays{
+    width:67%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+}
+.scheduleDays img{
+    width: 83.7%;
+    position: absolute;
+    left: 5rem;
+    z-index: -100;
+    filter: blur(6px);
+    filter: opacity(0.5);
+    object-fit: cover;
+    height: max-content;
+    
+}
+.day{
+    width: 100%;
+    height: max-content;
+    border-bottom: 3px solid #008080c9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color:#008080;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px #c1c1c1;
+    font-size: 1.2rem;
+    
+}
+.day span{
+    width: 50%;
+}
+.day span p{
+    height: 1.8rem;
+}
+/* pagina Turism */
+.turisMain{
+    height: max-content
+}
+.turisContainer{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.mdqMoreInfo, .santaClaraMoreInfo{
+    width: 100%;
+    height: max-content;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.mdqMoreInfo img, .santaClaraMoreInfo img{
+    width: 80%;
+    margin-bottom: 1rem;
+}
+.mdqMoreInfo p, .santaClaraMoreInfo p{
+    width: 90%;
+    line-height: 2rem;
+}
+
+.mdqMoreInfo a, .santaClaraMoreInfo a{
+    display: block;
+    background-color: #008080;
+    color: #fff;
+    padding: .3rem .5rem;
+    text-decoration: none;
+    width: max-content;
+    margin-bottom: .5rem;
+}
+.mdqMoreInfoPbottom{
+    text-align: center;
+}
+
+.mdqMoreInfo a:hover, .santaClaraMoreInfo a:hover{
+    background-color: #fff;
+    color: #008080;
+    font-weight: 600;
+}
+
+.turismHotel{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #eeeeee;
+}
+.hotelLeft{
+    width: 25rem;
+    height: max-content;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hotelLeft p{
+    background-color: white;
+    color:#008080;
+}
+
+.hotelLeft span{
+    background-color: #008080;
+    color: white;
+}
+
+.hotelLeft a{
+    margin-top: .5rem;
+    text-decoration: none;
+    background-color: #008080;
+    color:white;
+}
+.hotelLeft a:hover{
+    background-color: white;
+    color:#008080;
+}
+
+.turisContainer h3{
+    font-size: 2rem;
+    background-color: #008080;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.topP{
+    color: #008080;
+    font-size: 1.5rem;
+}
+.hotelLeft h4{
+    font-size: 1rem;
+}
+.table{
+    border:1px solid black;
+    margin: 1rem auto;
+}
+
+.table th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.table th {
+    background-color: #f4f4f4;
+}
+.hotelRight{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.turismHotel img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+.club360, .tiendaLeonMoreinfo{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.club360 img, .tiendaLeonMoreinfo img{
+    width: 60vw;
+    height: auto;
+    margin: auto;
+}
+.club360 h3, .tiendaLeonMoreinfo h3{
+    background-color: #008080;
+    color: white;
+    margin: auto;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 60vw;
+}
+.club360 ul, .tiendaLeonMoreinfo ul{
+    background-color: white;
+    width: 60vw;
+    margin: auto;
+}
+.club360 li, .tiendaLeonMoreinfo li{
+    list-style: none;
+}
+.club360 div, .tiendaLeonMoreinfo div{
+    width: 60vw;
+    height: auto;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 1rem;
+
+}
+
+.turismNeed{
+    position: relative;
+    top:2rem
+}
+
+
+/* pagina T&C */
+.tycContainer{
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+}
+.tycContainer li{
+    margin: .5rem;
+    border-bottom: 2px solid #c1c1c3;
+}
+.notesContainer{
+    width: 75%;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Pagina Success */
+.successContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.regSuccess{
+    padding: 2rem;
+    width: 40rem;
+
+    margin:  auto;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #ddd;
+}
+.regSuccess img{
+    width: 50%;
+    height: auto;
+}
+.regSuccess p{
+    margin-bottom: 1rem;
+}
+.regSuccess a{
+    background-color: #009900;
+    padding: .5rem;
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+.regSuccess a:hover{
+    background-color: #fff;
+    border: 1px solid #009900;
+    color: #009900;
+}
+/* Pagina regSumary */
+.sumaryContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, rgb(110, 130, 130) 20%, rgb(45, 53, 53) 60%);
+    color: #c1c1c3;
+    padding: 1rem;
+}
+.sumaryContainer li{
+    list-style: none;
+}
+.subSumaryContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+.subSumaryContainer h2{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.subSumaryContainer span{
+    text-decoration: underline;
+}
+
+
+
+
+
+/* responsive */
+@media screen and (max-width: 576px) {
+.menu-icon {
+    display: block;
+    background-color: #008080;
+    padding: 0 50%;
+    color:#FFF
+    }
+#menu-toggle:checked ~ .navbar ul {
+    display: block;
+    text-align: center;
+    }
+.navbar ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top:0;
+    background-color: #008080;
+    width: 100vw;
+    height: max-content;
+    padding-bottom: 20px;
+    }
+    .navbar ul li{
+        width: 100%;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+    }
+    .navbar ul a{
+        color: #fff;
+        width: max-content;
+    }
+
+    .IcoWhatsDesk{
+        display: none;
+    }
+    .logoWhats{
+        width: 4rem;
+    }
+    .IcoWhats{
+        display: block;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: .5rem;
+        right: 0rem;
+    }
+
+.header{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    height: max-content;
+    width: 100vw;
+}
+.header label{
+    margin-bottom: 0;
+}
+.logo{
+    width: 6rem;
+    margin: auto;
+}
+/* footer */
+.footerAconteiner a{
+    font-size: 1rem;
+    width: max-content;
+    padding: 0;
+    display: block;
+    margin:.5rem;
+}
+.containerFooter img{
+    width: 3rem;
+}
+
+/* home */
+.bannerHome{
+    width: 100%;
+    height: 20rem;
+    margin: 0;
+    padding:0;
+}
+.bannerHome img{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.homeH2{
+    font-size: 2rem;
+    position: absolute;
+    top:11.5rem;
+    width: max-content;
+}
+.bannerHome h3{
+    font-size: 2rem;
+    top:14rem;
+    text-align: center;
+}
+.datepara{
+    font-size: 1.1rem;
+    position: absolute;
+    top:20rem;
+    text-align: center;
+}
+.hometoptext{
+    position: absolute;
+    top:10rem;
+    font-size: 1.5rem;
+}
+
+.containerMain{
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.message{
+    width: 100vw;
+}
+
+.homeSchedule{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.schlL{
+    width: 100%;
+}
+.schlR{
+    width: 100%;
+}
+.daySchl{
+    display: block;
+    width: max-content;
+    text-align: center;
+    width: 100%;
+}
+.schlL .subtitle{
+    display: block;
+}
+
+.dropdown{
+    width: 100%;
+}
+.roundTipe{
+    background-color: #c1c1c3;
+}
+.bookingContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.booking{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.bookingText{
+    width: 90%;
+}
+.bookingText span{
+    bottom: 0;
+}
+.card{
+    width: 70%;
+}
+/* inscription */
+.containerForm{
+    width: 100%;
+}
+#registrationForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rowForm{
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+}
+.lineForm{
+    width: max-content;
+}
+.lineForm label{
+    max-width: 60vw;
+}
+.lineForm input{
+    max-width: 90vw;
+}
+.lineForm select{
+    max-width: 90vw;
+}
+.lineForm textarea{
+    max-width: 90vw;
+}
+.aceptTYC{
+    display: block;
+    height: max-content;
+    width: 90%;
+    background-color: transparent;
+}
+#terms-error{
+    display: block;
+    margin-top: 1rem;
+}
+.acepTYClabel{
+    margin: auto;
+    width: 90vw;
+    background-color: white;
+    position: relative;
+    left: 20px;
+    padding: .3rem;
+}
+.btnInsc{
+    padding: .5rem 1rem;
+    width: 11rem;
+}
+
+
+
+/* participants */
+.containerParticipants{
+    height: 40vh;
+}
+/* schedule */
+.scheduleInfo{
+    width: 95%;
+}
+.scheduleDays{
+    width: 100%;
+    margin-top: 1rem;
+}
+.scheduleDays img{
+    width: 100%;
+    height: 440%;
+    position: absolute;
+    left: 0;
+}
+.day{
+    width: 100%;
+    height: max-content;
+}
+.day span{
+    width: 90%;
+    height: max-content;
+}
+.day span p{
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* turism */
+
+.turismHotel{
+    flex-direction: column;
+}
+/* T&C */
+.notesContainer{
+    width: 90%;
+}
+.subSumaryContainer{
+    flex-direction: column;
+}
+.inscDetails, .paymentInstruction{
+    width: 90%;
+}
+/* registerSuccess */
+.regSuccess{
+    width: 90%;
+}
+/* admin-form */
+.tablacontainer{
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none;
+}
+}

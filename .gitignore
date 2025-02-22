@@ -1,0 +1,7 @@
+# Ignorar archivos de entorno
+.env
+
+/node_modules/
+.vercel
+
+wiac2025/views/admin/register.ejs

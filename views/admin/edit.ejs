@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/styles.css">
+    <link rel="shortcut icon" href="/resources/img/LogoWIAC2025.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Admin</title>
+</head>
+
+<body>
+    <h1 class="title">Editar</h1>
+    <% if (user){%>
+        <div class="ContainerFormEdit">
+            <form class="formEdit" action="/update" method="POST">
+
+                <input class="form-control form-control-sm" id="id" name="id" value="<%= user.id%>" hidden>
+                <div>
+                    <label for="First name">First name:</label>
+                    <input class="form-control form-control-sm" type="text" id="First name" name="Firstname"
+                        placeholder="Firstname" value="<%= user.Firstname%>" autofocus>
+                    <span id="errorName" class="error-message"></span>
+                    <br>
+                </div>
+                <label for="Last name">Last name:</label>
+                <input class="form-control form-control-sm" type="text" id="Last name" name="Lastname"
+                    placeholder="Last Name" value="<%= user.Lastname%>" autofocus>
+                <span id="errorLastName" class="error-message"></span>
+                <br>
+                <label for="Email">Email:</label>
+                <input class="form-control form-control-sm" type="email" id="Email" name="Email" placeholder="Email"
+                    value="<%= user.Email%>" autofocus>
+                <span id="errorEmail" class="error-message"></span>
+                <br>
+
+                <label for="Federation">Federation:</label>
+                <select class="form-control form-control-sm" id="Federation" name="Federation" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option <%=user.Federation=='AAE' ? "selected" : "" %> value="AAE">AAE</option>
+                    <option <%=user.Federation=='AATA' ? "selected" : "" %> value="AATA">AATA</option>
+                    <option <%=user.Federation=='ABA' ? "selected" : "" %> value="ABA">ABA</option>
+                    <option <%=user.Federation=='OBSV' ? "selected" : "" %> value="OBSV">OBSV</option>
+                    <option <%=user.Federation=='RBA' ? "selected" : "" %> value="RBA">RBA</option>
+                    <option <%=user.Federation=='GAA' ? "selected" : "" %> value="GAA">GAA</option>
+                    <option <%=user.Federation=='AFB' ? "selected" : "" %> value="AFB">AFB</option>
+                    <option <%=user.Federation=='BFAA' ? "selected" : "" %> value="BFAA">BFAA</option>
+                    <option <%=user.Federation=='AC' ? "selected" : "" %> value="AC">AC</option>
+                    <option <%=user.Federation=='ACH' ? "selected" : "" %> value="ACH">ACH</option>
+                    <option <%=user.Federation=='AICC' ? "selected" : "" %> value="AICC">AICC</option>
+                    <option <%=user.Federation=='CZ3D' ? "selected" : "" %> value="CZ3D">CZ3D</option>
+                    <option <%=user.Federation=='EFAA' ? "selected" : "" %> value="EFAA">EFAA</option>
+                    <option <%=user.Federation=='FAAE' ? "selected" : "" %> value="FAAE">FAAE</option>
+                    <option <%=user.Federation=='FFAA' ? "selected" : "" %> value="FFAA">FFAA</option>
+                    <option <%=user.Federation=='FFTL' ? "selected" : "" %> value="FFTL">FFTL</option>
+                    <option <%=user.Federation=='DFBV' ? "selected" : "" %> value="DFBV">DFBV</option>
+                    <option <%=user.Federation=='PAPG' ? "selected" : "" %> value="PAPG">PAPG</option>
+                    <option <%=user.Federation=='HKFAA' ? "selected" : "" %> value="HKFAA">HKFAA</option>
+                    <option <%=user.Federation=='HAA' ? "selected" : "" %> value="HAA">HAA</option>
+                    <option <%=user.Federation=='IBA' ? "selected" : "" %> value="IBA">IBA</option>
+                    <option <%=user.Federation=='FAAI' ? "selected" : "" %> value="FAAI">FAAI</option>
+                    <option <%=user.Federation=='IFAF' ? "selected" : "" %> value="IFAF">IFAF</option>
+                    <option <%=user.Federation=='FIARC' ? "selected" : "" %> value="FIARC">FIARC</option>
+                    <option <%=user.Federation=='LAF' ? "selected" : "" %> value="LAF">LAF</option>
+                    <option <%=user.Federation=='FAAFL' ? "selected" : "" %> value="FAAFL">FAAFL</option>
+                    <option <%=user.Federation=='LAA' ? "selected" : "" %> value="LAA">LAA</option>
+                    <option <%=user.Federation=='FLTA' ? "selected" : "" %> value="FLTA">FLTA</option>
+                    <option <%=user.Federation=='FAAM' ? "selected" : "" %> value="FAAM">FAAM</option>
+                    <option <%=user.Federation=='KHN' ? "selected" : "" %> value="KHN">KHN</option>
+                    <option <%=user.Federation=='NZFAA' ? "selected" : "" %> value="NZFAA">NZFAA</option>
+                    <option <%=user.Federation=='NIFAA' ? "selected" : "" %> value="NIFAA">NIFAA</option>
+                    <option <%=user.Federation=='PTAF' ? "selected" : "" %> value="PTFA">PTFA</option>
+                    <option <%=user.Federation=='PFAA' ? "selected" : "" %> value="PFAA">PFAA</option>
+                    <option <%=user.Federation=='FABP' ? "selected" : "" %> value="FABP">FABP</option>
+                    <option <%=user.Federation=='FRATF' ? "selected" : "" %> value="FRATF">FRATF</option>
+                    <option <%=user.Federation=='KFAA' ? "selected" : "" %> value="KFAA">KFAA</option>
+                    <option <%=user.Federation=='RAF' ? "selected" : "" %> value="RAF">RAF</option>
+                    <option <%=user.Federation=='FSTA' ? "selected" : "" %> value="FSTA">FSTA</option>
+                    <option <%=user.Federation=='SFAA' ? "selected" : "" %> value="SFAA">SFAA</option>
+                    <option <%=user.Federation=='SAA' ? "selected" : "" %> value="SAA">SAA</option>
+                    <option <%=user.Federation=='SANIFAA' ? "selected" : "" %> value="SANIFAA">SANIFAA</option>
+                    <option <%=user.Federation=='AAL' ? "selected" : "" %> value="AAL">AAL</option>
+                    <option <%=user.Federation=='SFSF' ? "selected" : "" %> value="SFSF">SFSF</option>
+                    <option <%=user.Federation=='FAAS' ? "selected" : "" %> value="FAAS">FAAS</option>
+                    <option <%=user.Federation=='TTFAA' ? "selected" : "" %> value="TTFAA">TTFAA</option>
+                    <option <%=user.Federation=='FUTARCO' ? "selected" : "" %> value="FUTARCO">FUTARCO</option>
+                    <option <%=user.Federation=='NFAA' ? "selected" : "" %> value="NFAA">NFAA</option>
+                    <option <%=user.Federation=='VAF' ? "selected" : "" %> value="VAF">VAF</option>
+                    <option <%=user.Federation=='VIFAF' ? "selected" : "" %> value="VIFAF">VIFAF</option>
+                    <option <%=user.Federation=='WFAA' ? "selected" : "" %> value="WFAA">WFAA</option>
+                    <option <%=user.Federation=='AZA' ? "selected" : "" %> value="AZA">AZA</option>
+                </select>
+                <br>
+                <label for="Country">Country:</label>
+                <input class="form-control form-control-sm" type="text" id="Country" name="Country"
+                    placeholder="Country" value="<%= user.Country%>" autofocus>
+                <br>
+                <label for="Age class">Age Class:</label>
+                <select class="form-control form-control-sm" id="Age class" name="Ageclass">
+                    <option value="" disabled selected>Select an option</option>
+                    <option <%= user.Ageclass=== 'Adult' ? "selected" : "" %> value="Adult">Adult (A)</option>
+                    <option <%= user.Ageclass=== 'Cub' ? "selected" : "" %> value="Cub">Cub (C)</option>
+                    <option <%= user.Ageclass=== 'Junior' ? "selected" : "" %> value="Junior">Junior (J)</option>
+                    <option <%= user.Ageclass=== 'Senior' ? "selected" : "" %> value="Senior">Senior (S)</option>
+                    <option <%= user.Ageclass=== 'Veteran' ? "selected" : "" %> value="Veteran">Veteran (V)</option>
+                    <option <%= user.Ageclass=== 'Young Adult' ? "selected" : "" %> value="Young Adult">Young Adult (YA)
+                    </option>
+                </select>
+                <br>
+                <label for="Gender">Gender:</label>
+                <select class="form-control form-control-sm" id="Gender" name="Gender">
+                    <option <%= user.Gender=== 'F' ? "selected" : "" %> value="F">Female (F)</option>
+                    <option <%= user.Gender=== 'M' ? "selected" : "" %> value="M">Male (M)</option>
+                </select>
+                <br>
+                <label for="Bow type">Bow Type:</label>
+<select class="form-control form-control-sm" id="Bow type" name="Bowtype">
+    <option value="" disabled selected>Select an option</option>
+    <option <%= user.Bowtype === 'Barebow Compound (BB-C)' ? 'selected' : '' %> value="Barebow Compound (BB-C)">Barebow Compound (BB-C)</option>
+    <option <%= user.Bowtype === 'Barebow Recurve (BB-R)' ? 'selected' : '' %> value="Barebow Recurve (BB-R)">Barebow Recurve (BB-R)</option>
+    <option <%= user.Bowtype === 'Bowhunter Compound (BH-C)' ? 'selected' : '' %> value="Bowhunter Compound (BH-C)">Bowhunter Compound (BH-C)</option>
+    <option <%= user.Bowtype === 'Bowhunter Recurve (BH-R)' ? 'selected' : '' %> value="Bowhunter Recurve (BH-R)">Bowhunter Recurve (BH-R)</option>
+    <option <%= user.Bowtype === 'Bowhunter Limited (BL)' ? 'selected' : '' %> value="Bowhunter Limited (BL)">Bowhunter Limited (BL)</option>
+    <option <%= user.Bowtype === 'Bowhunter Unlimited (BU)' ? 'selected' : '' %> value="Bowhunter Unlimited (BU)">Bowhunter Unlimited (BU)</option>
+    <option <%= user.Bowtype === 'Freestyle Limited Compound (FS-C)' ? 'selected' : '' %> value="Freestyle Limited Compound (FS-C)">Freestyle Limited Compound (FS-C)</option>
+    <option <%= user.Bowtype === 'Freestyle Limited Recurve (FS-R)' ? 'selected' : '' %> value="Freestyle Limited Recurve (FS-R)">Freestyle Limited Recurve (FS-R)</option>
+    <option <%= user.Bowtype === 'Freestyle Unlimited (FU)' ? 'selected' : '' %> value="Freestyle Unlimited (FU)">Freestyle Unlimited (FU)</option>
+    <option <%= user.Bowtype === 'Historical Bow (HB)' ? 'selected' : '' %> value="Historical Bow (HB)">Historical Bow (HB)</option>
+    <option <%= user.Bowtype === 'LongBow (LB)' ? 'selected' : '' %> value="LongBow (LB)">LongBow (LB)</option>
+    <option <%= user.Bowtype === 'Traditional Recurve Bow (TR)' ? 'selected' : '' %> value="Traditional Recurve Bow (TR)">Traditional Recurve Bow (TR)</option>
+</select>
+                <br>
+                <label for="Target">Target type:</label>
+                <select class="form-control form-control-sm" id="Target" name="Target" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option <%=user.Target=='5 spots' ? "selected" : "" %> value="5 spots">5 Spots</option>
+                    <option <%=user.Target=='1 spot' ? "selected" : "" %> value="1 spot">1 Spot</option>
+                </select>
+                <br>
+                <label for="Flint">Flint type:</label>
+                <select class="form-control form-control-sm" id="Flint" name="Flint" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option <%=user.Flint=='standard' ? "selected" : "" %> value="standard">Standard</option>
+                    <option <%=user.Flint=='4 spots' ? "selected" : "" %> value="4 spots">4 Spots</option>
+                </select>
+                <br>
+                <label for="text">Message</label>
+                <textarea class="form-control form-control-sm" type="text" name="Text" rows="5" cols="72"
+                    value="<%= user.Text%>""><%= user.Text %></textarea>  
+                    <label for=" Pay">Pay:</label>
+                    <select class="form-control form-control-sm" id="Pay" name="Pay">
+                        <option value="" disabled selected>Select an option</option>
+                        <option <%=user.Pay=='NO' ? "selected" : "" %> value="NO">NO</option>
+                        <option <%=user.Pay=='YES' ? "selected" : "" %> value="YES">YES</option>
+                    </select>
+                    <div class="containerEditBtn">
+                <button class="btn btn-primary btn-lg" type="submit">Editar</button>
+                <a class="btn btn-danger btn-lg" href="/admin/form">Cancelar</a>
+            </div>
+        </form>
+    </div>
+    <% }%>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != 'undefined') { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmaButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>',
+            }).then(() => {
+                window.location = '/<%= ruta %>'
+            })
+
+        </script>
+        <%}%>
+        
+</body>
+</html>
