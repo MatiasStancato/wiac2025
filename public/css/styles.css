@@ -1053,7 +1053,25 @@ main{
     background-color: #fff;
     margin: auto;
     margin-bottom: 1rem;
-
+}
+.linkTD{
+    
+    color: #fff;
+    background-color: #ff6800;
+    text-decoration: none;
+    margin: auto;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ff6800;
+}
+.linkTD:hover{
+    color: #ff6800;
+    background-color: #fff;
+    
 }
 
 .turismNeed{
