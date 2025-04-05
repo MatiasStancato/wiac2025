@@ -28,7 +28,7 @@ export const save = async (req, res) => {
 
     const Pay = "NO";
 
-    let price = ageclass === "Cub" ? "EUR 130.00" : "EUR 170.00";
+    let price = ageclass === "Cub" ? "EUR 140.00" : "EUR 190.00";
 
     try {
         const query = `

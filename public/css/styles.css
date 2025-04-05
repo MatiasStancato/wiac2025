@@ -501,10 +501,9 @@ main{
 
   .secondGroup, .lastCall{
     transform: scale(.8);
-}
-.secondGroup{
     opacity: .5;
 }
+
 .card h3{
     width: 100%;
     margin-top: 1.8rem;
