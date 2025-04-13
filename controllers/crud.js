@@ -107,6 +107,7 @@ export const update = async (req, res) => {
     const flint = req.body.Flint;
     const mssg = req.body.Text;
     const Pay = req.body.Pay;
+    let price = ageclass === "Cub" ? "EUR 140.00" : "EUR 190.00";
 
     const query = `
         UPDATE participants 
