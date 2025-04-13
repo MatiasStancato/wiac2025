@@ -11,7 +11,7 @@ export const sendConfirmationEmail2 = async ({
     bowtype,
     target,
     flint,
-    price,
+    price = ageclass === "Cub" ? "EUR 140.00" : "EUR 190.00",
     expDate,
     mssg,
 }) => {
