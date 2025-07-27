@@ -12,6 +12,7 @@ export const sendConfirmationEmail2 = async ({
     target,
     flint,
     price,
+    expDate,
     mssg,
 }) => {
     const transporter = nodeMailer.createTransport({
