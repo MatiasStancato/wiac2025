@@ -452,9 +452,6 @@ main{
     transition: transform 0.3s ease;
     text-align: center;
 }
-.earlyBird:hover{
-    transform: scale(1.1);
-}
 .spanCard {
     position: absolute;
     overflow: hidden;
@@ -533,7 +530,7 @@ main{
   }
 
 
-  .secondGroup, .lastCall{
+  .secondGroup, .lastCall, .earlyBird{
     transform: scale(.8);
     opacity: .5;
 }
@@ -588,6 +585,13 @@ main{
 }
 .btnNO{
     display: none;
+}
+
+.bookingDuo h4{
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: #930b0b;
+    color: #c1c1c1;
 }
 /* admin-login */
 .formLog{
@@ -1200,7 +1204,10 @@ main{
 .subSumaryContainer span{
     text-decoration: underline;
 }
-
+.linkRegistration{
+    background-color: #930b0b;
+    color: #fff
+}
 
 
 
