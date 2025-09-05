@@ -289,6 +289,13 @@ main{
 .pMsg{
     color: #008080;;
 }
+
+/* Home Merch */
+.merchP{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 /* Home links */
 .extraLinks{
     display: none   ;
@@ -854,7 +861,7 @@ main{
     height: 1200px;
 
 }
-.listadoPart{
+.listadoPart , .merchButton{
     text-decoration: none;
     padding: .5rem 1rem;
     background-color: #008080;
@@ -863,8 +870,9 @@ main{
     width: 10rem;
     align-self:center;
     text-align: center;
+    box-shadow: 5px 10px 5px #c1c1c1;
 }
-.listadoPart:hover{
+.listadoPart:hover , .merchButton:hover{
     background-color: white;
     color:#008080;
 }
